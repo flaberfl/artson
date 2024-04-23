@@ -1,0 +1,70 @@
+//<QUANTITY>
+// Сніппет (HTML): qa
+.quantity {
+	width: 88px;
+	height: 26px;
+	display: flex;
+	// border: 1px solid rgba(166, 166, 166, 0.45);
+
+	// .quantity__button
+	&__button {
+		flex: 0 0 26px;
+		position: relative;
+		cursor: pointer;
+		border-radius: 7px;
+		background: $bodyColor;
+
+		transition: all 0.3s;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: all 0.3s ease 0s;
+			margin: 0px 0px 0px -4.5px;
+			// background-color: #a6a6a6;
+			border-radius: 2px;
+			background: #BCC0CC;
+			width: 10px;
+			height: 2px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+
+				&::before,
+				&::after {
+					// background-color: $mainColor;
+				}
+			}
+		}
+
+		// .quantity__button_plus
+		&--plus {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+
+		// .quantity__button_minus
+		&--minus {}
+	}
+
+	// .quantity__input
+	&__input {
+		flex: 1 1 auto;
+
+		input {
+			height: 100%;
+			width: 100%;
+
+			text-align: center;
+			font-size: toRem(20);
+			font-weight: 700;
+			line-height: normal;
+		}
+	}
+}

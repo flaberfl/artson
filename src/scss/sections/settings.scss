@@ -1,0 +1,63 @@
+.settings {
+  padding-top: toRem(76);
+  padding-bottom: toRem(67);
+
+  /* .settings__title */
+  &__title {
+    margin-bottom: toRem(14);
+  }
+
+  /* .settings__subtitle */
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 13, 22);
+  }
+
+  /* .settings__list */
+  &__list {
+    padding: toRem(20);
+    display: grid;
+    @include adaptiveValue("row-gap", 14, 20);
+
+    border: 1px solid rgba($color: #ffffff, $alpha: .16);
+  }
+
+  /* .settings__item */
+  &__item {
+    display: grid;
+    row-gap: toRem(10);
+    column-gap: toRem(20);
+
+    font-size: toRem(18);
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: .9px;
+
+    @media (min-width:$tablet) {
+      grid-template-columns: auto 57%;
+    }
+  }
+
+  /* .settings__name */
+  &__name {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+
+    &::after {
+      content: ".....................................................................................................................";
+      margin-top: -10px;
+      margin-left: 20px;
+      font-size: toRem(35);
+      white-space: nowrap;
+
+      @media (max-width:$tablet) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  /* .settings__value */
+  &__value {
+    max-width: 100%;
+  }
+}

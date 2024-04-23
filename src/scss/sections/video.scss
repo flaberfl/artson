@@ -1,0 +1,138 @@
+.video {
+  position: relative;
+  padding-top: toRem(97);
+  @include adaptiveValue("padding-top", 97, 75);
+  @include adaptiveValue("padding-bottom", 164, 115);
+  margin-top: toRem(-47);
+
+  @media (max-width: em(1200)) {
+    margin-top: toRem(-22);
+  }
+
+  /* .video__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 25);
+  }
+
+  /* .video__channel */
+  &__channel {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 18, 11);
+    @include adaptiveValue("margin-bottom", 55, 22);
+
+    svg {
+      @include adaptiveValue("width", 37, 22);
+      @include adaptiveValue("height", 29, 17);
+    }
+  }
+
+  /* .video__slider */
+  &__slider {
+    overflow: visible !important;
+    position: relative;
+  }
+
+  /* .video__wrapper */
+  &__wrapper {}
+
+  /* .video__slide */
+  &__slide {}
+
+  /* .video__image-ibg */
+  &__image-ibg {
+    padding-bottom: 57.77%;
+  }
+
+  &__overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 39, 47, 0.5);
+
+  }
+
+  /* .video__name */
+  &__name {
+    position: absolute;
+    @include adaptiveValue("top", 19, 9);
+    @include adaptiveValue("left", 32, 10);
+    z-index: 20;
+    @include adaptiveValue("font-size", 18, 12);
+
+    @media (max-width:$mobile) {
+      line-height: 14px;
+      letter-spacing: .6px;
+    }
+  }
+
+  /* .video__swiper-pagination */
+  &__swiper-pagination {
+    bottom: -73px;
+
+    @media (max-width:$tablet) {
+      bottom: -60px;
+    }
+
+    @media (max-width:$mobile) {
+      bottom: -50px;
+    }
+  }
+}
+
+.video-popup-video {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include adaptiveValue("width", 120, 56);
+  @include adaptiveValue("height", 120, 56);
+
+  border-radius: 50%;
+
+  border: 1px solid #fff;
+  transition: all 0.3s;
+
+
+  &::before {
+    content: '';
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  svg {
+    path {
+      transition: all 0.3s;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      path {
+        fill: #32353D;
+      }
+    }
+  }
+}

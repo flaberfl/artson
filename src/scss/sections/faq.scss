@@ -1,0 +1,10 @@
+.faq {
+  padding-top: toRem(77);
+  @include adaptiveValue("padding-top", 77, 66);
+  @include adaptiveValue("padding-bottom", 85, 67);
+
+  /* .faq__title */
+  &__title {
+    margin-bottom: toRem(30);
+  }
+}

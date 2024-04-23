@@ -1,0 +1,90 @@
+.spollers {
+	display: grid;
+	@include adaptiveValue("gap", 6, 11);
+}
+
+// Спойлер
+.spollers__item {}
+
+// Заголовок спойлера
+.spollers__title {
+	position: relative;
+	width: 100%;
+	cursor: default;
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("padding-left", 35, 25);
+	padding-top: toRem(20);
+	padding-bottom: toRem(20);
+	padding-right: toRem(84);
+	background-color: #22242A;
+	box-shadow: 0px 10px 56px 0px rgba(0, 0, 0, 0.65);
+
+	list-style: none;
+
+	transition: all 0.6s;
+
+	&::marker {}
+
+	._spoller-init & {
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 30px;
+			@include adaptiveValue("right", 24, 20);
+			@include adaptiveValue("height", 7, 4);
+			@include adaptiveValue("width", 37, 24);
+
+			background-color: #D9D9D9;
+
+			border-radius: 6px;
+			transition: all 0.5s ease 0s;
+			z-index: 10;
+		}
+
+		&::after {
+			transform: rotate(-90deg);
+		}
+
+		&._spoller-active {
+			&::before {
+				transform: rotate(-45deg);
+				background-color: #515151;
+			}
+
+			&::after {
+				transform: rotate(45deg);
+				background-color: #515151;
+			}
+		}
+	}
+}
+
+// Контент спойлера
+.spollers__body {
+	@include adaptiveValue("padding-top", 30, 18);
+	@include adaptiveValue("padding-bottom", 34, 18);
+	@include adaptiveValue("padding-left", 41, 22);
+	@include adaptiveValue("padding-right", 101, 26);
+
+	font-weight: 300 !important;
+}
+
+// .spollers__circle {
+// 	position: absolute;
+// 	@include adaptiveValue("width", 64, 29);
+// 	@include adaptiveValue("height", 64, 29);
+
+// 	right: toRem(9);
+// 	border-radius: 50%;
+// 	background-color: $bodyColor;
+
+// 	transition: all 0.3s;
+
+// 	._spoller-active & {
+// 		background-color: red;
+// 	}
+// }

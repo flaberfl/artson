@@ -1,0 +1,29 @@
+.denial {
+  @include adaptiveValue("padding-top", 150, 100);
+  padding-bottom: toRem(50);
+}
+
+.denial__container {}
+
+.denial__title {
+  margin-bottom: toRem(40);
+}
+
+.denial__text {
+  line-height: toRem(28);
+
+  p {
+    margin-bottom: toRem(20);
+    padding-left: toRem(20);
+
+    .policy & {
+      padding-left: toRem(0);
+    }
+  }
+
+  // den
+  b {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 20, 18);
+  }
+}

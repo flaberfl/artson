@@ -1,0 +1,19 @@
+[data-showmore] {}
+
+[data-showmore-content] {}
+
+[data-showmore-button] {
+	span {
+		&:last-child {
+			display: none;
+		}
+
+		.show & {
+			display: none;
+
+			&:last-child {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+.post {
+  @include adaptiveValue("padding-top", 157, 120);
+  padding-bottom: toRem(44);
+
+  /* .post__container */
+  &__container {
+    @media (min-width: em(600)) and (max-width: em(1500)) {
+      padding-right: toRem(70);
+      padding-left: toRem(70);
+    }
+  }
+
+  /* .post__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 63, 54);
+  }
+
+  /* .post__header */
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 49.35%;
+    @include adaptiveValue("gap", 120, 30);
+    align-items: center;
+    @include adaptiveValue("margin-bottom", 78, 33);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+    }
+  }
+
+  /* .post__left-side */
+  &__left-side {}
+
+  /* .post__name */
+  &__name {
+    @include adaptiveValue("margin-bottom", 90, 30);
+
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: toRem(34);
+    letter-spacing: toRem(1.2);
+
+    @media (max-width:$mobile) {
+      letter-spacing: toRem(1.1);
+    }
+  }
+
+  /* .post__text */
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(30);
+      }
+
+      line-height: toRem(28);
+      letter-spacing: toRem(.9);
+      font-weight: 300;
+
+      @media (max-width:$mobile) {
+        font-size: toRem(16);
+        letter-spacing: toRem(.8);
+      }
+    }
+  }
+
+  /* .post__image-ibg */
+  &__image-ibg {
+    padding-bottom: 73%;
+    aspect-ratio: 572 / 415;
+
+    @media (max-width:$tablet) {
+      grid-row-start: 1;
+    }
+  }
+
+  /* .post__body */
+  &__body {
+    @include adaptiveValue("margin-bottom", 100, 30);
+  }
+
+  /* .post__box */
+  &__box {
+    display: grid;
+    grid-template-columns: 49.35% 1fr;
+    @include adaptiveValue("gap", 118, 30);
+    align-items: center;
+    @include adaptiveValue("margin-bottom", 98, 23);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+
+	justify-content: center;
+	align-items: center;
+	height: toRem(70);
+	@include adaptiveValue("width", 418, 320);
+	// @include adaptiveValue("padding-right", 36, 32);
+	// @include adaptiveValue("padding-left", 36, 32);
+
+	border: 1px solid rgba(0, 69, 248, 100%);
+	border-radius: $borderRadius;
+	// background: linear-gradient(135.00deg, rgb(0, 252, 192), rgb(0, 174, 248) 50.521%, rgb(0, 252, 192) 100%);
+	// background: linear-gradient(rgb(0, 252, 192) 10%, rgb(0, 69, 248) 100%);
+
+	@include adaptiveValue("font-size", 20, 16);
+	font-weight: 600;
+	// line-height: 1px;
+	letter-spacing: 1px;
+
+	@media (max-width:$mobile) {
+		letter-spacing: .16px;
+	}
+}

@@ -1,0 +1,561 @@
+.setup {
+  @include adaptiveValue("padding-top", 107, 67);
+  background: url('@img/back-main.png') center center no-repeat;
+
+  @media (min-width:em(1701)) {
+    margin-top: toRem(-67);
+  }
+
+  @media (max-width: em(1100)) {
+    @include adaptiveValue("padding-bottom", 60, 100);
+  }
+
+  /* .setup__container */
+  &__container {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* .setup__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 15, 45);
+
+    text-align: center;
+  }
+
+  /* .setup__body */
+  &__media {
+    position: relative;
+    max-width: toRem(516);
+
+    @media (min-width:em(1101)) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: em(1100)) {
+      margin-left: auto;
+      transform: translate(-15%, 0px);
+    }
+
+    @media (max-width:$tablet) {
+      transform: translate(10%, 0px);
+    }
+
+    @media (max-width:$mobile) {
+      transform: translate(21%, 0px);
+    }
+
+    @media (max-width: em(680)) {
+      transform: translate(29%, 0px);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.line-tooltip {
+  display: inline-block;
+  // display: block;
+  position: absolute;
+  border-bottom: 1px solid #fff;
+  padding-bottom: toRem(8);
+  max-width: toRem(308);
+  cursor: pointer;
+
+  @include adaptiveValue("font-size", 18, 14);
+  letter-spacing: .9px;
+  line-height: 24px;
+
+  @media (max-width: em(644)) {
+    padding-bottom: toRem(4);
+    line-height: 18px;
+    text-align: right;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: #fff;
+    transform-origin: 0 0;
+
+    z-index: 5;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: url('@img/icons/link-point.svg') 0 0 no-repeat;
+    width: toRem(45);
+    height: toRem(45);
+
+    z-index: 10;
+    cursor: pointer;
+
+    @media (max-width: em(644)) {
+      background: url('@img/icons/link-point-mobile.svg') 0 0 no-repeat;
+      width: toRem(33);
+      height: toRem(33);
+    }
+  }
+
+  &_1 {
+    left: -10.3%;
+    top: 8.6%;
+
+    // &:hover {
+    //   .setup-parts_1 {
+    //     opacity: 1;
+    //   }
+    // }
+
+    @media (max-width: em(1100)) {
+      left: -46%;
+      top: 11.6%;
+    }
+
+    @media (max-width: em(644)) {
+      left: -25%;
+    }
+
+    &::before {
+      bottom: -119px;
+      right: -1px;
+      height: toRem(118);
+      transform: rotate(307deg);
+
+      @media (max-width: em(1100)) {
+        bottom: -291px;
+        height: 290px;
+        transform: rotate(-79deg);
+      }
+
+      @media (max-width: em(644)) {
+        @include adaptiveValue("height", 193, 90, 0, 644, 360);
+        @include adaptiveValue("bottom", -194, -91, 0, 644, 360);
+      }
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+
+      @media (max-width: em(1100)) {
+        right: -328px;
+        bottom: -83px;
+      }
+
+      @media (max-width: em(644)) {
+        right: toRem(-220);
+        bottom: toRem(-57);
+        @include adaptiveValue("right", -220, -120, 0, 644, 360);
+        @include adaptiveValue("bottom", -57, -41, 0, 644, 360);
+
+      }
+    }
+  }
+
+  &_2 {
+    right: -46.1%;
+    top: 18.4%;
+
+    // &:hover {
+    //   .setup-parts_2 {
+    //     opacity: 1;
+    //   }
+    // }
+
+
+    @media (max-width: em(1100)) {
+      left: -46%;
+      top: -1.6%;
+    }
+
+    @media (max-width: em(644)) {
+      max-width: 150px;
+      left: -25%;
+    }
+
+    &::before {
+      bottom: -194px;
+      left: 0;
+      height: toRem(194);
+      transform: rotate(116deg);
+
+      @media (max-width: em(1100)) {
+        left: auto;
+        right: 0;
+        transform: rotate(-80deg);
+        height: 170px;
+        bottom: -171px;
+      }
+
+      @media (max-width: em(644)) {
+        @include adaptiveValue("bottom", -175, -61, 0, 644, 360);
+        @include adaptiveValue("height", 174, 60, 0, 644, 360);
+      }
+    }
+
+    &::after {
+      left: -218px;
+      top: -62px;
+
+      @media (max-width: em(1100)) {
+        left: 472px;
+        top: 63px;
+      }
+
+      @media (max-width: em(644)) {
+        @include adaptiveValue("left", 320, 220, 0, 644, 360);
+        @include adaptiveValue("top", 75, 45, 0, 644, 360);
+      }
+    }
+  }
+
+  &_3 {
+    max-width: toRem(342);
+    left: -47%;
+    top: 30.3%;
+
+    @media (max-width: em(1100)) {
+      left: -47%;
+      top: 21.3%;
+    }
+
+    @media (min-width:em(1101)) {
+      text-align: right;
+    }
+
+    @media (max-width: em(644)) {
+      max-width: 200px;
+      left: -32%;
+      top: 27.3%;
+    }
+
+    &::before {
+      bottom: -119px;
+      right: 0;
+      height: toRem(118);
+      transform: rotate(307deg);
+
+      @media (max-width: em(644)) {
+        transform: rotate(291deg);
+        bottom: -189px;
+        right: 0;
+        height: 188px;
+
+        @include adaptiveValue("bottom", -189, -35, 0, 644, 360);
+        @include adaptiveValue("height", 188, 34, 0, 644, 360);
+
+      }
+
+      @media (max-width:$mobileSmall) {
+        transform: rotate(298deg);
+      }
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+
+      @media (max-width: em(644)) {
+        @include adaptiveValue("right", -207, -54, 0, 644, 360);
+        @include adaptiveValue("bottom", -87, -47, 0, 644, 360);
+      }
+    }
+  }
+
+  &_4 {
+    right: -46.7%;
+    top: 35.4%;
+    max-width: toRem(300);
+
+    @media (max-width: em(1100)) {
+      right: auto;
+      left: -46.7%;
+      top: 81.4%;
+    }
+
+    @media (max-width: em(644)) {
+      right: 168px;
+      top: 97.4%;
+      left: auto;
+      width: 100%;
+    }
+
+    @media (max-width: em(380)) {
+      right: 136px;
+    }
+
+    &::before {
+      bottom: -126px;
+      left: 0;
+      height: toRem(126);
+      transform: rotate(49deg);
+
+      @media (max-width: em(1100)) {
+        left: auto;
+        right: 0;
+        transform: rotate(-125deg);
+        bottom: -327px;
+        height: toRem(326);
+      }
+
+      @media (max-width: em(644)) {
+        transform: rotate(-180deg);
+
+        @include adaptiveValue("bottom", -281, -196, 0, 644, 360);
+        @include adaptiveValue("height", 280, 195, 0, 644, 360);
+      }
+
+      @media (max-width:$mobileSmall) {
+        transform: rotate(-173deg);
+      }
+    }
+
+    &::after {
+      right: 390px;
+      bottom: -120px;
+
+      @media (max-width: em(1100)) {
+        right: -303px;
+        bottom: 180px;
+      }
+
+      @media (max-width: em(644)) {
+
+        bottom: auto;
+        top: 100px;
+        right: auto;
+
+        @include adaptiveValue("left", 270, 339, 0, 644, 310);
+        @include adaptiveValue("top", -230, -157, 0, 644, 360);
+      }
+
+      @media (max-width: em(380)) {
+        left: 310px;
+      }
+    }
+  }
+
+  &_5 {
+    left: -38.6%;
+    bottom: 37.5%;
+    max-width: 300px;
+
+    @media (max-width: em(1100)) {
+      bottom: 30.5%;
+      left: -46.6%;
+    }
+
+    @media (min-width:em(1101)) {
+      text-align: right;
+    }
+
+    @media (max-width: em(644)) {
+      bottom: 15.5%;
+      left: -30.6%;
+      max-width: toRem(200);
+    }
+
+    &::before {
+      bottom: -119px;
+      right: 0;
+      height: toRem(118);
+      transform: rotate(307deg);
+
+      @media (max-width: em(1100)) {
+        transform: rotate(-76.4deg);
+        bottom: -111px;
+        height: 110px;
+      }
+
+      @media (max-width: em(644)) {
+        transform: rotate(-90.4deg);
+        bottom: -171px;
+        height: 170px;
+
+        bottom: -21px;
+        height: 20px;
+        @include adaptiveValue("bottom", -171, -21, 0, 644, 360);
+        @include adaptiveValue("height", 170, 20, 0, 644, 360);
+      }
+    }
+
+    &::after {
+      right: -135px;
+      bottom: -107px;
+
+      @media (max-width: em(1100)) {
+        right: -150px;
+        bottom: -56px;
+      }
+
+      @media (max-width: em(644)) {
+        right: -200px;
+        bottom: -16px;
+        @include adaptiveValue("right", -200, -50, 0, 644, 360);
+      }
+    }
+  }
+
+  &_6 {
+    right: -47%;
+    top: 58%;
+
+    @media (max-width: em(1100)) {
+      left: -47%;
+      top: 38%;
+    }
+
+    @media (max-width: em(644)) {
+      left: -29%;
+      top: 48%;
+      max-width: 200px;
+    }
+
+    &::before {
+      bottom: -163px;
+      left: 0;
+      height: toRem(163);
+      transform: rotate(69deg);
+
+      @media (max-width: em(1100)) {
+        left: auto;
+        right: 0;
+        bottom: -227px;
+        height: 226px;
+        transform: rotate(-47deg);
+      }
+
+      @media (max-width: em(644)) {
+        transform: rotate(-64deg);
+        @include adaptiveValue("bottom", -227, -77, 0, 644, 360);
+        @include adaptiveValue("height", 226, 76, 0, 644, 360);
+      }
+
+      @media (max-width:$mobileSmall) {
+        transform: rotate(-54deg);
+      }
+    }
+
+    &::after {
+      left: -196px;
+      bottom: -91px;
+
+      @media (max-width: em(1100)) {
+        left: 467px;
+        bottom: -199px;
+      }
+
+      @media (max-width: em(644)) {
+        @include adaptiveValue("left", 398, 248, 0, 644, 360);
+        @include adaptiveValue("bottom", -129, -79, 0, 644, 360);
+      }
+    }
+  }
+
+  &_svg {
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+.setup-parts {
+  position: absolute;
+  border-radius: 50%;
+  @include adaptiveValue("width", 219, 150);
+  @include adaptiveValue("height", 219, 150);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 100;
+  aspect-ratio: 219 / 219;
+  // max-width: 100%;
+  border: 1px solid #fff;
+
+  opacity: 0;
+  z-index: -10;
+  transition: opacity .6s;
+}
+
+.line-wrapper_1 {
+
+  &:hover {
+    .setup-parts_1 {
+
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+.line-wrapper_2 {
+
+  &:hover {
+    .setup-parts_2 {
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+.line-wrapper_3 {
+
+  &:hover {
+    .setup-parts_3 {
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+.line-wrapper_4 {
+
+  &:hover {
+    .setup-parts_4 {
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+.line-wrapper_5 {
+
+  &:hover {
+    .setup-parts_5 {
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+.line-wrapper_6 {
+
+  &:hover {
+    .setup-parts_6 {
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
+
+// .setup-parts_2 {
+//   .hov & {
+//     opacity: 1;
+//   }
+// }
+
+// @for $i from 1 through 6 {
+//   .setup-parts_#{$i} {
+//     .hov & {
+//       opacity: 1;
+//     }
+//   }
+// }

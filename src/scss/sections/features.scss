@@ -1,0 +1,73 @@
+.features {
+  @include adaptiveValue("padding-top", 97, 70);
+  @include adaptiveValue("padding-bottom", 94, 59);
+  position: relative;
+
+  /* .features__title */
+  &__title {
+    margin-bottom: toRem(40);
+  }
+
+  /* .features__list */
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: toRem(20);
+
+    @media (max-width:$tablet) {
+      row-gap: toRem(50);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: auto;
+    }
+  }
+
+  /* .features__item */
+  &__item {
+    display: grid;
+    height: 100%;
+  }
+
+  /* .features__image-ibg */
+  &__image-ibg {
+    aspect-ratio: 335 / 243;
+    margin-bottom: toRem(20);
+  }
+
+  /* .features__block */
+  &__block {
+    display: grid;
+  }
+
+  /* .features__name */
+  &__name {
+    @include adaptiveValue("margin-bottom", 20, 15);
+
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: toRem(34);
+    letter-spacing: toRem(1.2);
+
+    @media (max-width:$mobile) {
+      letter-spacing: toRem(1.1);
+    }
+  }
+
+  /* .features__text */
+  &__text {
+    @include adaptiveValue("margin-bottom", 28, 20);
+    line-height: toRem(28);
+    letter-spacing: toRem(.9);
+    font-weight: 300;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
+      letter-spacing: toRem(.8);
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}
