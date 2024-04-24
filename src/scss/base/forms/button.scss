@@ -6,7 +6,7 @@
 
 	justify-content: center;
 	align-items: center;
-	height: toRem(70);
+	height: toRem(60);
 	@include adaptiveValue("width", 418, 320);
 	// @include adaptiveValue("padding-right", 36, 32);
 	// @include adaptiveValue("padding-left", 36, 32);
