@@ -1,156 +1,30 @@
 .title-h1,
-.title-h1 span,
 .title-h2 {
-	font-family: MontserratAlternates;
-	@include adaptiveValue("font-size", 55, 27);
 
-	font-weight: 700;
-	// line-height: 70px;
-	letter-spacing: 2.75px;
-
-	@include adaptiveValue("line-height", 70, 37);
-
-	@media (min-width:$tablet) and (max-width: em(1366)) {
-		font-size: toRem(40);
-	}
-
-	@media (max-width:$tablet) {
-		letter-spacing: toRem(1.35);
-	}
+	@include adaptiveValue("font-size", 56, 32);
+	font-weight: 800;
+	letter-spacing: 0.03em;
 }
 
-.title-h1 span {
-	@include adaptiveValue("font-size", 38, 18);
-
-	@include adaptiveValue("line-height", 70, 28);
-
-	white-space: wrap;
-
-
-	@media (min-width:em(1366)) {
-		white-space: nowrap;
-	}
-
-	// @media (max-width:$tablet) {
-	// 	line-height: 28px;
-	// }
+.title-h2_white {
+	color: #fff;
 }
 
 .subtitle-h3 {
-	@include adaptiveValue("font-size", 24, 20);
-	color: $subColor;
-	font-weight: 400;
-	line-height: 34px;
-	letter-spacing: 1.2px;
-
-	span {
-		color: #fff;
-		font-weight: 500;
-	}
-
-	@media (max-width:$mobile) {
-		line-height: toRem(28);
-	}
-}
-
-.text-18 {
-	@include adaptiveValue("font-size", 18, 16);
-	color: $subColor;
-	line-height: 28px;
-	letter-spacing: .9px;
-
-	span {
-		font-weight: 600;
-		color: #fff;
-	}
-}
-
-.text-base {
 	font-size: toRem(18);
-	font-weight: 500;
-	line-height: 28px;
-	letter-spacing: .9px;
-	// text-decoration: underline;
+	letter-spacing: 0.03em;
 
-	@media (max-width:$mobile) {
-		font-size: toRem(16);
-		letter-spacing: .8px;
+	&_white {
+		color: #fff;
 	}
 }
 
 .logo {
 	img {
-		@include adaptiveValue("width", 235, 97);
-		@include adaptiveValue("height", 102, 20);
+		@include adaptiveValue("width", 216, 151);
+		@include adaptiveValue("height", 63, 44);
 	}
 }
-
-.social-block {
-	display: grid;
-	row-gap: 22px;
-}
-
-.social-row {
-	display: flex;
-	align-items: center;
-	@include adaptiveValue("gap", 30, 13);
-
-	transition: all 0.3s;
-}
-
-/* .support__social-link */
-.social-link {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	@include adaptiveValue("width", 98, 60);
-	@include adaptiveValue("height", 98, 60);
-
-	border-radius: 50%;
-
-	z-index: 20;
-	border: 1px solid #fff;
-	transition: all 0.3s;
-
-
-	&::before {
-		content: '';
-		top: 0;
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-		background-color: #fff;
-		transition: all 0.3s;
-		opacity: 0;
-		z-index: -1;
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			&::before {
-				opacity: 1;
-			}
-		}
-	}
-
-	svg {
-		path {
-			transition: all 0.3s;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			path {
-				fill: #32353D;
-			}
-		}
-	}
-}
-
 
 .hidden {
 	display: none !important;
