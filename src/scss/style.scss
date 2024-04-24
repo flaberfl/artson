@@ -23,6 +23,8 @@ $bodyColor: #fff;
 $subColor: #FF9900;
 $borderRadius: 50px;
 $shadowText: 5px 7px 6px 0 rgba(0, 0, 0, 0.18);
+$gradientBtn: linear-gradient(131deg, #f90 0%, #ff6544 100%);
+$gradientBlock: linear-gradient(90deg, #f90 0%, #c97800 100%);
 $animSpeed: 0.8s;
 
 
@@ -194,24 +196,7 @@ body {
 // Підключення стилів окремих блоків
 @import "header";
 @import "sections/intro";
-@import "sections/report";
-@import "sections/secret";
-@import "sections/setup";
-@import "sections/first";
-@import "sections/settings";
-@import "sections/properties";
-@import "sections/support";
-@import "sections/video";
-@import "sections/reviews";
-@import "sections/for-human";
-@import "sections/features";
-@import "sections/faq";
-@import "sections/callback";
 
-@import "sections/denial";
-
-@import "sections/blog";
-@import "sections/post";
 
 @import "footer";
 
