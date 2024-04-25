@@ -47,7 +47,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-flsFunctions.spollers();
+// flsFunctions.spollers();
 
 /*
 Модуль "Таби"
@@ -89,7 +89,7 @@ flsFunctions.spollers();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-import './libs/popup.js'
+// import './libs/popup.js'
 
 /*
 Модуль паралаксу мишею
@@ -162,7 +162,7 @@ flsForms.formSubmit();
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-import "./files/sliders.js";
+// import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модулі роботи з прокручуванням сторінки ========================================================================================================================================================================================================================================================
@@ -174,13 +174,13 @@ import "./files/sliders.js";
 Документація плагіна: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
 Сніппет(HTML): 
 */
-import './files/scroll/simplebar.js';
+// import './files/scroll/simplebar.js';
 
 // Ліниве (відкладене) завантаження картинок
 // Документація по роботі у шаблоні: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
 // Документація плагіна: https://github.com/verlok/vanilla-lazyload
 // Сніппет(HTML):
-import './files/scroll/lazyload.js';
+// import './files/scroll/lazyload.js';
 
 // Спостерігач за об'єктами з атрибутом data-watch
 // Документація: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
