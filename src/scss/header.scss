@@ -60,8 +60,6 @@
 		align-items: center;
 		@include adaptiveValue("gap", 105, 60);
 	}
-
-
 }
 
 .menu {
@@ -198,8 +196,17 @@
 	display: block;
 	position: relative;
 	width: toRem(17);
-	height: toRem(15);
+	height: toRem(16);
 	z-index: 990;
+
+	&::before{
+		content:'';
+		position: absolute;
+		width: toRem(60);
+		height: toRem(60);
+		border-radius: 50%;
+		border: 1px solid $subColor;
+	}
 
 	@media (any-hover: none) {
 		cursor: default;
