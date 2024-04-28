@@ -168,42 +168,75 @@
 	// .menu__body
 
 	&__body {
-
 		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
+		max-width: toRem(1400);
 		width: 100%;
-		// height: 100%;
 		height: toRem(116);
+		height: 0;
 		top: 110px;
-		// left: 0;
 		left: 50%;
-		transform: translate(50%, 0);
+
+		transform: translate(-50%, 0);
+		opacity: 0;
+		visibility: hidden;
+
 		text-align: center;
-
-
-		// background-color: #22242A;
 		background-color: #fff;
-		text-align: center;
-		transition: all 0.3s;
 		color: $mainColor;
 
-		@media (max-width:$tablet) {
-			overflow: auto;
-			// position: fixed;
-			// transform: scale(.7);
-			// visibility: hidden;
-			// opacity: 0;
-		}
+		transition: all .7s;
 
 		.menu-open & {
-			transition: opacity 0.3s ease-in-out, transform .3s ease-in-out;
-			visibility: visible;
-			transform: scale(1);
-			z-index: 900;
+			transition: all .7s;
 			opacity: 1;
+			visibility: visible;
+			height: toRem(116);
+			z-index: 900;
 		}
 
 	}
+
+	// &__body {
+
+	// 	position: absolute;
+
+	// 	width: 100%;
+	// 	// height: 100%;
+	// 	height: toRem(116);
+	// 	top: 110px;
+	// 	// left: 0;
+	// 	left: 50%;
+	// 	transform: translate(50%, 0);
+	// 	text-align: center;
+
+
+	// 	// background-color: #22242A;
+	// 	background-color: #fff;
+	// 	text-align: center;
+	// 	transition: all 0.3s;
+	// 	color: $mainColor;
+
+	// 	@media (max-width:$tablet) {
+	// 		overflow: auto;
+	// 		// position: fixed;
+	// 		// transform: scale(.7);
+	// 		// visibility: hidden;
+	// 		// opacity: 0;
+	// 	}
+
+	// 	.menu-open & {
+	// 		transition: opacity 0.3s ease-in-out, transform .3s ease-in-out;
+	// 		visibility: visible;
+	// 		transform: scale(1);
+	// 		z-index: 900;
+	// 		opacity: 1;
+	// 	}
+
+	// }
 
 	// .menu__list
 
@@ -222,14 +255,15 @@
 	}
 
 	&__link {
-		font-size: toRem(16);
-		text-transform: uppercase;
-		white-space: pre;
+
+		font-size: toRem(22);
+		line-height: 200%;
+		letter-spacing: 0.03em;
 
 
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				color: $subColor;
 			}
 		}
 	}
@@ -321,7 +355,6 @@
 		width: 100%;
 		height: toRem(2);
 		background-color: rgba(255, 255, 255, 0.97);
-		// border-radius: toRem(2);
 	}
 
 	&::before {
@@ -402,6 +435,26 @@
 		transform: scale(.4);
 		opacity: 0;
 		transition: all 0.3s;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: 5%;
+		left: 34%;
+
+		border-left: 11px solid transparent;
+		border-right: 11px solid transparent;
+		border-bottom: 11px solid #fff;
+		opacity: 0;
+		transition: all .7s;
+		bottom: -28%;
+
+		.menu-open & {
+			opacity: 1;
+		}
 	}
 
 	&:hover {
