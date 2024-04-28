@@ -63,15 +63,104 @@
 	}
 
 	&__right {
+		display: flex;
+		// align-items: center;
+		@include adaptiveValue("gap", 33, 15);
+		padding-top: toRem(12);
+	}
 
+	&__contacts {
+		display: flex;
+		align-items: center;
+		gap: toRem(15);
+
+		&:hover {
+			svg {
+				animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+			}
+		}
 	}
 
 	&__tel {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+		align-items: flex-end;
+
 		a {
-			
+			display: block;
+			font-size: toRem(20);
+			font-weight: 900;
+			letter-spacing: .03em;
+
+			@media (max-width:$mobile) {
+				font-size: toRem(18);
+			}
+		}
+	}
+
+	&__time {
+		font-size: toRem(14);
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: toRem(190);
+		height: toRem(60);
+		position: relative;
+
+		border: 1px solid $subColor;
+		border-radius: $borderRadius;
+
+		font-size: toRem(16);
+		font-weight: 900;
+		letter-spacing: .03em;
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $subColor;
+			border-radius: $borderRadius;
+			z-index: -1;
+			transform: scale(.2);
+			opacity: 0;
+			transition: all 0.4s;
+		}
+
+		&:hover {
+			&::before {
+				transform: scale(1);
+				opacity: 1;
+			}
 		}
 	}
 }
+
+
+@keyframes trambling-animation {
+
+	0%,
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
+
+	10%,
+	30% {
+		transform: rotate(-10deg);
+	}
+
+	20%,
+	40% {
+		transform: rotate(10deg);
+	}
+}
+
 
 .menu {
 	padding: 0 toRem(10); // отступы безопасности
@@ -270,6 +359,8 @@
 }
 
 .wrap-icon-btn {
+
+	display: none;
 
 	@media (max-width:$tablet) {
 		position: relative;
