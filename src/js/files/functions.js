@@ -433,9 +433,9 @@ export function tabs() {
 }
 // Модуль роботи з меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
-	if (document.querySelector(".icon-menu")) {
+	if (document.querySelector(".wrap-icon-btn")) {
 		document.addEventListener("click", function (e) {
-			if (bodyLockStatus && e.target.closest('.icon-menu')) {
+			if (bodyLockStatus && e.target.closest('.wrap-icon-btn')) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
 			}
@@ -450,6 +450,25 @@ export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
 }
+
+// Модуль роботи с меню в десктоп ==========================================
+export function menuInitDesk() {
+	if (document.querySelector(".wrap-icon-btn-d")) {
+		document.addEventListener("click", function (e) {
+			if (e.target.closest('.wrap-icon-btn-d')) {
+				document.documentElement.classList.toggle("menu-open");
+			}
+		});
+	};
+}
+export function menuOpenDesk() {
+	document.documentElement.classList.add("menu-open");
+}
+export function menuCloseDesk() {
+	document.documentElement.classList.remove("menu-open");
+}
+
+
 // Модуль "показати ще" =======================================================================================================================================================================================================================
 export function showMore() {
 	window.addEventListener("load", function (e) {

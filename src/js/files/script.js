@@ -3,32 +3,61 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
-/* Код для ссылок-при ховере на иконку-родительскому классу задается класс hhv  */
-
-const links = document.querySelectorAll(".support__social-link");
-
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("mouseenter", function () {
-    this.parentNode.classList.add("hhv");
-  });
-
-  links[i].addEventListener("mouseleave", function () {
-    this.parentNode.classList.remove("hhv");
-  });
-}
 
 
-const parts = document.querySelectorAll(".line-tooltip");
+// // Получаем элемент с классом button
+// const button = document.querySelector('.icon-menu_pc');
 
-for (let i = 0; i < parts.length; i++) {
-  parts[i].addEventListener("mouseenter", function () {
-    this.parentNode.classList.add("hov");
-  });
+// // Добавляем обработчик события нажатия на элемент button
+// button.addEventListener('click', function() {
+//   // Получаем элементы с классами menu и button
+//   const menu = document.querySelector('.menu__body');
+//   const buttonElement = this;
 
-  parts[i].addEventListener("mouseleave", function () {
-    this.parentNode.classList.remove("hov");
-  });
-}
+//   // Добавляем класс active элементам menu и button
+//   menu.classList.add('active');
+//   buttonElement.classList.add('active');
+// });
+
+
+
+// const menuBtns = document.querySelectorAll('.icon-menu_pc');
+// const drops = document.querySelectorAll('.menu__body');
+
+// menuBtns.forEach(el => {
+//   el.addEventListener('click', (e) => {
+//     let currentBtn = e.currentTarget;
+//     let drop = currentBtn.closest('.wrap-icon-btn').querySelector('.menu__body');
+
+//     menuBtns.forEach(el => {
+//       if (el !== currentBtn) {
+//         el.classList.remove('icon-menu_pc--active');
+//       }
+//     });
+
+//     drops.forEach(el => {
+//       if (el !== drop) {
+//         el.classList.remove('menu__body--active');
+//       }
+//     });
+
+//     drop.classList.toggle('menu__body--active');
+//     currentBtn.classList.toggle('icon-menu_pc--active');
+//   });
+// });
+
+// document.addEventListener('click', (e) => {
+//   if (!e.target.closest('.header')) {
+//     menuBtns.forEach(el => {
+//       el.classList.remove('icon-menu_pc--active');
+//     });
+
+//     drops.forEach(el => {
+//       el.classList.remove('menu__body--active');
+//     });
+//   }
+// });
+
 
 
 // При прокрутке стрелка вниз изчезает
@@ -43,42 +72,8 @@ for (let i = 0; i < parts.length; i++) {
 // };
 
 
-/*menu*/
-var lastId,
-  topMenu = $("#fp-bullets"),
-  topMenuHeight = topMenu.outerHeight() + 15,
-  // All list items
-  menuItems = topMenu.find("a"),
-  // Anchors corresponding to menu items
-  scrollItems = menuItems.map(function () {
-    var item = $($(this).attr("href"));
-    if (item.length) {
-      return item;
-    }
-  });
 
-// Bind to scroll
-$(window).scroll(function () {
-  // Get container scroll position
-  var fromTop = $(this).scrollTop() + topMenuHeight;
 
-  // Get id of current scroll item
-  var cur = scrollItems.map(function () {
-    if ($(this).offset().top < fromTop)
-      return this;
-  });
-  // Get the id of the current element
-  cur = cur[cur.length - 1];
-  var id = cur && cur.length ? cur[0].id : "";
-
-  if (lastId !== id) {
-    lastId = id;
-    // Set/remove active class
-    menuItems
-      .parent().removeClass("active")
-      .end().filter("[href='#" + id + "']").parent().addClass("active");
-  }
-});
 
 
 // Присвоим попапам и линкам на них порядковые номера
