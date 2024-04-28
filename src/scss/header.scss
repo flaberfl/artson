@@ -10,12 +10,11 @@
 		position: fixed;
 		display: flex;
 		align-items: center;
-
 		top: 0;
 		left: 0;
 		width: 100%;
-		// padding: toRem(5) 0;
-		@include adaptiveValue("height", 120, 60);
+		height: toRem(60);
+		@include adaptiveValue("margin-top", 30, 25);
 		transition: all 0.4s;
 		z-index: 30;
 
@@ -111,11 +110,7 @@
 		}
 
 		@media (max-width: em(550)) {
-			margin-left: toRem(20);
-			margin-right: toRem(20);
-			padding-top: toRem(25);
-			border-top: 1px solid #D9D9D9;
-			width: 100%;
+			align-items: flex-start;
 		}
 	}
 
@@ -237,6 +232,7 @@
 			transform: scale(.7);
 			visibility: hidden;
 			opacity: 0;
+			padding: toRem(45) toRem(20) toRem(35);
 
 			.menu-open & {
 				transform: scale(1);
@@ -249,43 +245,6 @@
 
 	}
 
-	// &__body {
-
-	// 	position: absolute;
-
-	// 	width: 100%;
-	// 	height: toRem(116);
-	// 	top: 110px;
-	// 	// left: 0;
-	// 	left: 50%;
-	// 	transform: translate(50%, 0);
-	// 	text-align: center;
-
-
-	// 	// background-color: #22242A;
-	// 	background-color: #fff;
-	// 	text-align: center;
-	// 	transition: all 0.3s;
-	// 	color: $mainColor;
-
-	// 	@media (max-width:$tablet) {
-	// 		overflow: auto;
-	// 		// position: fixed;
-	// 		// transform: scale(.7);
-	// 		// visibility: hidden;
-	// 		// opacity: 0;
-	// 	}
-
-	// 	.menu-open & {
-	// 		transition: opacity 0.3s ease-in-out, transform .3s ease-in-out;
-	// 		visibility: visible;
-	// 		transform: scale(1);
-	// 		z-index: 900;
-	// 		opacity: 1;
-	// 	}
-
-	// }
-
 	// .menu__list
 
 	&__list {
@@ -297,8 +256,16 @@
 		@media (max-width:$mobile) {
 			flex-direction: column;
 			align-items: flex-start;
+			border-bottom: 1px solid #D9D9D9;
+			width: 100%;
+		}
+	}
 
-			padding: toRem(45) toRem(20) toRem(20);
+	&__item {
+		@media (max-width: em(550)){
+			 &:last-child{
+				margin-bottom: toRem(35);
+			 } 
 		}
 	}
 
@@ -313,6 +280,17 @@
 			&:hover {
 				color: $subColor;
 			}
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		padding-top: toRem(25);
+		gap: toRem(18);
+
+		@media (min-width:em(550)) {
+			display: none;
 		}
 	}
 }
