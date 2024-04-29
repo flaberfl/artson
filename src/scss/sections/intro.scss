@@ -1,0 +1,41 @@
+.intro {
+  // @include adaptiveValue("padding-top", 218, 150);
+  background: url('@img/intro/intro-bg.jpg') 0 0 no-repeat;
+  width: 100%;
+  /* .intro__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 49% auto;
+  }
+
+  /* .intro__content */
+  &__content {}
+
+  /* .intro__title */
+  &__title {
+    line-height: normal;
+  }
+
+  /* .intro__text */
+  &__text {}
+
+  /* .intro__subtitle */
+  &__subtitle {}
+
+  /* .intro__action */
+  &__action {}
+
+  /* .intro__button */
+  &__button {}
+
+  /* .intro__price */
+  &__price {}
+
+  /* .intro__media */
+  &__media {}
+}
+
+
+
+
+

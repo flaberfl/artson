@@ -3,10 +3,10 @@
 	@include adaptiveValue("font-size", 56, 32);
 	font-weight: 800;
 	letter-spacing: 0.03em;
-}
 
-.title-h2_white {
-	color: #fff;
+	&_white {
+		color: #fff;
+	}
 }
 
 .subtitle-h3 {
@@ -34,6 +34,11 @@
 	cursor: no-drop;
 }
 
+.line {
+	width: toRem(24);
+	height: toRem(1);
+	background-color: #fff;
+}
 
 .simplebar-scrollbar::before {
 	background-color: #fff !important;
@@ -46,7 +51,6 @@
 }
 
 // Анимации
-
 
 [anim-up-down] {
 	// transform: translate(rem(0), rem(20));

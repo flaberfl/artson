@@ -20,8 +20,9 @@
 
 		._header-scroll & {
 			transform: translateY(-100%);
+			// margin-top: toRem(0);
 			// background-color: rgba($color: #191A1F, $alpha: .9);
-			@include adaptiveValue("height", 100, 50);
+			// @include adaptiveValue("height", 100, 50);
 
 		}
 
