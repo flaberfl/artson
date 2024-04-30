@@ -10,10 +10,9 @@
 
 	padding: toRem(20) toRem(30);
 
-	background: $subColor;
+	background: linear-gradient(131.02deg, rgb(255, 153, 0) 0.402%, rgb(255, 101, 68) 99.331%);
+
 	border-radius: $borderRadius;
-	// background: linear-gradient(135.00deg, rgb(0, 252, 192), rgb(0, 174, 248) 50.521%, rgb(0, 252, 192) 100%);
-	// background: linear-gradient(rgb(0, 252, 192) 10%, rgb(0, 69, 248) 100%);
 
 	font-size: toRem(16);
 	font-weight: 900;

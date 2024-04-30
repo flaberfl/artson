@@ -65,6 +65,7 @@ body {
 	background-color: $bodyColor;
 	opacity: 0;
 	letter-spacing: .03em;
+	line-height: normal;
 	// @include adaptiveValue("font-size", 22, 16);
 	color: #fff;
 
