@@ -1,8 +1,14 @@
 .intro {
   // @include adaptiveValue("padding-top", 230, 150);
   padding-top: toRem(156);
-  background: url('@img/intro/intro-bg.jpg') 0 0 no-repeat;
+  @include adaptiveValue("margin-bottom", 151, 50);
+  background: url('@img/intro/intro-bg.jpg') center right no-repeat;
+  padding-bottom: toRem(151);
   width: 100%;
+
+  @media (max-width:$mobile) {
+    background-position: 70%;
+  }
 
   /* .intro__container */
   &__container {
@@ -14,6 +20,7 @@
   /* .intro__content */
   &__content {
     padding-top: toRem(72);
+    @include adaptiveValue("padding-top", 72, 0);
   }
 
   /* .intro__title */
@@ -48,6 +55,11 @@
     display: flex;
     align-items: center;
     @include adaptiveValue("gap", 44, 20);
+
+    @media (max-width: em(1140)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   /* .intro__button */
@@ -61,6 +73,10 @@
     color: $subColor;
     letter-spacing: .03em;
 
+    @media (max-width: em(1140)) {
+      margin-bottom: toRem(30);
+    }
+
     span {
       font-weight: 900;
     }
@@ -71,23 +87,35 @@
     position: relative;
   }
 
+  /* .intro__image */
+  &__image {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
   &__img {
     position: absolute;
+    // max-width: 100%;
   }
 
   &__img1 {
     left: -18.7%;
     top: 21.5%;
+    @include adaptiveValue("width", 343, 137);
+    width: 200px;
   }
 
   &__img2 {
     right: -15%;
     top: 13.4%;
+    @include adaptiveValue("width", 300, 121);
   }
 
   &__img3 {
     right: -16.5%;
     bottom: -16.9%;
+    @include adaptiveValue("width", 283, 148);
   }
 
   &__arrow-down {
