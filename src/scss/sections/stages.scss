@@ -1,1 +1,110 @@
-background: rgba(15, 17, 26, 0.7);
+.turnkey {
+  @include adaptiveValue("padding-top", 106, 72);
+  @include adaptiveValue("padding-bottom", 124, 117);
+
+  /* .turnkey__container */
+  &__container {}
+
+  /* .turnkey__title */
+  &__title {
+    color: $mainColor;
+
+    @include adaptiveValue("margin-bottom", 72, 30);
+  }
+
+  /* .turnkey__body */
+  &__body {
+    display: grid;
+    grid-template-columns: 49.28% auto;
+    @include adaptiveValue("gap", 138, 32);
+  }
+
+  /* .turnkey__media */
+  &__media {}
+
+  /* .turnkey__content */
+  &__content {}
+
+  /* .turnkey__name */
+  &__name {
+    @include adaptiveValue("margin-bottom", 36, 15);
+
+    @include adaptiveValue("font-size", 32, 20);
+    letter-spacing: .03em;
+    color: $mainColor;
+    font-weight: 800;
+  }
+
+  /* .turnkey__text */
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    align-content: space-between;
+    height: 100%;
+
+
+    font-size: toRem(18);
+    color: $mainColor;
+
+    p {
+      &:not(:last-child) {
+        // @include adaptiveValue("margin-bottom", 30, 26);
+      }
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
+    }
+
+    // @include adaptiveValue("margin-bottom", 50, 40);
+  }
+
+  /* .turnkey__button */
+  &__button {}
+
+  /* .turnkey__stages */
+  &__stages {}
+}
+
+.stages-turnkey {
+
+  /* .stages-turnkey__items */
+  &__items {}
+
+  /* .stages-turnkey__item */
+  &__item {
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: rgba(15, 17, 26, 0.7);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  /* .stages-turnkey__name */
+  &__name {}
+
+  /* .stages-turnkey__title */
+  &__title {}
+
+  /* .stages-turnkey__text */
+  &__text {}
+}
