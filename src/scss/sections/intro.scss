@@ -1,8 +1,6 @@
 .intro {
   position: relative;
-  // @include adaptiveValue("padding-top", 230, 150);
   padding-top: toRem(156);
-  // @include adaptiveValue("margin-bottom", 151, 50);
   background: url('@img/intro/intro-bg.jpg') no-repeat;
   background-size: cover;
 
@@ -50,7 +48,7 @@
     }
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 28, 18);
+      @include adaptiveValue("margin-bottom", 28, 8);
     }
   }
 
@@ -59,8 +57,18 @@
     display: flex;
     align-items: center;
     gap: toRem(17);
-
+    
     @include adaptiveValue("margin-bottom", 138, 52);
+    
+    @media (max-width:$mobile){
+      gap: toRem(23);
+    }
+
+    svg {
+      @media (max-width:$mobile){
+        width: toRem(40);
+      }
+    }
   }
 
   /* .intro__subtitle */
@@ -177,7 +185,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    // position: absolute;
     width: toRem(84);
     height: toRem(84);
     border-radius: 50%;

@@ -13,8 +13,8 @@
 	font-size: toRem(18);
 	letter-spacing: 0.03em;
 
-	&_white {
-		color: #fff;
+	&_black {
+		color: $mainColor;
 	}
 }
 
@@ -35,7 +35,7 @@
 }
 
 .line {
-	width: toRem(24);
+	width: toRem(30);
 	height: toRem(1);
 	background-color: #fff;
 }

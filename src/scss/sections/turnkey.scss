@@ -17,11 +17,17 @@
     display: grid;
     grid-template-columns: 49.28% auto;
     @include adaptiveValue("gap", 138, 32);
+    align-items: center;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: auto;
+    }
   }
 
   /* .turnkey__media */
   &__media {
     img {
+      width: 100%;
       max-width: 100%;
     }
   }
@@ -30,16 +36,12 @@
   &__content {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     gap: toRem(20);
-    // align-content: space-between;
     height: 100%;
   }
 
   /* .turnkey__name */
   &__name {
-    // @include adaptiveValue("margin-bottom", 36, 15);
-
     @include adaptiveValue("font-size", 32, 20);
     letter-spacing: .03em;
     color: $mainColor;
@@ -51,6 +53,7 @@
     display: flex;
     flex-direction: column;
     gap: toRem(23);
+    @include adaptiveValue("gap", 23, 20);
     flex: 1 1 auto;
 
     font-size: toRem(18);
@@ -58,7 +61,6 @@
 
     p {
       &:not(:last-child) {
-        // @include adaptiveValue("margin-bottom", 30, 26);
         letter-spacing: .03em;
       }
 
@@ -70,37 +72,59 @@
     @media (max-width:$mobile) {
       font-size: toRem(16);
     }
-
-    // @include adaptiveValue("margin-bottom", 50, 40);
   }
 
   /* .turnkey__button */
   &__button {
     align-self: flex-start;
+
+    @media (max-width:$mobile) {
+      margin-top: toRem(20);
+    }
   }
 
   /* .turnkey__stages */
   &__stages {}
+
 }
 
 .stages-turnkey {
 
   /* .stages-turnkey__items */
-  &__items {}
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include adaptiveValue("gap", 20, 15);
+    // display: flex;
+
+  }
 
   /* .stages-turnkey__item */
   &__item {
-    position: relative;
 
-    img {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
+    padding: toRem(56) toRem(60) toRem(50);
+    // flex: 0 1 33.3%;
+
+    &::before {
+      content: '';
       position: absolute;
+      background: url('@img/turnkey/01.jpg') 0 0 no-repeat;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 69.315%;
     }
 
-    &::before {
+    &::after {
       content: '';
       position: absolute;
       background: rgba(15, 17, 26, 0.7);
@@ -108,15 +132,77 @@
       height: 100%;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 69.315%;
+
     }
+
+    // img {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   z-index: -1;
+
+    //   // max-width: 100%;
+    // }
+
+
   }
 
+
+  // &__image-ibg {
+  //   padding-bottom: 69.315%;
+  // }
+
+  // &__body {
+  //   position: relative;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+
+  &__body {
+    position: relative;
+    z-index: 10;
+  }
+
+
   /* .stages-turnkey__name */
-  &__name {}
+  &__name {
+    display: flex;
+    // align-items: flex-end;
+    gap: toRem(15);
+    // min-height: toRem(66);
+    margin-bottom: 30px;
+
+    svg {
+      margin-top: toRem(-16);
+    }
+
+  }
 
   /* .stages-turnkey__title */
-  &__title {}
+  &__title {
+    // max-width: toRem(235);
+    @include adaptiveValue("font-size", 26, 20);
+    font-weight: 800;
+    letter-spacing: .03em;
+  }
 
   /* .stages-turnkey__text */
-  &__text {}
+  &__text {
+    font-size: toRem(16);
+    line-height: 26px;
+
+    @media (max-width:$mobile){
+       font-size: toRem(14); 
+       line-height: 17px;
+    }
+  }
 }
