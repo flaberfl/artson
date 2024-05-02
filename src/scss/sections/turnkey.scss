@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     // justify-content: space-between;
-    gap: toRem(45);
+    gap: toRem(20);
     // align-content: space-between;
     height: 100%;
   }
@@ -50,9 +50,8 @@
   &__text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    // flex: 1 1 auto;
-    height: 100%;
+    gap: toRem(23);
+    flex: 1 1 auto;
 
     font-size: toRem(18);
     color: $mainColor;
@@ -60,6 +59,7 @@
     p {
       &:not(:last-child) {
         // @include adaptiveValue("margin-bottom", 30, 26);
+        letter-spacing: .03em;
       }
 
       span {
