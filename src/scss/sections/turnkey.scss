@@ -20,14 +20,25 @@
   }
 
   /* .turnkey__media */
-  &__media {}
+  &__media {
+    img {
+      max-width: 100%;
+    }
+  }
 
   /* .turnkey__content */
-  &__content {}
+  &__content {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    gap: toRem(45);
+    // align-content: space-between;
+    height: 100%;
+  }
 
   /* .turnkey__name */
   &__name {
-    @include adaptiveValue("margin-bottom", 36, 15);
+    // @include adaptiveValue("margin-bottom", 36, 15);
 
     @include adaptiveValue("font-size", 32, 20);
     letter-spacing: .03em;
@@ -39,10 +50,9 @@
   &__text {
     display: flex;
     flex-direction: column;
-    flex-flow: row wrap;
-    align-content: space-between;
+    justify-content: space-between;
+    // flex: 1 1 auto;
     height: 100%;
-
 
     font-size: toRem(18);
     color: $mainColor;
@@ -65,7 +75,9 @@
   }
 
   /* .turnkey__button */
-  &__button {}
+  &__button {
+    align-self: flex-start;
+  }
 
   /* .turnkey__stages */
   &__stages {}
