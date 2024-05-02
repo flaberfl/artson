@@ -19,6 +19,8 @@
     @include adaptiveValue("gap", 138, 32);
     align-items: center;
 
+    @include adaptiveValue("margin-bottom", 95, 55);
+
     @media (max-width:$mobile) {
       grid-template-columns: auto;
     }
@@ -94,34 +96,40 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     @include adaptiveValue("gap", 20, 15);
-    // display: flex;
 
+
+    @media (max-width: em(1160)) {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* .stages-turnkey__item */
   &__item {
-
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     position: relative;
-    padding: toRem(56) toRem(60) toRem(50);
-    // flex: 0 1 33.3%;
+    padding-bottom: 69.315%;
+    // max-width: toRem(453);
+    width: 100%;
+    height: 100%;
+    @include adaptiveValue("padding-top", 76, 32);
+    @include adaptiveValue("padding-right", 55, 30);
+    @include adaptiveValue("padding-left", 56, 36);
+    @include adaptiveValue("padding-bottom", 40, 20);
 
-    &::before {
-      content: '';
+
+    img {
       position: absolute;
-      background: url('@img/turnkey/01.jpg') 0 0 no-repeat;
       width: 100%;
       height: 100%;
-      top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding-bottom: 69.315%;
+      top: 0;
+      object-fit: cover;
     }
 
     &::after {
@@ -134,62 +142,59 @@
       left: 0;
       right: 0;
       bottom: 0;
-      padding-bottom: 69.315%;
-
+      // object-fit: cover;
     }
 
-    // img {
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   bottom: 0;
-    //   right: 0;
-    //   z-index: -1;
+    &:last-child {
+      justify-self: center;
+      align-self: center;
 
-    //   // max-width: 100%;
-    // }
+      @media (min-width:$mobile) {}
 
+      @media (min-width:$mobile) and (max-width: em(1160)) {
+        grid-column: span 2;
+      }
+    }
 
+    @media (max-width:$mobile) {
+      max-width: toRem(453);
+      min-height: 220px;
+    }
   }
 
-
-  // &__image-ibg {
+  // &__image {
+  //   display: block;
+  //   position: absolute;
   //   padding-bottom: 69.315%;
+
+
   // }
 
-  // &__body {
-  //   position: relative;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
 
 
   &__body {
     position: relative;
+    display: flex;
+    gap: toRem(15);
     z-index: 10;
   }
 
+  &__icon {
+    margin-top: toRem(-16);
 
-  /* .stages-turnkey__name */
-  &__name {
-    display: flex;
-    // align-items: flex-end;
-    gap: toRem(15);
-    // min-height: toRem(66);
-    margin-bottom: 30px;
-
-    svg {
-      margin-top: toRem(-16);
+    @media (max-width:$mobile) {
+      margin-top: toRem(-6);
     }
 
+    svg {
+      @include adaptiveValue("width", 57, 40);
+    }
   }
 
   /* .stages-turnkey__title */
   &__title {
-    // max-width: toRem(235);
+    margin-bottom: 30px;
+    @include adaptiveValue("margin-bottom", 30, 9);
     @include adaptiveValue("font-size", 26, 20);
     font-weight: 800;
     letter-spacing: .03em;
@@ -200,9 +205,9 @@
     font-size: toRem(16);
     line-height: 26px;
 
-    @media (max-width:$mobile){
-       font-size: toRem(14); 
-       line-height: 17px;
+    @media (max-width:$mobile) {
+      font-size: toRem(14);
+      line-height: 17px;
     }
   }
 }

@@ -94,9 +94,7 @@
 					<div class="turnkey__stages stages-turnkey">
 						<div class="stages-turnkey__items">
 							<div class="stages-turnkey__item stages-turnkey__item_1">
-								<img src="@img/turnkey/01.jpg" alt="Заключаем договор">
-								<div class="stages-turnkey__image">
-								</div>
+								<!-- <img src="@img/turnkey/01.jpg" alt="Заключаем договор"> -->
 								<div class="stages-turnkey__body">
 									<div class="stages-turnkey__icon">
 										<svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,9 +114,7 @@
 								</div>
 							</div>
 							<div class="stages-turnkey__item stages-turnkey__item_2">
-								<img src="@img/turnkey/02.jpg" alt="Быстрый старт работ">
-								<div class="stages-turnkey__image">
-								</div>
+								<!-- <img src="@img/turnkey/02.jpg" alt="Быстрый старт работ"> -->
 								<div class="stages-turnkey__body">
 									<div class="stages-turnkey__icon">
 										<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,9 +133,7 @@
 								</div>
 							</div>
 							<div class="stages-turnkey__item stages-turnkey__item_3">
-								<img src="@img/turnkey/03.jpg" alt="Регулярный отчет по работам">
-								<div class="stages-turnkey__image">
-								</div>
+								<!-- <img src="@img/turnkey/03.jpg" alt="Регулярный отчет по работам"> -->
 								<div class="stages-turnkey__body">
 									<div class="stages-turnkey__icon">
 										<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,10 +162,214 @@
 		</main>
 
 
-)
+		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 
 </html>
+
+
+
+.turnkey {
+  @include adaptiveValue("padding-top", 106, 72);
+  @include adaptiveValue("padding-bottom", 124, 117);
+
+  /* .turnkey__container */
+  &__container {}
+
+  /* .turnkey__title */
+  &__title {
+    color: $mainColor;
+
+    @include adaptiveValue("margin-bottom", 72, 30);
+  }
+
+  /* .turnkey__body */
+  &__body {
+    display: grid;
+    grid-template-columns: 49.28% auto;
+    @include adaptiveValue("gap", 138, 32);
+    align-items: center;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: auto;
+    }
+  }
+
+  /* .turnkey__media */
+  &__media {
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  /* .turnkey__content */
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+    height: 100%;
+  }
+
+  /* .turnkey__name */
+  &__name {
+    @include adaptiveValue("font-size", 32, 20);
+    letter-spacing: .03em;
+    color: $mainColor;
+    font-weight: 800;
+  }
+
+  /* .turnkey__text */
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(23);
+    @include adaptiveValue("gap", 23, 20);
+    flex: 1 1 auto;
+
+    font-size: toRem(18);
+    color: $mainColor;
+
+    p {
+      &:not(:last-child) {
+        letter-spacing: .03em;
+      }
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
+    }
+  }
+
+  /* .turnkey__button */
+  &__button {
+    align-self: flex-start;
+
+    @media (max-width:$mobile) {
+      margin-top: toRem(20);
+    }
+  }
+
+  /* .turnkey__stages */
+  &__stages {}
+
+}
+
+.stages-turnkey {
+
+  /* .stages-turnkey__items */
+  &__items {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    @include adaptiveValue("gap", 20, 15);
+
+
+
+    @media (max-width:$mobile) {
+
+      grid-template-columns: auto;
+    }
+  }
+
+  /* .stages-turnkey__item */
+  &__item {
+    position: relative;
+    // padding: toRem(76) toRem(56) toRem(50);
+    // min-height: 220px;
+
+    @include adaptiveValue("padding-top", 76, 32);
+    @include adaptiveValue("padding-right", 55, 30);
+    @include adaptiveValue("padding-left", 56, 36);
+    @include adaptiveValue("padding-bottom", 40, 20);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      padding-bottom: 69.315%;
+      // background: url('@img/turnkey/01.jpg') 0 0 no-repeat;
+
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: rgba(15, 17, 26, 0.7);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 69.315%;
+    }
+
+    &_1 {
+      background: url('@img/turnkey/01.jpg') 0 0 no-repeat;
+    }
+
+    &_2 {
+      background: url('@img/turnkey/02.jpg') 0 0 no-repeat;
+
+    }
+
+    &_3 {
+      background: url('@img/turnkey/03.jpg') 0 0 no-repeat;
+
+    }
+  }
+
+
+  &__body {
+    position: relative;
+    display: flex;
+    gap: toRem(15);
+    z-index: 10;
+  }
+
+  &__icon {
+    margin-top: toRem(-16);
+
+    @media (max-width:$mobile) {
+      margin-top: toRem(-6);
+    }
+
+    svg {
+      @include adaptiveValue("width", 57, 40);
+    }
+  }
+
+  /* .stages-turnkey__title */
+  &__title {
+    margin-bottom: 30px;
+    @include adaptiveValue("margin-bottom", 30, 9);
+    @include adaptiveValue("font-size", 26, 20);
+    font-weight: 800;
+    letter-spacing: .03em;
+  }
+
+  /* .stages-turnkey__text */
+  &__text {
+    font-size: toRem(16);
+    line-height: 26px;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(14);
+      line-height: 17px;
+    }
+  }
+}
