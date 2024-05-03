@@ -193,11 +193,7 @@
 
   /* .stages-turnkey__title */
   &__title {
-    margin-bottom: 30px;
     @include adaptiveValue("margin-bottom", 30, 9);
-    @include adaptiveValue("font-size", 26, 20);
-    font-weight: 800;
-    letter-spacing: .03em;
   }
 
   /* .stages-turnkey__text */
