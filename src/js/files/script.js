@@ -5,6 +5,14 @@ import { flsModules } from "./modules.js";
 
 
 
+
+// document.querySelector(".box .block").show();
+// document.querySelector(".closed .block").hide();
+// document.querySelector("div.hide").click(function() {
+//   document.querySelector(this).toggleClass("show").next().slideToggle("medium");
+// });
+
+
 // // Получаем элемент с классом button
 // const button = document.querySelector('.icon-menu_pc');
 

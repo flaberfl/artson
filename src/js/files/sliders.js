@@ -28,7 +28,7 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.first__slider')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.object__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.first__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
@@ -70,7 +70,7 @@ function initSliders() {
 			*/
 
 			pagination: {
-				el: '.first__swiper-pagination',
+				el: '.swiper-pagination',
 				clickable: true,
 			},
 
@@ -102,166 +102,6 @@ function initSliders() {
 			// 		spaceBetween: 20,
 			// 	},
 			// },
-
-			// Події
-			on: {
-
-			}
-		});
-	}
-
-	if (document.querySelector('.video__slider')) { // Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper('.video__slider', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Pagination],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 2,
-			spaceBetween: 23,
-			// loop: true,
-			slidesPerView: 'auto',
-			// height: 'auto',
-			grabCursor: true,
-			// autoHeight: true,
-			speed: 800,
-			freeMode: true,
-			// centeredSlides: true,
-			// centeredSlidesBounds: true,
-			// coverflowEffect: {
-			// 	rotate: 0,
-			// 	stretch: 0,
-			// 	depth: 100,
-			// 	modifier: 2.5,
-
-			// },
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			pagination: {
-				el: '.video__swiper-pagination',
-				clickable: true,
-			},
-
-			// Брейкпоінти
-			breakpoints: {
-				360: {
-					slidesPerView: 1,
-				},
-				640: {
-					// grid: {
-					// 	rows: 2,
-					// },
-					slidesPerView: 1,
-
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 23,
-				},
-				992: {
-					slidesPerView: 2,
-					spaceBetween: 23,
-				},
-				1268: {
-					slidesPerView: 2,
-					spaceBetween: 23,
-				},
-			},
-
-			// Події
-			on: {
-
-			}
-		});
-	}
-
-	if (document.querySelector('.reviews__slider')) { // Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
-		new Swiper('.reviews__slider', { // Вказуємо склас потрібного слайдера
-			// Підключаємо модулі слайдера
-			// для конкретного випадку
-			modules: [Pagination],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 2,
-			spaceBetween: 20,
-			// loop: true,
-			// slidesPerView: 'auto',
-			// height: 'auto',
-			// grabCursor: true,
-			autoHeight: false,
-			speed: 800,
-			freeMode: true,
-			// centeredSlides: true,
-			// centeredSlidesBounds: true,
-			// coverflowEffect: {
-			// 	rotate: 0,
-			// 	stretch: 0,
-			// 	depth: 100,
-			// 	modifier: 2.5,
-
-			// },
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			lazy: true,
-
-			/*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-			pagination: {
-				el: '.reviews__swiper-pagination',
-				clickable: true,
-			},
-
-			// Брейкпоінти
-			breakpoints: {
-				360: {
-					slidesPerView: 1,
-				},
-				640: {
-					slidesPerView: 1,
-					// grid: {
-					// 	rows: 2,
-					// },
-
-				},
-				768: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 1.5,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 1.5,
-					spaceBetween: 20,
-				},
-			},
 
 			// Події
 			on: {

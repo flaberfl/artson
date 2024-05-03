@@ -247,15 +247,89 @@
 						Не гонимся за количеством,
 						ведем не более 3 объектов одновременно
 					</h2>
-				</div>
-			</section>
+					<p class="objects__text">Посетите любой из объектов в работе. Расскажем, покажем, ответим на все возможные
+						вопросы</p>
 
-		</main>
+					<div class="objects__body">
+
+						<div class="object">
+							<div class="object__block object__block_1">
+								<img src="@img/objects/01.jpg" alt="Жилой комплекс">
+								<div class="object__body">
+									<div class="object__header">
+										<h5 class="object__title">
+											ЖК ФИЛИ СИТИ на Павелецкой
+										</h5>
+										<p class="object__desc"></p>
+									</div>
+									<div class="object__footer">
+										<p class="object__text">Черновой ремонт новостройки под ключ</p>
+										<a href="#" class="object__button button">записаться на встречу</a>
+									</div>
+								</div>
+							</div>
+							<div class="object__block object__block_2">
+								<img src="@img/objects/02.jpg" alt="Фото квартиры">
+							</div>
+							<div class="object__block object__block_3">
+								<img src="@img/objects/03.jpg" alt="Фото квартиры">
+							</div>
+							<div class="object__block object__block_4">
+								<img src="@img/objects/04.jpg" alt="Фото квартиры">
+							</div>
+
+						</div>
 
 
-	</div>
-	@@include('html/_popup.htm',{})
-	@@include('html/_js.htm',{})
+					</div>
+
+
+					<div id="slider">
+						<img src="image1.jpg" alt="Изображение 1">
+						<img src="image2.jpg" alt="Изображение 2">
+						<img src="image3.jpg" alt="Изображение 3">
+					</div>
+
+					<button id="prev">Назад</button>
+					<button id="next">Вперед</button>
+
+					<script>
+						const slider = document.getElementById("slider");
+						const prevButton = document.getElementById("prev");
+						const nextButton = document.getElementById("next");
+
+						let currentIndex = 0;
+
+						prevButton.addEventListener("click", () => {
+							currentIndex--;
+							if (currentIndex < 0) {
+								currentIndex = slider.children.length - 1;
+							}
+							slider.style.marginLeft = "-" + (currentIndex * 100) + "px";
+						});
+
+						nextButton.addEventListener("click", () => {
+							currentIndex++;
+							if (currentIndex >= slider.children.length) {
+								currentIndex = 0;
+							}
+							slider.style.marginLeft = "-" + (currentIndex * 100) + "px";
+						});
+					</script>
+</body>
+
+</html>
+
+
+</div>
+</section>
+
+</main>
+
+
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
 </body>
 
 </html>
