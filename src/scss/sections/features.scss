@@ -1,13 +1,8 @@
 .features {
-  // position: relative;
   @include adaptiveValue("padding-top", 129, 76);
-
-  margin-bottom: toRem(200);
 
   background: url('@img/features/bg.jpg') 0 0 no-repeat;
   background-size: cover;
-
-  // background-position: 70%;
 
   /* .features__container */
   &__container {}

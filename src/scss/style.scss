@@ -135,10 +135,6 @@ body {
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
 			margin: 0 auto;
-
-			@media (min-width: em(1501)) and (max-width: em(1600)) {
-				padding-left: toRem(60) !important;
-			}
 		}
 
 		@if ($containerPadding>0) {
