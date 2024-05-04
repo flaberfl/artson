@@ -1,5 +1,19 @@
 .objects {
   // background-color: red;
+
+
+  &__title {
+
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__text {
+    margin-bottom: 54px;
+    @include adaptiveValue("margin-bottom", 54, 45);
+
+    color: $mainColor;
+    letter-spacing: .03em;
+  }
 }
 
 
@@ -166,7 +180,7 @@
 
   @media (max-width: em(1024)) {
     grid-template-rows: repeat(5, 1fr);
-    grid-template-rows: .6fr .2fr .3fr .2fr .4fr;
+    grid-template-rows: .6fr .4fr .3fr .2fr .4fr;
 
     // margin-right: 200px;
     // margin-left: 200px;
@@ -271,10 +285,12 @@
 
   /* .object__title */
   &__title {
-    max-width: toRem(340);
 
-    margin-bottom: toRem(20);
     @include adaptiveValue("margin-bottom", 20, 10);
+
+    @media (min-width:em(1025)) {
+      max-width: toRem(340);
+    }
   }
 
   /* .object__desc */
@@ -294,5 +310,7 @@
   }
 
   /* .object__button */
-  &__button {}
+  &__button {
+    white-space: nowrap;
+  }
 }
