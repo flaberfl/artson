@@ -6,6 +6,10 @@
   background-size: cover;
   z-index: -2;
 
+  @media (max-width:$tablet) {
+    padding-bottom: toRem(93);
+  }
+
   /* .types__container */
   &__container {}
 
@@ -14,16 +18,18 @@
 
   /* .types__header */
   &__header {
-    // display: grid;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    // grid-template-columns: 66.4% 1fr;
     grid-template-columns: 1fr auto;
     align-items: end;
-    gap: toRem(20);
-    margin-bottom: toRem(49);
-    // @include adaptiveValue("gap", 84, 34);
+    @include adaptiveValue("gap", 20, 30);
+    @include adaptiveValue("margin-bottom", 49, 30);
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   /* .types__title */
@@ -52,15 +58,24 @@
   /* .types__body */
   &__body {}
 
+
   /* .types__list */
   &__list {
-    display: flex;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: toRem(20);
+    // display: grid;
+    // // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: 1fr;
+    // gap: toRem(20);
   }
 
   /* .types__item */
   &__item {}
+
+  &__slider {
+    @media (min-width:em(1320)) {
+      padding-left: 5px;
+      margin-left: -5px;
+    }
+  }
 }
 
 .tabs {
@@ -76,7 +91,10 @@
 
   /* .tabs__body */
   &__body {}
+
+
 }
+
 
 .item-types {
   position: relative;
@@ -84,14 +102,19 @@
   justify-items: end;
   // padding: 51px 57px 40px 59px;
   padding: 51px 0 40px 0;
+  @include adaptiveValue("padding-top", 51, 26);
+  max-width: toRem(453);
+  // max-width: toRem(295);
+  // @include adaptiveValue("width", 453, 295);
 
   background-color: #fff;
 
   /* .item-types__title */
   &__title {
     padding-right: toRem(57);
-    padding-left: toRem(59);
-    padding-bottom: toRem(10);
+    @include adaptiveValue("padding-right", 57, 48);
+    @include adaptiveValue("padding-left", 59, 28);
+    @include adaptiveValue("padding-bottom", 10, 18);
 
     @include adaptiveValue("font-size", 26, 20);
     font-weight: 800;
@@ -103,7 +126,7 @@
   &__price {
     position: relative;
     padding: toRem(18) 0;
-    margin-bottom: toRem(13);
+    margin-bottom: toRem(14);
 
     width: calc(100% + 4px);
     // z-index: 10;
@@ -124,7 +147,9 @@
 
     &-old,
     &-new {
-      padding: 0 57px 0 59px;
+      @include adaptiveValue("padding-right", 57, 20);
+      @include adaptiveValue("padding-left", 59, 29);
+
     }
 
     &-old {
@@ -147,8 +172,8 @@
   }
 
   &__content {
-    padding-right: toRem(57);
-    padding-left: toRem(59);
+    @include adaptiveValue("padding-right", 57, 10);
+    @include adaptiveValue("padding-left", 59, 20);
     justify-self: start;
   }
 
@@ -162,10 +187,11 @@
   /* .item-types__item */
   &__item {
     display: flex;
-    align-items: center;
+    // align-items: center;
     position: relative;
     @include adaptiveValue("gap", 18, 12);
     padding-left: toRem(25);
+    @include adaptiveValue("padding-left", 25, 20);
 
     color: $mainColor;
     letter-spacing: .03em;
@@ -180,6 +206,7 @@
       background: $subColor;
       border-radius: 50%;
       left: 0;
+      top: toRem(12);
     }
 
     @media (max-width:$mobile) {
@@ -209,5 +236,38 @@
   &__button {
     position: relative;
     z-index: 50;
+  }
+}
+
+.types__slider.swiper {
+
+  @media (max-width: em(1320)) {
+    overflow: visible !important;
+
+  }
+}
+
+.swiper-pagination {
+
+  display: flex;
+  gap: toRem(8);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 300;
+  bottom: toRem(-35);
+}
+
+.swiper-pagination-bullet {
+  width: toRem(14);
+  height: toRem(14);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: .4;
+  transition: all 0.3s;
+
+  &-active {
+    opacity: 1;
   }
 }

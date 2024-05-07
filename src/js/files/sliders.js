@@ -1,14 +1,8 @@
-/*
-Документація по роботі у шаблоні: 
-Документація слайдера: https://swiperjs.com/
-Сніппет(HTML): swiper
-*/
-
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,29 +22,29 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.object__slider')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.types__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.first__slider', { // Вказуємо склас потрібного слайдера
+		new Swiper('.types__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			// slidesPerView: 3,
+			spaceBetween: 20,
 			// loop: true,
-			slidesPerView: 'auto',
+			// slidesPerView: 'auto',
 			// height: 'auto',
 			// grabCursor: true,
 			// autoHeight: true,
-			speed: 800,
+			speed: 1500,
 			// centeredSlides: true,
 			// centeredSlidesBounds: true,
 			// coverflowEffect: {
 			// 	rotate: 0,
 			// 	stretch: 0,
 			// 	depth: 100,
-			// 	modifier: 2.5,
+			// modifier: 2.5,
 
 			// },
 
@@ -70,38 +64,34 @@ function initSliders() {
 			*/
 
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.types__swiper-pagination',
 				clickable: true,
 			},
 
 			// Брейкпоінти
-			// breakpoints: {
-			// 	360: {
-			// 		// centeredSlides: true,
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	640: {
-			// 		// centeredSlides: true,
-			// 		slidesPerView: 1,
-			// 		spaceBetween: 20,
-			// 	},
-			// 	768: {
-			// 		centeredSlides: true,
-			// 		slidesPerView: 1.5,
-			// 		spaceBetween: -40,
-			// 	},
-			// 	992: {
-			// 		centeredSlides: true,
-			// 		slidesPerView: 1.5,
-			// 		spaceBetween: -60,
-			// 	},
-			// 	1200: {
-			// 		// centeredSlides: true,
-			// 		slidesPerView: 2,
-			// 		spaceBetween: 20,
-			// 	},
-			// },
+			breakpoints: {
+				320: {
+					spaceBetween: 15,
+					slidesPerView: 1.1,
+
+				},
+				480: {
+					spaceBetween: 15,
+					slidesPerView: 1.6,
+				},
+				768: {
+					slidesPerView: 2.2,
+					spaceBetween: 20
+				},
+				992: {
+					slidesPerView: 2.8,
+					spaceBetween: 20,
+				},
+				1320: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
 
 			// Події
 			on: {
