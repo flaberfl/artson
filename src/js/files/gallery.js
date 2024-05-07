@@ -16,7 +16,7 @@ import lightGallery from 'lightgallery';
 // Плагіни
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
 // import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
-//import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
+// import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
 
 // Базові стилі
 import '@scss/libs/gallery/lightgallery.scss';
