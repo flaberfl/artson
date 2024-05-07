@@ -142,7 +142,6 @@
   &__text {
     font-size: toRem(16);
     line-height: 26px;
-
   }
 
   /* .object__footer */
@@ -151,6 +150,7 @@
   /* .object__text */
   &__text {
     margin-bottom: toRem(30);
+    font-size: toRem(18);
   }
 
   /* .object__button */
