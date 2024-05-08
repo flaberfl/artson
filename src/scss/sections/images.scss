@@ -1,18 +1,15 @@
 .images {
-  padding-bottom: toRem(142);
-  padding-top: toRem(142);
-
-  /* .images__container */
-  &__container {}
+  @include adaptiveValue("padding-bottom", 142, 110);
+  @include adaptiveValue("padding-top", 142, 87);
 
   /* .images__title */
   &__title {
-    margin-bottom: toRem(30);
+    @include adaptiveValue("margin-bottom", 30, 23);
   }
 
   /* .images__subtitle */
   &__subtitle {
-    margin-bottom: toRem(75);
+    @include adaptiveValue("margin-bottom", 75, 42);
 
     letter-spacing: .03em;
     color: $mainColor;
@@ -30,7 +27,6 @@
       @include adaptiveValue("margin-left", 100, 0);
 
       grid-template-columns: repeat(4, 1fr);
-      // grid-template-rows: repeat(15, 1fr);
       grid-template-rows: .6fr .5fr .4fr .5fr .5fr .6fr .3fr;
     }
   }

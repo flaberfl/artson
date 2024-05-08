@@ -243,7 +243,6 @@
 
   @media (max-width: em(1320)) {
     overflow: visible !important;
-
   }
 }
 
@@ -256,7 +255,7 @@
   text-align: center;
   position: relative;
   z-index: 300;
-  bottom: toRem(-35);
+  bottom: -35px;
 }
 
 .swiper-pagination-bullet {
