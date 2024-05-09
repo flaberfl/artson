@@ -195,7 +195,7 @@ let myTextSlider = new Swiper('.portfolio__slider_text', {
 	modules: [Navigation],
 	observer: true,
 	observeParents: true,
-	// slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 20,
 	// loop: true,
 	// slidesPerView: 'auto',
@@ -204,6 +204,7 @@ let myTextSlider = new Swiper('.portfolio__slider_text', {
 	// autoHeight: true,
 	allowTouchMove: false,
 	speed: 1500,
+	effect: "fade",
 	// centeredSlides: true,
 	// centeredSlidesBounds: true,
 	// effect: 'coverflow',
@@ -221,14 +222,16 @@ let myTextSlider = new Swiper('.portfolio__slider_text', {
 	//preloadImages: false,
 	lazy: true,
 
-	/*
+	// fadeEffect: {
+	// 	crossFade: true
+	// },
 	// Ефекти
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+	// effect: 'fade',
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: false,
+	// },
+
 
 	// pagination: {
 	// 	el: '.docs__swiper-pagination',
@@ -267,7 +270,7 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	modules: [Navigation],
 	observer: true,
 	observeParents: true,
-	// slidesPerView: 3,
+	slidesPerView: 1,
 	spaceBetween: 20,
 	// loop: true,
 	// slidesPerView: 'auto',
@@ -278,22 +281,19 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	centeredSlides: true,
 	centeredSlidesBounds: true,
 
-	// thumbs: {
-	// 	swiper: portfolio__slider_text,
+
+	// effect: 'coverflow',
+	// coverflowEffect: {
+	// 	rotate: 0,
+	// 	stretch: 0,
+	// 	depth: 100,
+	// 	modifier: 2.5,
+
 	// },
 
-	effect: 'coverflow',
-	coverflowEffect: {
-		rotate: 0,
-		stretch: 0,
-		depth: 100,
-		modifier: 2.5,
-
-	},
-
-// 	thumbs: {                           
-// 		swiper: myTextSlider,            
-// },    
+	// 	thumbs: {                           
+	// 		swiper: myTextSlider,            
+	// },    
 
 	//touchRatio: 0,
 	//simulateTouch: false,
@@ -301,14 +301,14 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	//preloadImages: false,
 	lazy: true,
 
-	/*
+
 	// Ефекти
 	effect: 'fade',
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
 	},
-	*/
+
 
 	// pagination: {
 	// 	el: '.docs__swiper-pagination',
@@ -328,13 +328,12 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 });
 
 const swipeAllSliders = (index) => {
-  myImageSlider.slideToLoop(index);
-  myTextSlider.slideToLoop(index);
+	myImageSlider.slideToLoop(index);
+	myTextSlider.slideToLoop(index);
 };
 
 myImageSlider.on('slideChange', () => swipeAllSliders(myImageSlider.realIndex));
 myTextSlider.on('slideChange', () => swipeAllSliders(myTextSlider.realIndex));
-
 
 
 let myTextSlider_2 = new Swiper('.portfolio__slider_text_2', {
@@ -368,14 +367,14 @@ let myTextSlider_2 = new Swiper('.portfolio__slider_text_2', {
 	//preloadImages: false,
 	lazy: true,
 
-	/*
+
 	// Ефекти
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	*/
+	// effect: 'fade',
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: false,
+	// },
+
 
 	// pagination: {
 	// 	el: '.docs__swiper-pagination',
@@ -434,9 +433,9 @@ let myImageSlider_2 = new Swiper('.portfolio__slider_2', { // Вказуємо �
 
 	},
 
-// 	thumbs: {                           
-// 		swiper: myTextSlider,            
-// },    
+	// 	thumbs: {                           
+	// 		swiper: myTextSlider,            
+	// },    
 
 	//touchRatio: 0,
 	//simulateTouch: false,
@@ -471,8 +470,8 @@ let myImageSlider_2 = new Swiper('.portfolio__slider_2', { // Вказуємо �
 });
 
 const swipeAllSliders_2 = (index) => {
-  myImageSlider_2.slideToLoop(index);
-  myTextSlider_2.slideToLoop(index);
+	myImageSlider_2.slideToLoop(index);
+	myTextSlider_2.slideToLoop(index);
 };
 
 myImageSlider_2.on('slideChange', () => swipeAllSliders_2(myImageSlider_2.realIndex));
