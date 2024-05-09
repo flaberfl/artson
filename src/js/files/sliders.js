@@ -316,10 +316,10 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	// },
 
 	// Arrows
-	navigation: {
-		nextEl: '.portfolio__swiper-button-next',
-		prevEl: '.portfolio__swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.portfolio__swiper-button-next',
+	// 	prevEl: '.portfolio__swiper-button-prev',
+	// },
 
 	// Події
 	on: {
@@ -382,10 +382,10 @@ let myTextSlider_2 = new Swiper('.portfolio__slider_text_2', {
 	// },
 
 	// Arrows
-	navigation: {
-		nextEl: '.portfolio__swiper-button-next',
-		prevEl: '.portfolio__swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.portfolio__swiper-button-next',
+	// 	prevEl: '.portfolio__swiper-button-prev',
+	// },
 
 	// Брейкпоінти
 	breakpoints: {

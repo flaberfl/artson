@@ -1,4 +1,7 @@
 .portfolio {
+  padding-top: toRem(130);
+
+  // background: #000;
 
   /* .portfolio__container */
   &__container {}
@@ -114,7 +117,24 @@
 
 .swiper-button-prev {}
 
-.swiper-button-next {}
+.portfolio__swiper-button-next.swiper-button-next,
+.portfolio__swiper-button-prev.swiper-button-prev {
+  background-color: #F4F4F4;
+}
+
+.portfolio__swiper-button-prev.swiper-button-prev:disabled,
+.portfolio__swiper-button-next.swiper-button-next:disabled {
+
+  background-color: transparent;
+  border: 1px solid #F4F4F4;
+
+  svg {
+    path {
+      fill: $mainColor;
+    }
+  }
+}
+
 
 .tabs {
 
