@@ -188,7 +188,298 @@ function initSliders() {
 			}
 		});
 	}
+
 }
+let myTextSlider = new Swiper('.portfolio__slider_text', {
+
+	modules: [Navigation],
+	observer: true,
+	observeParents: true,
+	// slidesPerView: 3,
+	spaceBetween: 20,
+	// loop: true,
+	// slidesPerView: 'auto',
+	// height: 'auto',
+	// grabCursor: true,
+	// autoHeight: true,
+	allowTouchMove: false,
+	speed: 1500,
+	// centeredSlides: true,
+	// centeredSlidesBounds: true,
+	// effect: 'coverflow',
+	// coverflowEffect: {
+	// 	rotate: 0,
+	// 	stretch: 0,
+	// 	depth: 100,
+	// 	modifier: 2.5,
+
+	// },
+
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	lazy: true,
+
+	/*
+	// Ефекти
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+
+	// pagination: {
+	// 	el: '.docs__swiper-pagination',
+	// 	clickable: true,
+	// },
+
+	// Arrows
+	navigation: {
+		nextEl: '.portfolio__swiper-button-next',
+		prevEl: '.portfolio__swiper-button-prev',
+	},
+
+	// Брейкпоінти
+	breakpoints: {
+		320: {
+			spaceBetween: 0,
+			slidesPerView: 1,
+
+		},
+
+		1320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+		},
+	},
+
+	// Події
+	on: {
+
+	}
+});
+
+let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо склас потрібного слайдера
+	// Підключаємо модулі слайдера
+	// для конкретного випадку
+	modules: [Navigation],
+	observer: true,
+	observeParents: true,
+	// slidesPerView: 3,
+	spaceBetween: 20,
+	// loop: true,
+	// slidesPerView: 'auto',
+	// height: 'auto',
+	// grabCursor: true,
+	// autoHeight: true,
+	speed: 1500,
+	centeredSlides: true,
+	centeredSlidesBounds: true,
+
+	// thumbs: {
+	// 	swiper: portfolio__slider_text,
+	// },
+
+	effect: 'coverflow',
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 0,
+		depth: 100,
+		modifier: 2.5,
+
+	},
+
+// 	thumbs: {                           
+// 		swiper: myTextSlider,            
+// },    
+
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	lazy: true,
+
+	/*
+	// Ефекти
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+
+	// pagination: {
+	// 	el: '.docs__swiper-pagination',
+	// 	clickable: true,
+	// },
+
+	// Arrows
+	navigation: {
+		nextEl: '.portfolio__swiper-button-next',
+		prevEl: '.portfolio__swiper-button-prev',
+	},
+
+	// Події
+	on: {
+
+	}
+});
+
+const swipeAllSliders = (index) => {
+  myImageSlider.slideToLoop(index);
+  myTextSlider.slideToLoop(index);
+};
+
+myImageSlider.on('slideChange', () => swipeAllSliders(myImageSlider.realIndex));
+myTextSlider.on('slideChange', () => swipeAllSliders(myTextSlider.realIndex));
+
+
+
+let myTextSlider_2 = new Swiper('.portfolio__slider_text_2', {
+
+	modules: [Navigation],
+	observer: true,
+	observeParents: true,
+	// slidesPerView: 3,
+	spaceBetween: 20,
+	// loop: true,
+	// slidesPerView: 'auto',
+	// height: 'auto',
+	// grabCursor: true,
+	// autoHeight: true,
+	allowTouchMove: false,
+	speed: 1500,
+	// centeredSlides: true,
+	// centeredSlidesBounds: true,
+	// effect: 'coverflow',
+	// coverflowEffect: {
+	// 	rotate: 0,
+	// 	stretch: 0,
+	// 	depth: 100,
+	// 	modifier: 2.5,
+
+	// },
+
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	lazy: true,
+
+	/*
+	// Ефекти
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+
+	// pagination: {
+	// 	el: '.docs__swiper-pagination',
+	// 	clickable: true,
+	// },
+
+	// Arrows
+	navigation: {
+		nextEl: '.portfolio__swiper-button-next',
+		prevEl: '.portfolio__swiper-button-prev',
+	},
+
+	// Брейкпоінти
+	breakpoints: {
+		320: {
+			spaceBetween: 0,
+			slidesPerView: 1,
+
+		},
+
+		1320: {
+			slidesPerView: 1,
+			spaceBetween: 0,
+		},
+	},
+
+	// Події
+	on: {
+
+	}
+});
+
+let myImageSlider_2 = new Swiper('.portfolio__slider_2', { // Вказуємо склас потрібного слайдера
+	// Підключаємо модулі слайдера
+	// для конкретного випадку
+	modules: [Navigation],
+	observer: true,
+	observeParents: true,
+	// slidesPerView: 3,
+	spaceBetween: 20,
+	// loop: true,
+	// slidesPerView: 'auto',
+	// height: 'auto',
+	// grabCursor: true,
+	// autoHeight: true,
+	speed: 1500,
+	centeredSlides: true,
+	centeredSlidesBounds: true,
+
+	effect: 'coverflow',
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 0,
+		depth: 100,
+		modifier: 2.5,
+
+	},
+
+// 	thumbs: {                           
+// 		swiper: myTextSlider,            
+// },    
+
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	lazy: true,
+
+	/*
+	// Ефекти
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+
+	// pagination: {
+	// 	el: '.docs__swiper-pagination',
+	// 	clickable: true,
+	// },
+
+	// Arrows
+	navigation: {
+		nextEl: '.portfolio__swiper-button-next',
+		prevEl: '.portfolio__swiper-button-prev',
+	},
+
+	// Події
+	on: {
+
+	}
+});
+
+const swipeAllSliders_2 = (index) => {
+  myImageSlider_2.slideToLoop(index);
+  myTextSlider_2.slideToLoop(index);
+};
+
+myImageSlider_2.on('slideChange', () => swipeAllSliders_2(myImageSlider_2.realIndex));
+myTextSlider_2.on('slideChange', () => swipeAllSliders_2(myTextSlider_2.realIndex));
+
+
+
 
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

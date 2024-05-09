@@ -1,0 +1,165 @@
+.portfolio {
+
+  /* .portfolio__container */
+  &__container {}
+
+  /* .portfolio__title */
+  &__title {}
+
+  /* .portfolio__buttons */
+  &__buttons {}
+
+  /* .portfolio__swiper-button-prev */
+  &__swiper-button-prev {}
+
+  /* .portfolio__swiper-button-next */
+  &__swiper-button-next {}
+
+  /* .portfolio__box */
+  &__box {}
+
+  /* .portfolio__tabs */
+  &__tabs {
+    position: relative;
+  }
+
+  /* .portfolio__navigation */
+  &__navigation {
+    display: flex;
+    gap: toRem(22);
+
+    position: absolute;
+    right: 0;
+    top: toRem(47);
+  }
+
+  /* .portfolio__content */
+  &__content {}
+
+  /* .portfolio__body */
+  &__body {
+    // display: flex;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 31.071%;
+
+    color: #000;
+  }
+
+  /* .portfolio__slider */
+  &__slider {}
+
+  /* .portfolio__wrapper */
+  &__wrapper {}
+
+  /* .portfolio__slide */
+  &__slide {
+    display: flex;
+    align-items: center;
+  }
+
+  /* .portfolio__image */
+  &__image {}
+
+  /* .portfolio__desc */
+  &__desc {}
+
+  /* .portfolio__sl-footer */
+  &__sl-footer {}
+
+  /* .portfolio__button */
+  &__button {}
+
+  /* .portfolio__slogan */
+  &__slogan {}
+}
+
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.tabs {
+
+  /* .tabs__navigation */
+  &__navigation {}
+
+  /* .tabs__title */
+  &__title {}
+
+  /* .tabs__content */
+  &__content {}
+
+  /* .tabs__body */
+  &__body {}
+}
+
+.tabs__title.portfolio__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: toRem(184);
+  height: toRem(60);
+
+  font-size: toRem(16);
+  font-weight: 900;
+  color: $subColor;
+  letter-spacing: .03em;
+
+  @media (max-width:$mobile) {
+    width: toRem(150);
+  }
+
+
+  &._tab-active {
+    border: 1px solid $subColor;
+    border-radius: $borderRadius;
+  }
+}
+
+.desc-portfolio {
+
+  /* .desc-portfolio__list */
+  &__list {
+    display: grid;
+    gap: 20px;
+    padding-left: toRem(40);
+  }
+
+  /* .desc-portfolio__item */
+  &__item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    @include adaptiveValue("gap", 18, 12);
+
+    @include adaptiveValue("padding-left", 25, 20);
+
+
+    font-size: toRem(18);
+    color: $mainColor;
+    letter-spacing: .03em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: $subColor;
+      border-radius: 50%;
+      left: 0;
+      // top: toRem(12);
+    }
+
+    span {
+      font-weight: 900;
+    }
+
+    @media (max-width:$mobile) {
+      font-size: toRem(16);
+    }
+  }
+}
+
+.button {}
