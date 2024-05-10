@@ -432,15 +432,6 @@ let myImageSlider_2 = new Swiper('.portfolio__slider_2', { // Вказуємо �
 		modifier: 2.5,
 
 	},
-
-	// 	thumbs: {                           
-	// 		swiper: myTextSlider,            
-	// },    
-
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
 	lazy: true,
 
 	/*
@@ -459,8 +450,8 @@ let myImageSlider_2 = new Swiper('.portfolio__slider_2', { // Вказуємо �
 
 	// Arrows
 	navigation: {
-		nextEl: '.portfolio__swiper-button-next',
-		prevEl: '.portfolio__swiper-button-prev',
+		nextEl: '.portfolio__swiper-button-next_2',
+		prevEl: '.portfolio__swiper-button-prev_2',
 	},
 
 	// Події
