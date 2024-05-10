@@ -1,6 +1,6 @@
 .portfolio {
   @include adaptiveValue("padding-top", 130, 91);
-  @include adaptiveValue("padding-bottom", 166, 100);
+  @include adaptiveValue("padding-bottom", 166, 211);
   // background: #000;
 
   /* .portfolio__container */
@@ -138,7 +138,7 @@
       left: 50%;
       transform: translate(-50%, 0);
       // bottom: toRem(-120);
-      @include adaptiveValue("bottom", -120, -84);
+      @include adaptiveValue("bottom", -120, -115);
 
       text-align: center;
     }

@@ -13,12 +13,23 @@ textarea {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 0px 26px;
+	// border: 1px solid #eee;
+	height: toRem(60);
+
+	color: $mainColor;
 
 	&._form-focus {}
 
 	&._form-error {}
+}
+
+textarea[placeholder],
+.input[placeholder] {
+	font-size: toRem(14);
+	font-weight: 400;
+	color: $mainColor;
+	letter-spacing: .03em;
 }
 
 .input[placeholder]:not([data-placeholder-nohiden]) {
@@ -31,10 +42,11 @@ textarea {
 	}
 }
 
-textarea.input {
+textarea {
 	resize: none;
-	padding: 0px 0px;
-	color: #fff !important;
+	padding: 23px 26px;
+	color: $mainColor;
+	// width: 100%;
 }
 
 
