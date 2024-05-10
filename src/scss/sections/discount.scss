@@ -1,0 +1,77 @@
+.discount {
+
+  padding-bottom: 45px;
+  background: url('@img/discount/bg.jpg') 0 0 no-repeat;
+  background-size: cover;
+
+  /* .discount__container */
+  &__container {
+    display: grid;
+    grid-template-columns: auto 57.142%;
+  }
+
+  /* .discount__media */
+  &__media {}
+
+  /* .discount__image */
+  &__image {
+    max-width: 100%;
+    // position: relative;
+    // bottom: -7.5%;
+    // left: -18.8%;
+    z-index: 3;
+  }
+
+  /* .discount__img */
+  &__img {
+    position: absolute;
+
+    /* .discount__img_1 */
+    &_1 {}
+
+    /* .discount__img_2 */
+    &_2 {}
+
+    /* .discount__img_3 */
+    &_3 {}
+  }
+
+  /* .discount__content */
+  &__content {}
+
+  /* .discount__title */
+  &__title {}
+
+  /* .discount__form */
+  &__form {}
+
+  /* .discount__button */
+  &__button {}
+}
+
+.title-h2 {}
+
+.form {
+
+  /* .form__line */
+  &__line {
+
+    /* .form__line_name */
+    &_name {}
+
+    /* .form__line_tel */
+    &_tel {}
+
+    /* .form__line_promo */
+    &_promo {}
+
+    /* .form__line_comment */
+    &_comment {}
+
+    /* .form__line_file */
+    &_file {}
+
+    /* .form__line_button */
+    &_button {}
+  }
+}
