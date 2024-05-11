@@ -468,6 +468,53 @@ const swipeAllSliders_2 = (index) => {
 myImageSlider_2.on('slideChange', () => swipeAllSliders_2(myImageSlider_2.realIndex));
 myTextSlider_2.on('slideChange', () => swipeAllSliders_2(myTextSlider_2.realIndex));
 
+let myVideoSlider = new Swiper('.video__slider', {
+
+	modules: [Navigation, Pagination],
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	// loop: true,
+	// slidesPerView: 'auto',
+	// height: 'auto',
+	// grabCursor: true,
+	autoHeight: true,
+	speed: 1500,
+
+
+	pagination: {
+		el: '.video__swiper-pagination',
+		clickable: true,
+	},
+
+	// Arrows
+	navigation: {
+		nextEl: '.video__swiper-button-next',
+		prevEl: '.video__swiper-button-prev',
+	},
+
+	// Брейкпоінти
+	breakpoints: {
+		320: {
+			spaceBetween: 15,
+			slidesPerView: 1,
+
+		},
+
+		1320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+	},
+
+	// Події
+	on: {
+
+	}
+});
+
+
 
 
 
