@@ -1,5 +1,6 @@
 .reviews-map {
   position: relative;
+  padding-bottom: toRem(146);
 
   &__overlay {
     position: absolute;
@@ -12,6 +13,7 @@
 
   /* .section-map__container */
   &__container {
+    padding-top: toRem(101);
     position: relative;
     z-index: 100;
   }
@@ -28,6 +30,86 @@
     }
   }
 }
+
+
+.reviews-map {
+
+  /* .reviews-map__body */
+  &__body {
+    display: grid;
+    grid-template-columns: auto 32.357%;
+    // grid-template-columns: auto auto;
+  }
+
+  /* .reviews-map__media */
+  &__media {
+    position: relative;
+  }
+
+  /* .reviews-map__person */
+  &__person {
+    position: absolute;
+
+    /* .reviews-map__person_1 */
+    &_1 {
+      left: -11.8%;
+      bottom: -68.1%;
+    }
+
+    &_2 {
+      left: 3.3%;
+      top: 43.6%;
+    }
+
+    &_3 {
+      right: 43.2%;
+      top: 16%;
+    }
+
+    &_4 {}
+
+    &_5 {}
+
+    &_6 {}
+
+    &_7 {}
+  }
+
+  /* .reviews-map__image */
+  &__image {}
+
+  /* .reviews-map__info */
+  &__info {}
+
+  /* .reviews-map__box */
+  &__box {}
+
+  /* .reviews-map__head */
+  &__head {}
+
+  /* .reviews-map__wrap-head */
+  &__wrap-head {}
+
+  /* .reviews-map__name */
+  &__name {}
+
+  /* .reviews-map__data */
+  &__data {}
+
+  /* .reviews-map__rating */
+  &__rating {}
+
+  /* .reviews-map__review */
+  &__review {}
+}
+
+
+
+
+
+
+
+
 
 .map {
   position: absolute;
