@@ -1,7 +1,5 @@
 .discount {
-  padding-top: toRem(44);
   @include adaptiveValue("padding-top", 44, 0);
-  // padding-bottom: 45px;
   background: url('@img/discount/bg.jpg') 0 0 no-repeat;
   background-size: cover;
 
@@ -10,8 +8,14 @@
     display: grid;
     grid-template-columns: auto 57.142%;
 
-    @media (max-width:$tablet) {
+    @media (max-width: em(1286)) {
+      grid-template-columns: auto 1fr;
+      align-items: baseline;
+    }
+
+    @media (max-width: em(1010)) {
       grid-template-columns: auto;
+      gap: toRem(80);
     }
   }
 
@@ -24,12 +28,15 @@
   &__image {
     max-width: 100%;
     position: relative;
-    // bottom: -7.5%;
     left: -22.3%;
     z-index: 3;
 
-    @media (max-width: em(1286)) {
-      // width: 80%;
+    @media (max-width: em(1010)) {
+      @include adaptiveValue("width", 592, 355);
+
+      left: 50%;
+      transform: translate(-50%, 0px);
+
     }
   }
 
@@ -42,18 +49,33 @@
     &_1 {
       left: -26.5%;
       top: 13.4%;
+      @include adaptiveValue("width", 217, 130);
+
+      @media (max-width: em(1010)) {
+        @include adaptiveValue("left", 300, -30);
+      }
     }
 
     /* .discount__img_2 */
     &_2 {
       right: 4.6%;
       top: 19.3%;
+      @include adaptiveValue("width", 212, 130);
+
+      @media (max-width: em(1010)) {
+        @include adaptiveValue("right", 200, -80);
+      }
     }
 
     /* .discount__img_3 */
     &_3 {
       left: -3.7%;
       bottom: 8%;
+      @include adaptiveValue("width", 207, 130);
+
+      @media (max-width: em(1010)) {
+        @include adaptiveValue("left", 330, 80);
+      }
     }
   }
 
@@ -61,7 +83,7 @@
   &__content {
     @include adaptiveValue("padding-top", 117, 91);
 
-    @media (max-width:$tablet) {
+    @media (max-width: em(1010)) {
       grid-row-start: 1;
     }
   }
@@ -80,8 +102,11 @@
     column-gap: toRem(20);
     row-gap: toRem(31);
 
-    @media (max-width:$tablet) {
+    @media (max-width:em(1010)) {
       row-gap: toRem(20);
+
+      @include adaptiveValue("margin-left", 100, 0);
+      @include adaptiveValue("margin-right", 100, 0);
     }
   }
 
@@ -102,7 +127,6 @@
 
     @media (max-width: em(1286)) {
       grid-column: span 2;
-      // width: 80%;
     }
 
     .input {
@@ -124,12 +148,16 @@
         font-size: toRem(10);
         font-weight: 500;
         letter-spacing: .03em;
+
+        @media (max-width:em(1010)) {
+          letter-spacing: 0;
+        }
       }
     }
 
     /* .form__line_promo */
     &_promo {
-      @media (max-width:$tablet) {
+      @media (max-width:em(1010)) {
         margin-top: toRem(10);
       }
     }
@@ -142,8 +170,7 @@
         padding-bottom: toRem(22);
       }
 
-      @media (max-width:$mobile) {
-        // height: 100%;
+      @media (max-width:em(1010)) {
         min-height: toRem(153);
       }
     }
@@ -168,12 +195,11 @@
         color: $subColor;
         text-decoration: underline;
 
-        @media (max-width:$mobile) {
+        @media (max-width:em(1010)) {
           letter-spacing: .01em;
         }
 
         input[type=file] {
-          // display: none;
           width: 0.1px;
           height: 0.1px;
           opacity: 0;
