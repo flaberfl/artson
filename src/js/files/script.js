@@ -7,8 +7,8 @@ import { flsModules } from "./modules.js";
 ymaps.ready(init);
 function init() {
   var map = new ymaps.Map("map", {
-    center: [55.727540, 37.567785],
-    zoom: 18
+    center: [55.720860, 37.560354],
+    zoom: 15
   });
 
   // var myPlacemark = new ymaps.Placemark(
