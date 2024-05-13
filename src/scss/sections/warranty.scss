@@ -109,18 +109,21 @@
     &_1 {
       left: 4%;
       top: 14.2%;
+      @include adaptiveValue("width", 113, 96);
     }
 
     /* .warranty__img_2 */
     &_2 {
       right: -19%;
       top: -4.4%;
+      @include adaptiveValue("width", 294, 160);
     }
 
     /* .warranty__img_3 */
     &_3 {
       right: -5.2%;
       bottom: 21.1%;
+      @include adaptiveValue("width", 175, 120);
     }
   }
 }
