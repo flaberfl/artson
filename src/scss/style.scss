@@ -63,6 +63,7 @@ $responsiveType: 1;
 body {
 	font-weight: 400;
 	background-color: #fff;
+	// background-color: $mainColor;
 	opacity: 0;
 	letter-spacing: .03em;
 	line-height: normal;
@@ -204,6 +205,7 @@ body {
 @import "sections/discount";
 @import "sections/video";
 @import "sections/reviews-map";
+@import "sections/warranty";
 
 
 // @import "footer";
