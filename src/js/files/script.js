@@ -37,101 +37,81 @@ function init() {
   // map.geoObjects.add(myPlacemark);
 }
 
+// let event_list = ["click", "mouseenter"];
 
+// event_list.forEach(function(event) {
 
-// const links = document.querySelectorAll(".reviews-map__person");
+// 	document.querySelector(".element").addEventListener(event, function() { // Применяем к элементу с class="element"
 
-// for (let i = 0; i < links.length; i++) {
-//   links[i].addEventListener("mouseenter", function () {
-//     this.parentNode.classList.add("hhv");
+// 		// Нужное действие
+
+// 	});
+
+// });
+
+// event_list.forEach(function (event) {
+//   document.querySelector('.reviews-map__person_1').addEventListener(event, function () {
+//     document.querySelector('.reviews-map__box_1').classList.add('active');
 //   });
 
-//   links[i].addEventListener("mouseleave", function () {
-//     this.parentNode.classList.remove("hhv");
-//   });
-// }
-
-let bodyPerson = document.querySelector('.reviews-map__body');
-document.querySelectorAll('.reviews-map__person').forEach(e => e.addEventListener('mouseenter', function () {
-  bodyPerson.classList.add('hovered');
-}));
-
-document.querySelectorAll('.reviews-map__person').forEach(e => e.addEventListener('mouseleave', function () {
-  bodyPerson.classList.remove('hovered');
-}));
-
-
-// const boxReviews = document.querySelector('.reviews-map__box');
-
-
-
-console.log(bodyPerson);
-// console.log ();
-// forEach(e => e.addEventListener("mouseover", fun));
-// document.querySelector('.reviews-map__person').addEventListener('mouseenter', function () {
-//   this.parentElement.classList.add('hovered');
 // });
 
 
-// document.querySelector(".box .block").show();
-// document.querySelector(".closed .block").hide();
-// document.querySelector("div.hide").click(function() {
-//   document.querySelector(this).toggleClass("show").next().slideToggle("medium");
+function autoRemoveActiveClass() {
+
+  const elements = document.querySelectorAll(".reviews-map__box");
+  elements.forEach((element, i) => {
+    element.classList.remove('active')
+  })
+
+}
+// autoRemoveActiveClass();
+
+document.querySelector('.reviews-map__person_1').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_1').classList.toggle('active');
+});
+
+
+document.querySelector('.reviews-map__person_2').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_2').classList.toggle('active');
+});
+document.querySelector('.reviews-map__person_3').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_3').classList.toggle('active');
+});
+document.querySelector('.reviews-map__person_4').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_4').classList.toggle('active');
+});
+document.querySelector('.reviews-map__person_5').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_5').classList.toggle('active');
+});
+document.querySelector('.reviews-map__person_6').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_6').classList.toggle('active');
+});
+document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', function () {
+  autoRemoveActiveClass();
+  document.querySelector('.reviews-map__box_7').classList.toggle('active');
+});
+
+
+
+
+
+
+// document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', function () {
+//   document.querySelector('.reviews-map__box_7').classList.toggle('active');
+// });
+
+// document.querySelector('.reviews-map__person_7').addEventListener('mouseleave', function () {
+//   document.querySelector('.reviews-map__box_7').classList.remove('active');
 // });
 
 
-// // Получаем элемент с классом button
-// const button = document.querySelector('.icon-menu_pc');
-
-// // Добавляем обработчик события нажатия на элемент button
-// button.addEventListener('click', function() {
-//   // Получаем элементы с классами menu и button
-//   const menu = document.querySelector('.menu__body');
-//   const buttonElement = this;
-
-//   // Добавляем класс active элементам menu и button
-//   menu.classList.add('active');
-//   buttonElement.classList.add('active');
-// });
-
-
-
-// const menuBtns = document.querySelectorAll('.icon-menu_pc');
-// const drops = document.querySelectorAll('.menu__body');
-
-// menuBtns.forEach(el => {
-//   el.addEventListener('click', (e) => {
-//     let currentBtn = e.currentTarget;
-//     let drop = currentBtn.closest('.wrap-icon-btn').querySelector('.menu__body');
-
-//     menuBtns.forEach(el => {
-//       if (el !== currentBtn) {
-//         el.classList.remove('icon-menu_pc--active');
-//       }
-//     });
-
-//     drops.forEach(el => {
-//       if (el !== drop) {
-//         el.classList.remove('menu__body--active');
-//       }
-//     });
-
-//     drop.classList.toggle('menu__body--active');
-//     currentBtn.classList.toggle('icon-menu_pc--active');
-//   });
-// });
-
-// document.addEventListener('click', (e) => {
-//   if (!e.target.closest('.header')) {
-//     menuBtns.forEach(el => {
-//       el.classList.remove('icon-menu_pc--active');
-//     });
-
-//     drops.forEach(el => {
-//       el.classList.remove('menu__body--active');
-//     });
-//   }
-// });
 
 
 

@@ -15,20 +15,26 @@
 
   /* .section-map__container */
   &__container {
-    padding-top: toRem(101);
+    @include adaptiveValue("padding-top", 101, 45);
     position: relative;
     z-index: 100;
+    // pointer-events: none;
   }
-
 
   &__image {
     position: relative;
     display: inline-flex;
 
+    svg {
+      @include adaptiveValue("width", 112, 74);
+    }
+
     img {
       position: absolute;
-      top: 6px;
-      left: 6px;
+      @include adaptiveValue("top", 6, 25);
+      @include adaptiveValue("left", 6, 4);
+
+      @include adaptiveValue("width", 100, 66);
     }
   }
 }
@@ -41,17 +47,28 @@
     display: grid;
     grid-template-columns: auto 32.357%;
     // grid-template-columns: auto auto;
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr auto;
+    }
   }
+
 
   /* .reviews-map__media */
   &__media {
     position: relative;
+
+    @media (max-width:$tablet) {
+      min-height: toRem(103);
+    }
   }
 
   /* .reviews-map__person */
   &__person {
     position: absolute;
     cursor: pointer;
+    pointer-events: fill;
 
     &:hover {
       .reviews-map__image {
@@ -76,41 +93,73 @@
       left: -11.8%;
       bottom: 27.6%;
 
-      &:hover {
-        .reviews-map__box_1 {
-          visibility: visible;
-        }
+      @media (max-width: em(1650)) {
+        left: -6%;
+      }
+
+      @media (max-width:$tablet) {
+        left: 0;
+        bottom: -199.4%;
       }
     }
 
     &_2 {
       left: 3.3%;
       top: 19%;
+
+      @media (max-width:$tablet) {
+        left: 10.6%;
+        top: 14.8%;
+      }
     }
 
     &_3 {
       right: 43.2%;
       top: 7%;
+
+      @media (max-width:$tablet) {
+        right: 37.3%;
+        top: 148%;
+      }
     }
 
     &_4 {
       left: 9.2%;
       bottom: -8%;
+
+      @media (max-width:$tablet) {
+        left: 49.6%;
+        bottom: -126.6%;
+      }
     }
 
     &_5 {
       left: 15.2%;
       bottom: 11.7%;
+
+      @media (max-width:$tablet) {
+        left: 35.2%;
+        bottom: -15.3%;
+      }
     }
 
     &_6 {
       left: 26.3%;
       bottom: -3.5%;
+
+      @media (max-width:$tablet) {
+        left: 90.3%;
+        bottom: -156.5%;
+      }
     }
 
     &_7 {
       right: 20.1%;
       bottom: 11.7%;
+
+      @media (max-width:$tablet) {
+        right: -4.9%;
+      }
     }
   }
 
@@ -133,18 +182,29 @@
   /* .reviews-map__info */
   &__info {
     min-height: 622px;
+    align-self: end;
+
+    @media (max-width:$tablet) {
+      display: grid;
+    }
   }
 
   /* .reviews-map__box */
   &__box {
     position: relative;
-    padding-top: toRem(40);
-    padding-right: toRem(46);
-    padding-top: toRem(40);
-    padding-left: toRem(58);
-    min-height: toRem(622);
-    display: none;
+    @include adaptiveValue("padding-top", 40, 25);
+    @include adaptiveValue("padding-right", 46, 30);
+    @include adaptiveValue("padding-left", 58, 24);
+    @include adaptiveValue("padding-bottom", 80, 52);
+    justify-self: end;
+
     background-color: #fff;
+    display: none;
+
+    @media (max-width:$tablet) {
+      align-self: end;
+    }
+
 
     &::before {
       content: '';
@@ -152,26 +212,47 @@
       width: 100%;
       height: 100%;
       background: url('@img/map/bg-light.svg') 0 0 no-repeat;
-      transform: translate(-70px, -26px);
+      // transform: translate(-70px, -26px);
+      transform: translate(-15.7%, -6.4%);
       z-index: -1;
-    }
 
-    &_1 {
-      .hovered & {
-        display: block;
+      @media (max-width:$tablet) {
+        background: $mainColor;
+        width: 111%;
+      }
+
+      @media (max-width:$mobile) {
+        width: 100%;
+        transform: translate(-11.7%, -3.4%);
       }
     }
 
-    &_2 {
-      .hovered & {
-        display: block;
-      }
+    &_1.active {
+      display: block;
     }
 
-    &_3 {
-      .hovered & {
-        display: block;
-      }
+    &_2.active {
+      display: block;
+    }
+
+    &_3.active {
+      display: block;
+    }
+
+    &_4.active {
+      display: block;
+    }
+
+    &_5.active {
+      display: block;
+    }
+
+    &_6.active {
+      display: block;
+    }
+
+    &_7.active {
+      display: block;
     }
   }
 
@@ -191,9 +272,13 @@
 
   /* .reviews-map__wrap-head */
   &__wrap-head {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+
+    @media (min-width:em(1280)) {
+      display: flex;
+      justify-content: space-between;
+
+    }
   }
 
   /* .reviews-map__name */
@@ -205,16 +290,19 @@
 
   /* .reviews-map__data */
   &__data {
-
     display: flex;
-    justify-content: space-between;
-
-
+    padding-top: toRem(7);
     font-size: toRem(12);
     font-weight: 400;
     color: $mainColor;
     line-height: 217%;
     letter-spacing: 0.03em;
+    gap: toRem(15);
+
+    @media (min-width:em(1280)) {
+      justify-content: space-between;
+      padding-top: toRem(0);
+    }
   }
 
   /* .reviews-map__rating */
@@ -229,7 +317,8 @@
 
     p {
       &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 30, 20);
+        display: block;
+        @include adaptiveValue("margin-bottom", 30, 25);
       }
     }
   }
@@ -248,6 +337,7 @@
   // position: relative;
   @include adaptiveValue("height", 860, 900);
   width: 100%;
+  // z-index: 100;
 
   &::before {
     content: '';
@@ -258,6 +348,7 @@
     height: 100%;
     background: rgba(15, 17, 26, 0.5);
     z-index: 20;
+    pointer-events: none;
   }
 }
 
