@@ -75,6 +75,12 @@
     &_1 {
       left: -11.8%;
       bottom: 27.6%;
+
+      &:hover {
+        .reviews-map__box_1 {
+          visibility: visible;
+        }
+      }
     }
 
     &_2 {
@@ -125,7 +131,9 @@
   }
 
   /* .reviews-map__info */
-  &__info {}
+  &__info {
+    min-height: 622px;
+  }
 
   /* .reviews-map__box */
   &__box {
@@ -135,7 +143,7 @@
     padding-top: toRem(40);
     padding-left: toRem(58);
     min-height: toRem(622);
-
+    display: none;
     background-color: #fff;
 
     &::before {
@@ -146,6 +154,24 @@
       background: url('@img/map/bg-light.svg') 0 0 no-repeat;
       transform: translate(-70px, -26px);
       z-index: -1;
+    }
+
+    &_1 {
+      .hovered & {
+        display: block;
+      }
+    }
+
+    &_2 {
+      .hovered & {
+        display: block;
+      }
+    }
+
+    &_3 {
+      .hovered & {
+        display: block;
+      }
     }
   }
 

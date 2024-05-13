@@ -39,6 +39,40 @@ function init() {
 
 
 
+// const links = document.querySelectorAll(".reviews-map__person");
+
+// for (let i = 0; i < links.length; i++) {
+//   links[i].addEventListener("mouseenter", function () {
+//     this.parentNode.classList.add("hhv");
+//   });
+
+//   links[i].addEventListener("mouseleave", function () {
+//     this.parentNode.classList.remove("hhv");
+//   });
+// }
+
+let bodyPerson = document.querySelector('.reviews-map__body');
+document.querySelectorAll('.reviews-map__person').forEach(e => e.addEventListener('mouseenter', function () {
+  bodyPerson.classList.add('hovered');
+}));
+
+document.querySelectorAll('.reviews-map__person').forEach(e => e.addEventListener('mouseleave', function () {
+  bodyPerson.classList.remove('hovered');
+}));
+
+
+// const boxReviews = document.querySelector('.reviews-map__box');
+
+
+
+console.log(bodyPerson);
+// console.log ();
+// forEach(e => e.addEventListener("mouseover", fun));
+// document.querySelector('.reviews-map__person').addEventListener('mouseenter', function () {
+//   this.parentElement.classList.add('hovered');
+// });
+
+
 // document.querySelector(".box .block").show();
 // document.querySelector(".closed .block").hide();
 // document.querySelector("div.hide").click(function() {
