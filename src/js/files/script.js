@@ -11,7 +11,12 @@ function init() {
     zoom: 15
   });
 
-  // var myPlacemark = new ymaps.Placemark(
+  // var map2 = new ymaps.Map("map2", {
+  //   center: [55.720860, 37.560354],
+  //   zoom: 15
+  // });
+
+  // var myPlacemark2 = new ymaps.Placemark(
 
   //   [55.727540, 37.567785],
   //   {},
@@ -34,8 +39,20 @@ function init() {
   map.controls.remove('rulerControl'); // удаляем контрол правил
   map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 
+
+  // map2.controls.remove('geolocationControl');
+  // map2.controls.remove('searchControl'); // удаляем поиск
+  // map2.controls.remove('trafficControl'); // удаляем контроль трафика
+  // map.controls.remove('typeSelector'); // удаляем тип
+
+  // // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  // map2.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  // map2.controls.remove('rulerControl'); // удаляем контрол правил
+  // map2.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
   // map.geoObjects.add(myPlacemark);
 }
+
 
 // let event_list = ["click", "mouseenter"];
 
