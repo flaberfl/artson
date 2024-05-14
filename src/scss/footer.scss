@@ -1,7 +1,8 @@
 .footer {
   // background-color: $bodyColor;
   overflow: hidden;
-background-color: #fff;
+  background-color: red;
+
   @media (max-width:$mobile) {
     padding-top: toRem(16);
   }
