@@ -1,11 +1,15 @@
 .contacts {
   position: relative;
-
-  // margin-top: toRem(-517);
+  // padding-top: toRem(115);
+  // top: 50%;
+  margin-top: toRem(-517);
   /* .contacts__container */
   z-index: 50;
+  pointer-events: all;
+  left: 0;
 
   &__container {
+    // position: absolute;
   }
 
 
@@ -64,8 +68,10 @@
     letter-spacing: .03em;
     font-weight: 900;
 
-    &:hover {
-      color: #AB8244;
+    a {
+      &:hover {
+        color: #AB8244;
+      }
     }
   }
 
@@ -86,6 +92,8 @@
     border: 1px solid $subColor;
     border-radius: 50%;
 
+    flex: 0 0 toRem(69);
+
     transition: background 0.3s;
 
     &:hover {
@@ -93,5 +101,3 @@
     }
   }
 }
-
-.title-h2 {}
