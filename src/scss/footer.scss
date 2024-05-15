@@ -194,6 +194,15 @@
     align-items: center;
     gap: toRem(14);
 
+    @media (max-width: em(960)) {
+      margin-top: toRem(25);
+    }
+
+    @media (max-width: em(680)) {
+      margin-top: toRem(18);
+      margin-bottom: toRem(18);
+    }
+
     // align-self: end;
     span {
       font-size: toRem(10);
