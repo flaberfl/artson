@@ -144,6 +144,12 @@
       @media (max-width: em(680)) {
         margin-left: 0;
         margin-top: 0;
+        justify-self: center;
+        grid-column: span 2;
+      }
+
+      @media (max-width: em(360)) {
+        justify-self: start;
       }
     }
 
@@ -272,6 +278,11 @@
     @media (max-width: em(1120)) {
       top: -14.4%;
     }
+
+    @media (max-width: em(680)) {
+      top: 64%;
+      gap: toRem(60);
+    }
   }
 
   /* .button__up-box */
@@ -283,7 +294,7 @@
     width: toRem(84);
     height: toRem(84);
 
-    background-color: red;
+    background-color: #fff;
     border-radius: 50%;
     z-index: 50;
 
@@ -293,7 +304,6 @@
       @include adaptiveValue("width", 60, 47);
       @include adaptiveValue("height", 60, 47);
       background: $mainColor;
-      // background: red;
       border-radius: 50%;
       z-index: -1;
     }
