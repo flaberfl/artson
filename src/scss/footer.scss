@@ -1,5 +1,5 @@
 .footer {
-  margin-bottom: toRem(500);
+  // margin-bottom: toRem(500);
   position: relative;
 
   &__wrapper {
@@ -25,6 +25,10 @@
 
     @media (max-width: em(1360)) {
       padding-top: toRem(35);
+    }
+
+    @media (max-width: em(960)) {
+      padding-left: 0;
     }
   }
 
@@ -134,7 +138,7 @@
       }
 
       @media (max-width: em(1020)) {
-        margin-left: toRem(40);
+        margin-left: toRem(71);
       }
 
       @media (max-width: em(680)) {
@@ -158,6 +162,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: em(480)) {
+      justify-self: start;
     }
 
   }
@@ -200,7 +208,7 @@
 
   &__copyright {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
     margin-top: toRem(7);
     width: 100%;
@@ -211,6 +219,7 @@
 
     @media (max-width: em(680)) {
       margin-top: toRem(35);
+      flex-direction: column;
     }
 
     a {
@@ -241,6 +250,19 @@
       letter-spacing: 0.24em;
       @include adaptiveValue("font-size", 14, 12);
     }
+
+    @media (max-width: em(1660)) {
+      top: -77.4%;
+    }
+
+    @media (max-width: em(1360)) {
+      top: -41.4%;
+      right: -3%;
+    }
+
+    @media (max-width: em(1120)) {
+      top: -14.4%;
+    }
   }
 
   /* .button__up-box */
@@ -259,9 +281,8 @@
     &::before {
       content: '';
       position: absolute;
-      width: toRem(60);
-      height: toRem(60);
-
+      @include adaptiveValue("width", 60, 47);
+      @include adaptiveValue("height", 60, 47);
       background: $mainColor;
       // background: red;
       border-radius: 50%;
