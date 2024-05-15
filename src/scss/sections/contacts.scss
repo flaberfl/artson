@@ -1,10 +1,12 @@
 .contacts {
   position: relative;
-  margin-top: toRem(-517);
+
+  // margin-top: toRem(-517);
   /* .contacts__container */
   z-index: 50;
 
-  &__container {}
+  &__container {
+  }
 
 
   /* .contacts__body */
@@ -25,7 +27,7 @@
       height: 100%;
       top: -15px;
       right: -15px;
-      
+
       background-color: #fff;
       z-index: -1;
     }
