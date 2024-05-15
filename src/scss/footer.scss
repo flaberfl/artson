@@ -1,5 +1,6 @@
 .footer {
   margin-bottom: toRem(500);
+  position: relative;
 
   &__wrapper {
     position: relative;
@@ -208,8 +209,8 @@
     letter-spacing: .03em;
     color: $mainColor;
 
-    @media (max-width: em(680)){
-       margin-top: toRem(35); 
+    @media (max-width: em(680)) {
+      margin-top: toRem(35);
     }
 
     a {
@@ -218,5 +219,59 @@
       }
     }
   }
+}
 
+.button {
+
+  &__up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: toRem(85);
+    right: 2%;
+    top: -17.4%;
+
+    span {
+      color: $mainColor;
+      transform: rotate(-90deg);
+      display: inline-block;
+
+      letter-spacing: 0.24em;
+      @include adaptiveValue("font-size", 14, 12);
+    }
+  }
+
+  /* .button__up-box */
+  &__up-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: toRem(84);
+    height: toRem(84);
+
+    background-color: red;
+    border-radius: 50%;
+    z-index: 50;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: toRem(60);
+      height: toRem(60);
+
+      background: $mainColor;
+      // background: red;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  svg {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
 }
