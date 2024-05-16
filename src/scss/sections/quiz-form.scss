@@ -1,0 +1,197 @@
+.quiz-form {
+
+  /* .quiz-form__header */
+  &__header {
+    margin-bottom: 3px;
+  }
+
+  /* .quiz-form__title */
+  &__name {
+    margin-bottom: toRem(51);
+
+    @include adaptiveValue("font-size", 36, 22);
+    font-weight: 800;
+    letter-spacing: .03em;
+    color: $mainColor;
+  }
+
+  /* .quiz-form__fieldset */
+  &__fieldset {
+    margin-bottom: toRem(50);
+  }
+
+  /* .quiz-form__top */
+  &__top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: toRem(31);
+
+    @include adaptiveValue("font-size", 26, 16);
+    color: $mainColor;
+    letter-spacing: .03em;
+  }
+
+  /* .quiz-form__number */
+  &__number {
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  /* .quiz-form__discount */
+  &__discount {}
+
+  /* .quiz-form__num */
+  &__num {
+    @include adaptiveValue("font-size", 55, 30);
+    color: #FFB443;
+    font-weight: 800;
+  }
+
+  /* .quiz-form__proc */
+  &__proc {
+    color: #FFB443;
+    font-weight: 800;
+  }
+
+  /* .quiz-form__body */
+  &__body {}
+
+  /* .quiz-form__options */
+  &__options {
+    display: grid;
+    gap: toRem(24);
+  }
+
+  /* .quiz-form__footer */
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiveValue("gap", 44, 0);
+    margin-top: toRem(67);
+  }
+
+  /* .quiz-form__button */
+  &__button {
+
+    width: toRem(189);
+
+    /* .quiz-form__button_prev */
+    &_prev {}
+
+    /* .quiz-form__button_next */
+    &_next {}
+  }
+
+  /* .quiz-form__progress */
+  &__progress {
+    flex: 1 1 auto;
+  }
+}
+
+.progress-quiz-form {
+  &__bar {
+    position: relative;
+    background: #D9D9D9;
+    border-radius: toRem(10);
+    height: toRem(6);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // max-width: toRem(690);
+  }
+
+  &__progress {
+    position: absolute;
+    height: 200%;
+    left: 0;
+    top: 50%;
+    transform: translate(0%,-50%);
+    border-radius: toRem(10);
+
+    background-color: #979DA4;
+
+    &_1 {
+      width: 12.46%;
+    }
+
+    &_2 {
+      width: 24.92%;
+    }
+  }
+}
+
+
+.wpcf7-form-control {}
+
+.wpcf7-radio {}
+
+.wpcf7-list-item {}
+
+.wpcf7-list-item-label {}
+
+.button {}
+
+.progress-quiz-form {
+
+  /* .progress-quiz-form__bar */
+  &__bar {}
+
+  /* .progress-quiz-form__progress */
+  &__progress {
+
+    /* .progress-quiz-form__progress_1 */
+    &_1 {}
+  }
+}
+
+
+
+// Бэкграунд радио кнопки
+.wpcf7-radio input[type="radio"]+span:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: toRem(30);
+  height: toRem(30);
+  left: 0;
+  top: 50%;
+
+  transform: translate(0, -50%);
+  background-color: transparent;
+  border: 1px solid $subColor;
+}
+
+// Галочка при нажатии на кнопку
+.wpcf7-radio input[type=radio]:checked+span:before {
+  background: url('@img/icons/check.svg') center center no-repeat;
+  border-color: $mainColor;
+}
+
+// Прячем нативные кнопки RADIO
+.wpcf7-radio input[type=radio] {
+  position: relative;
+  visibility: hidden;
+}
+
+.wpcf7-radio label {
+  position: relative;
+  cursor: pointer;
+}
+
+// Текст радио кнопки
+.wpcf7-list-item-label {
+  margin-left: 29px;
+
+  font-size: toRem(14);
+  letter-spacing: .03em;
+  color: $mainColor;
+  font-weight: 400;
+}
+
+.sub-hidden {
+  display: none;
+}

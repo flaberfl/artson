@@ -1,42 +1,247 @@
-<div id="features-popup" aria-hidden="true" class="features-popup popup">
-	<div class="popup__wrapper features-popup__wrapper">
-		<div class="popup__content features-popup__content">
-			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<rect x="31.1128" y="4.94971" width="37" height="7" rx="3" transform="rotate(135 31.1128 4.94971)"
-						fill="#D9D9D9" />
-					<rect width="37" height="7" rx="3" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.1128 26.1636)"
-						fill="#D9D9D9" />
+<div id="quiz-popup" aria-hidden="true" class="quiz-popup popup popup_show">
+	<div class="popup__wrapper quiz-popup__wrapper">
+		<div class="popup__content quiz-popup__content">
+			<button data-close type="button" class="popup__close">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 2L22 22M22.8787 2L2.87868 22" stroke="black" stroke-width="3" />
 				</svg>
+
 			</button>
-			<div class="popup__body">
-				<div class="popup__top">
-					<div class="popup__left-side">
-						<h2 class="popup__title">Спортсменам</h2>
-						<h3 class="popup__subtitle" data-da=".popup__top, 992">Для повышения выносливости организма на 30% и более
-							быстрого восстановления
-							после
-							тренировок</h3>
-						<p class="popup__name">Как водородная вода улучшает результаты тренировок?</p>
+			<div class="popup__body quiz-popup__body">
+
+				<form action="" class=quiz-form">
+
+					<div class="quiz-form__header">
+						<h2 sub-visible class="quiz-form__title title-h2 title-h2_black">Рассчитайте стоимость ремонта <br> за 3
+							минуты
+						</h2>
+						<!-- <h2 sub-hidden class="quiz__title title-h2 title-h2_black">Стоимость Вашего ремонта сформирована</h2> -->
 					</div>
-					<div class="popup__image-ibg"><img data-src="@img/blog/01-big.jpg" alt="Изображение блога"></div>
-				</div>
-				<div class="popup__bottom">
-					<p class="popup__text text-base">Насыщенная водородом вода — мощный антиоксидант,который уменьшает окисляющее
-						воздействие на мышечные ткани и нейтрализуетклетки молочной кислоты, вырабатывающейся в них при больших
-						физическихнагрузках. Если совмещать приём водородной воды и активные занятия спортом,то вода будет
-						способствовать увеличению силовых нагрузок, снижениювыделения молочной кислоты в мышечных тканях, повышению
-						выносливости мышц.Это помогает избежать перетренированности, появления микротравм, ускоряетмомент
-						восстановления организма, уменьшает чувство скованности мышци болевой синдром по утрам.</p>
-					<a href="https://medicalgasresearch.biomedcentral.com/articles/10.1186/2045-9912-2-12"
-						class="popup__link text-base">http//medicalgasresearch.biomedcentral.com/articles/10.1186/2045-9912-2-12</a>
-				</div>
+					<fieldset class="quiz-form__fieldset">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>1/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">1</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Где требуется ремонт?</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="new-house">
+											<span class="wpcf7-list-item-label">Новостройка</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="old-house">
+											<span class="wpcf7-list-item-label">Втричное жилье</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="private-house">
+											<span class="wpcf7-list-item-label">Частный дом/коттедж</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="old-fond">
+											<span class="wpcf7-list-item-label">Ремонт в старом фонде</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="other-house">
+											<span class="wpcf7-list-item-label">Другое</span>
+										</label>
+									</span>
+								</span>
+
+
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button op0">назад</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_1"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next">далее</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
+						</div>
+					</fieldset>
+					
+					<fieldset class="quiz-form__fieldset">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>2/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">2</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Укажите количество комнат</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="studia">
+											<span class="wpcf7-list-item-label">Студия</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="1-room">
+											<span class="wpcf7-list-item-label">Однокомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="2-room">
+											<span class="wpcf7-list-item-label">Двухкомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="3-room">
+											<span class="wpcf7-list-item-label">Трехкомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="other-room">
+											<span class="wpcf7-list-item-label">Другое</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev">назад</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_prev btn-mobile"></button> -->
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_2"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next">далее</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>4/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">4</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Укажите количество комнат</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="studia">
+											<span class="wpcf7-list-item-label">Студия</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="1-room">
+											<span class="wpcf7-list-item-label">Однокомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="2-room">
+											<span class="wpcf7-list-item-label">Двухкомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="3-room">
+											<span class="wpcf7-list-item-label">Трехкомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="other-room">
+											<span class="wpcf7-list-item-label">Другое</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev">назад</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_prev btn-mobile"></button> -->
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_2"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next">далее</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
+						</div>
+					</fieldset>
+
+
+				</form>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div id="videos-popup-video" aria-hidden="true" class="video-popup popup">
+
+
+
+
+
+
+<!-- <div id="videos-popup-video" aria-hidden="true" class="video-popup popup">
 	<div class="popup__wrapper">
 		<div class="video-popup__content popup__content">
 			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -109,57 +314,4 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-
-<div id="report-popup" aria-hidden="true" class="submit-popup popup form-popup">
-	<div class="popup__wrapper submit-popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<rect x="31.1128" y="4.94971" width="37" height="7" rx="3" transform="rotate(135 31.1128 4.94971)"
-						fill="#D9D9D9" />
-					<rect width="37" height="7" rx="3" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 31.1128 26.1636)"
-						fill="#D9D9D9" />
-				</svg>
-			</button>
-			<div class="popup__body submit-popup__body">
-				<h2 class="submit-popup__title">Получить оригинал <br> Test Report</h2>
-
-				<form class="form" action="">
-					<div class="form__line form__line_name">
-						<label for="name">Имя *</label>
-						<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя"
-							class="input input_name">
-					</div>
-
-					<div class="form__line form__line_tel">
-						<label for="name">Телефон *</label>
-						<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш номер телефона"
-							class="input input_tel">
-					</div>
-
-					<div class="form__line form__line_mail">
-						<label for="name">E-mail *</label>
-						<input autocomplete="off" type="email" name="tel" data-error="Ошибка" placeholder="Ваш e-mail"
-							class="input input_mail">
-					</div>
-
-					<div class="form__line form__line_policy">
-						<div class="checkbox">
-							<input id="i-report" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-							<label for="i-report" class="checkbox__label"><span class="checkbox__text">Согласен с политикой
-									конфидециальности</span></label>
-						</div>
-					</div>
-
-					<div class="form__line form__line_button">
-						<button id="b-report" type="submit" class="button form__button intro__button">Получить оригинал Test
-							Report</button>
-					</div>
-
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+</div> -->

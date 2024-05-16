@@ -44,14 +44,13 @@ body::after {
 
 .popup__close {
 	position: absolute;
-	@include adaptiveValue("right", 30, 24);
-	@include adaptiveValue("top", 30, 24);
+	@include adaptiveValue("right", 34, 22);
+	@include adaptiveValue("top", 37, 22);
 	z-index: 100;
 
 	svg {
-		@include adaptiveValue("width", 37, 15);
-		@include adaptiveValue("height", 37, 15);
-
+		width: toRem(23);
+		height: toRem(23);
 	}
 }
 
@@ -60,21 +59,20 @@ body::after {
 	flex-direction: column;
 	align-items: center;
 	min-height: 100%;
-	justify-content: center;
+	// justify-content: center;
 	flex: 1 1 auto;
 	width: 100%;
 }
 
 .popup__content {
-	background-color: #22242A;
+	background-color: #fff;
 	width: 100%;
 	max-width: toRem(1400);
-
 	visibility: hidden;
 	opacity: 0;
 	transform: scale(.6);
 	transition: all 0.6s ease 0s;
-	box-shadow: 0px 29px 96px 0px rgb(0, 0, 0);
+	box-shadow: 0 29px 70px 0 rgba(0, 0, 0, 0.38);
 
 	.video-popup & {
 		background-color: #000;
@@ -93,10 +91,15 @@ body::after {
 // Переписать в стили
 .popup__body {
 	// padding: toRem(111) toRem(118) toRem(97) toRem(114);
-	@include adaptiveValue("padding-top", 90, 58);
-	@include adaptiveValue("margin-left", 90, 26);
-	@include adaptiveValue("margin-right", 90, 26);
-	@include adaptiveValue("margin-bottom", 70, 28);
+	// @include adaptiveValue("padding-top", 90, 58);
+	// @include adaptiveValue("margin-left", 90, 26);
+	// @include adaptiveValue("margin-right", 90, 26);
+	// @include adaptiveValue("margin-bottom", 70, 28);
+
+	padding-left: toRem(117);
+	padding-top: toRem(81);
+	padding-right: toRem(123);
+	padding-bottom: toRem(88);
 
 	// Переписать в стили
 	.form-popup & {

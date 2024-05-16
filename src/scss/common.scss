@@ -55,6 +55,12 @@
 	white-space: nowrap
 }
 
+.op0 {
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	z-index: -1000;
+}
 
 ._grid {
 	display: grid;
