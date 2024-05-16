@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: 49.28% auto;
     @include adaptiveValue("gap", 138, 32);
-    align-items: center;
+    // align-items: center;
 
     @include adaptiveValue("margin-bottom", 95, 55);
 

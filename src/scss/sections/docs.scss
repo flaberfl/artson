@@ -82,7 +82,13 @@
   }
 
   /* .docs__slider */
-  &__slider {}
+  &__slider {
+    margin-bottom: toRem(-1);
+
+    @media (min-width:$tablet) and (max-width: em(1420)) {
+      margin-right: toRem(-20);
+    }
+  }
 
   /* .docs__wrapper */
   &__wrapper {}

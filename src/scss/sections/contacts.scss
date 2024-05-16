@@ -1,9 +1,7 @@
 .contacts {
   position: relative;
-  // padding-top: toRem(115);
-  // top: 50%;
   margin-top: toRem(-517);
-  /* .contacts__container */
+
   z-index: 50;
   pointer-events: all;
   left: 0;
@@ -17,43 +15,31 @@
   }
 
 
-
   @media (max-width: em(960)) {
-    margin-top: toRem(-616);
+    margin-top: toRem(-566);
   }
 
   @media (max-width: em(680)) {
     margin-top: toRem(-210);
-    // left: 50%;
-    // transform: translate(-50%, 0%);
     margin-left: auto;
     margin-right: auto;
   }
-
-  &__container {
-    // position: absolute;
-  }
-
 
   /* .contacts__body */
   &__body {
     position: relative;
     background: url('@img/contacts/bg.jpg') 0 0 no-repeat;
-    // max-width: toRem(453);
     @include adaptiveValue("width", 453, 319);
     @include adaptiveValue("padding-top", 66, 30);
     @include adaptiveValue("padding-right", 95, 20);
     @include adaptiveValue("padding-bottom", 81, 46);
     @include adaptiveValue("padding-left", 90, 28);
-    // z-index: 30;
 
     &::before {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
-      // top: -15px;
-      // right: -15px;
 
       @include adaptiveValue("top", -15, -10);
       @include adaptiveValue("right", -15, -10);
