@@ -37,7 +37,7 @@ function initSliders() {
 			// height: 'auto',
 			// grabCursor: true,
 			// autoHeight: true,
-			speed: 1500,
+			speed: 700,
 			// centeredSlides: true,
 			// centeredSlidesBounds: true,
 			// coverflowEffect: {
@@ -115,7 +115,7 @@ function initSliders() {
 			// height: 'auto',
 			// grabCursor: true,
 			autoHeight: true,
-			speed: 1500,
+			speed: 700,
 			// centeredSlides: true,
 			// centeredSlidesBounds: true,
 			// coverflowEffect: {
@@ -203,7 +203,7 @@ let myTextSlider = new Swiper('.portfolio__slider_text', {
 	// grabCursor: true,
 	// autoHeight: true,
 	allowTouchMove: false,
-	speed: 1500,
+	speed: 700,
 	effect: "fade",
 	// centeredSlides: true,
 	// centeredSlidesBounds: true,
@@ -277,7 +277,7 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	// height: 'auto',
 	// grabCursor: true,
 	// autoHeight: true,
-	speed: 1500,
+	speed: 700,
 	centeredSlides: true,
 	centeredSlidesBounds: true,
 
@@ -349,7 +349,7 @@ let myTextSlider_2 = new Swiper('.portfolio__slider_text_2', {
 	// grabCursor: true,
 	// autoHeight: true,
 	allowTouchMove: false,
-	speed: 1500,
+	speed: 700,
 	// centeredSlides: true,
 	// centeredSlidesBounds: true,
 	// effect: 'coverflow',
@@ -420,7 +420,7 @@ let myImageSlider_2 = new Swiper('.portfolio__slider_2', { // Вказуємо �
 	// height: 'auto',
 	// grabCursor: true,
 	// autoHeight: true,
-	speed: 1500,
+	speed: 700,
 	centeredSlides: true,
 	centeredSlidesBounds: true,
 
@@ -480,7 +480,7 @@ let myVideoSlider = new Swiper('.video__slider', {
 	// height: 'auto',
 	// grabCursor: true,
 	autoHeight: true,
-	speed: 1500,
+	speed: 700,
 
 
 	pagination: {
