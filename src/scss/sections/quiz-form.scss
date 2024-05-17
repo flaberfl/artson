@@ -17,7 +17,7 @@
 
   /* .quiz-form__fieldset */
   &__fieldset {
-    margin-bottom: toRem(50);
+    margin-bottom: toRem(150);
   }
 
   /* .quiz-form__top */
@@ -57,7 +57,9 @@
   }
 
   /* .quiz-form__body */
-  &__body {}
+  &__body {
+    @include adaptiveValue("height", 364, 320);
+  }
 
   /* .quiz-form__options */
   &__options {
@@ -71,7 +73,7 @@
     justify-content: space-between;
     align-items: center;
     @include adaptiveValue("gap", 44, 0);
-    margin-top: toRem(67);
+    // margin-top: toRem(67);
   }
 
   /* .quiz-form__button */
