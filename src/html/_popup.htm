@@ -17,7 +17,9 @@
 						</h2>
 						<!-- <h2 sub-hidden class="quiz__title title-h2 title-h2_black">Стоимость Вашего ремонта сформирована</h2> -->
 					</div>
-					<fieldset class="quiz-form__fieldset">
+
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_1">
 						<div class="quiz-form__top">
 							<div class="quiz-form__number">
 								Вопрос <span>1/8</span>
@@ -87,8 +89,8 @@
 							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
 						</div>
 					</fieldset>
-					
-					<fieldset class="quiz-form__fieldset">
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_2">
 						<div class="quiz-form__top">
 							<div class="quiz-form__number">
 								Вопрос <span>2/8</span>
@@ -158,7 +160,7 @@
 						</div>
 					</fieldset>
 
-					<fieldset class="quiz-form__fieldset">
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_4">
 						<div class="quiz-form__top">
 							<div class="quiz-form__number">
 								Вопрос <span>4/8</span>
@@ -168,47 +170,92 @@
 							</div>
 						</div>
 						<div class="quiz-form__body">
-							<h3 class="quiz-form__name">Укажите количество комнат</h3>
+							<h3 class="quiz-form__name">Какой ремонт требуется?</h3>
 
 							<div class="quiz-form__options">
 
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="amount" value="studia">
-											<span class="wpcf7-list-item-label">Студия</span>
+											<input type="radio" name="type" value="capital">
+											<span class="wpcf7-list-item-label">Капитальный</span>
 										</label>
 									</span>
 								</span>
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="amount" value="1-room">
-											<span class="wpcf7-list-item-label">Однокомнатная</span>
+											<input type="radio" name="type" value="cosmetic">
+											<span class="wpcf7-list-item-label">Косметический</span>
 										</label>
 									</span>
 								</span>
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="amount" value="2-room">
-											<span class="wpcf7-list-item-label">Двухкомнатная</span>
+											<input type="radio" name="type" value="designer">
+											<span class="wpcf7-list-item-label">Дизайнерский</span>
+										</label>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev">назад</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_prev btn-mobile"></button> -->
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_4"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next">далее</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_5">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>5/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">5</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Какая отделка на объекте сейчас?</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="no-finish">
+											<span class="wpcf7-list-item-label">Без отделки</span>
 										</label>
 									</span>
 								</span>
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="amount" value="3-room">
-											<span class="wpcf7-list-item-label">Трехкомнатная</span>
+											<input type="radio" name="amount" value="develop-finish">
+											<span class="wpcf7-list-item-label">Отделка от застройщика</span>
 										</label>
 									</span>
 								</span>
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="amount" value="other-room">
-											<span class="wpcf7-list-item-label">Другое</span>
+											<input type="radio" name="amount" value="rough-finish">
+											<span class="wpcf7-list-item-label">Черновая отделка</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="old-finish">
+											<span class="wpcf7-list-item-label">Старый ремонт</span>
 										</label>
 									</span>
 								</span>
@@ -220,7 +267,122 @@
 							<!-- <button class="quiz-form__button button quiz-form__button_prev btn-mobile"></button> -->
 							<div class="quiz-form__progress progress-quiz-form">
 								<div class="progress-quiz-form__bar">
-									<div class="progress-quiz-form__progress progress-quiz-form__progress_2"></div>
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_5"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next">далее</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_6">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>6/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">6</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Нужен ли дизайн проект?</h3>
+							<h4 class="quiz-form__subname">При заказе полного  дизайн-проекта у нас, предоставим скидку 10%</h4>
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="sketchy">
+											<span class="wpcf7-list-item-label">Нужен эскизный дизайн-проект</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="full">
+											<span class="wpcf7-list-item-label">Нужен полный дизайн-проект</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="no-need">
+											<span class="wpcf7-list-item-label">Нет, не нужен</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="available">
+											<span class="wpcf7-list-item-label">Дизайн проект есть</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev">назад</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_prev btn-mobile"></button> -->
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_6"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next">далее</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_next btn-mobile"></button> -->
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_7">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>7/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">9</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Выберите свой подарок</h3>
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="present" value="cleaning">
+											<span class="wpcf7-list-item-label">Клининг после ремонта</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="present" value="w-system">
+											<span class="wpcf7-list-item-label">Система грубой очистки воды</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="present" value="e-lock">
+											<span class="wpcf7-list-item-label">Электронный замок на входную дверь</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev">назад</button>
+							<!-- <button class="quiz-form__button button quiz-form__button_prev btn-mobile"></button> -->
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_7"></div>
 								</div>
 							</div>
 							<button class="quiz-form__button button quiz-form__button_next">далее</button>
