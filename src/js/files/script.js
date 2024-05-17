@@ -219,17 +219,7 @@ btnsNext.forEach((btn) => {
     count++;
     initQuiz();
   });
-  // if (btn.style.display === 'none') {
-  //   btn.disabled = false;
-  // }
-  // btn.disabled = true;
-  // console.log(btn.style.display === 'none');
-  // btn.disabled = true;
-
-  // if (btn.style.display !== 'none') {
-  //   btn.setAttribute('disabled', '');
-  //   }
-
+  btn.disabled = true;
 });
 
 btnsPrev.forEach((btn) => {
