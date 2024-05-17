@@ -22,7 +22,7 @@ body::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: 30px 20px;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
@@ -91,15 +91,13 @@ body::after {
 // Переписать в стили
 .popup__body {
 	// padding: toRem(111) toRem(118) toRem(97) toRem(114);
-	// @include adaptiveValue("padding-top", 90, 58);
-	// @include adaptiveValue("margin-left", 90, 26);
 	// @include adaptiveValue("margin-right", 90, 26);
 	// @include adaptiveValue("margin-bottom", 70, 28);
 
-	padding-left: toRem(117);
-	padding-top: toRem(81);
-	padding-right: toRem(123);
 	padding-bottom: toRem(88);
+	@include adaptiveValue("padding-right", 123, 20);
+	@include adaptiveValue("padding-left", 117, 23);
+	@include adaptiveValue("padding-top", 81, 33);
 
 	// Переписать в стили
 	.form-popup & {

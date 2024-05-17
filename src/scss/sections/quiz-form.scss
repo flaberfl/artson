@@ -2,12 +2,12 @@
 
   /* .quiz-form__header */
   &__header {
-    margin-bottom: 3px;
+    @include adaptiveValue("margin-bottom", 3, 9);
   }
 
   /* .quiz-form__title */
   &__name {
-    margin-bottom: toRem(51);
+    @include adaptiveValue("margin-bottom", 51, 35);
 
     @include adaptiveValue("font-size", 36, 22);
     font-weight: 800;
@@ -25,6 +25,7 @@
   /* .quiz-form__fieldset */
   &__fieldset {
     // margin-bottom: toRem(150);
+    border: 1px solid red;
   }
 
   /* .quiz-form__top */
@@ -32,7 +33,7 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin-bottom: toRem(31);
+    @include adaptiveValue("margin-bottom", 31, 15);
 
     @include adaptiveValue("font-size", 26, 16);
     color: $mainColor;
@@ -66,6 +67,10 @@
   /* .quiz-form__body */
   &__body {
     @include adaptiveValue("height", 364, 320);
+
+    .quiz-form__fieldset_8 & {
+      @include adaptiveValue("margin-top", 108, 47);
+    }
   }
 
   /* .quiz-form__options */
@@ -76,17 +81,38 @@
 
   /* .quiz-form__footer */
   &__footer {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     align-items: center;
     @include adaptiveValue("gap", 44, 0);
     // margin-top: toRem(67);
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    @media (max-width:$mobileSmall) {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr 1fr;
+    }
   }
 
   /* .quiz-form__button */
   &__button {
 
-    min-width: toRem(189);
+    width: toRem(189);
+
+    @media (max-width:$mobile) {
+      display: none;
+
+      .quiz-form__fieldset_1 & {
+        justify-self: end;
+      }
+    }
+
+    .quiz-form__fieldset_8 & {
+      width: toRem(211);
+      display: inline-flex !important;
+    }
 
     /* .quiz-form__button_prev */
     &_prev {}
@@ -126,6 +152,7 @@
 
     &_phone {
       @include adaptiveValue("width", 572, 277);
+      margin-top: toRem(22);
 
       color: $mainColor;
       font-weight: 800 !important;
@@ -137,8 +164,6 @@
         color: #979DA4;
       }
     }
-
-
   }
 
   &__period,
@@ -150,7 +175,6 @@
     @media (max-width:$mobile) {
       font-size: toRem(14);
     }
-
   }
 
   &__period {
@@ -159,10 +183,13 @@
 
   &__file-inp {}
 
-
   /* .quiz-form__progress */
   &__progress {
-    flex: 1 1 auto;
+
+    @media (max-width:$mobileSmall) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
   }
 
   &__amount,

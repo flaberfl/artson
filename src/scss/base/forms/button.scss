@@ -20,3 +20,14 @@
 	letter-spacing: .03em;
 	color: #fff;
 }
+
+.btn-mobile {
+	width: toRem(60) !important;
+	height: toRem(60) !important;
+
+	display: none;
+
+	@media (max-width:$mobile) {
+		display: inline-flex !important;
+	}
+}
