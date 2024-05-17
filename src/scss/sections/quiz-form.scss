@@ -24,7 +24,7 @@
 
   /* .quiz-form__fieldset */
   &__fieldset {
-    margin-bottom: toRem(150);
+    // margin-bottom: toRem(150);
   }
 
   /* .quiz-form__top */
@@ -86,7 +86,7 @@
   /* .quiz-form__button */
   &__button {
 
-    width: toRem(189);
+    min-width: toRem(189);
 
     /* .quiz-form__button_prev */
     &_prev {}
@@ -123,6 +123,22 @@
       color: $mainColor;
       letter-spacing: .03em;
     }
+
+    &_phone {
+      @include adaptiveValue("width", 572, 277);
+
+      color: $mainColor;
+      font-weight: 800 !important;
+      text-align: left;
+
+      &::placeholder {
+        font-weight: 800;
+        letter-spacing: .03em;
+        color: #979DA4;
+      }
+    }
+
+
   }
 
   &__period,
@@ -149,10 +165,37 @@
     flex: 1 1 auto;
   }
 
+  &__amount,
+  &__present {
+    @include adaptiveValue("font-size", 26, 20);
+    font-weight: 800;
+    color: $mainColor;
+    letter-spacing: .03em;
+
+    span {
+      color: $subColor;
+    }
+  }
+
+
+  &__present {
+    @include adaptiveValue("margin-bottom", 22, 16);
+  }
+
+  &__amount {}
 
   &__phone {
+    @include adaptiveValue("margin-top", 116, 44);
 
+    label {
+      margin-bottom: toRem(22);
+
+      font-size: toRem(16);
+      letter-spacing: .03em;
+      color: $mainColor;
+    }
   }
+
 
 }
 
