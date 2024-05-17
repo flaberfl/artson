@@ -5,7 +5,7 @@ import * as noUiSlider from 'nouislider';
 // у файлі scss/forms/forms.scss
 
 // Підключення стилів з node_modules
-import 'nouislider/dist/nouislider.css';
+// import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
@@ -13,11 +13,12 @@ export function rangeInit() {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
 		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
+			start: 1, // [0,200000]
 			connect: [true, false],
+			step: 1,
 			range: {
-				'min': [0],
-				'max': [200000]
+				'min': [1],
+				'max': [200]
 			},
 			/*
 			format: wNumb({
