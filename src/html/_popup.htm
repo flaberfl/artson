@@ -1,4 +1,4 @@
-<div id="quiz-popup" aria-hidden="true" class="quiz-popup popup popup_show1">
+<div id="quiz-popup" aria-hidden="true" class="quiz-popup popup popup_show">
 	<div class="popup__wrapper quiz-popup__wrapper">
 		<div class="popup__content quiz-popup__content">
 			<button data-close type="button" class="popup__close">
@@ -8,6 +8,527 @@
 
 			</button>
 			<div class="popup__body quiz-popup__body">
+
+				<form action="" class="quiz-form">
+
+					<div class="quiz-form__header">
+						<h2 sub-visible class="quiz-form__title title-h2 title-h2_black">Рассчитайте стоимость ремонта <br> за 3
+							минуты
+						</h2>
+						<!-- <h2 sub-hidden class="quiz__title title-h2 title-h2_black">Стоимость Вашего ремонта сформирована</h2> -->
+					</div>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_1">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>1/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">1</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Где требуется ремонт?</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="new-house">
+											<span class="wpcf7-list-item-label">Новостройка</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="old-house">
+											<span class="wpcf7-list-item-label">Втричное жилье</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="private-house">
+											<span class="wpcf7-list-item-label">Частный дом/коттедж</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="old-fond">
+											<span class="wpcf7-list-item-label">Ремонт в старом фонде</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="where" value="other-house">
+											<span class="wpcf7-list-item-label">Другое</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button op0">назад</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_1"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_2">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>2/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">2</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Укажите количество комнат</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="studia">
+											<span class="wpcf7-list-item-label">Студия</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="1-room">
+											<span class="wpcf7-list-item-label">Однокомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="2-room">
+											<span class="wpcf7-list-item-label">Двухкомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="3-room">
+											<span class="wpcf7-list-item-label">Трехкомнатная</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="other-room">
+											<span class="wpcf7-list-item-label">Другое</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev"><span>назад</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_2"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_3">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>3/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">3</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Укажите площадь ремонтируемого помeщения</h3>
+
+							<div class="quiz-form__range">
+								<div id="range"></div>
+								<div class="quiz-form__range-inp">
+									<input id="num" min="1" max="1000" type="number" name="square"
+										class="input quiz-form__input quiz-form__input_range">
+									<label for="square">м<sup>2</sup></label>
+									<!-- <span id="result"></span> -->
+								</div>
+								<div class="quiz-form__period">
+									Срок работ: от 75 до 105 дней
+									<!-- Срок работ: от <span id="from"></span> до <span id="to"></span>дней -->
+								</div>
+							</div>
+							<div class="quiz-form__file-inp">
+								Выберите или перетащите файл планировки
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev"><span>назад</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_3"></div>
+								</div>
+							</div>
+							<button id="start-next" class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_4">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>4/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">4</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Какой ремонт требуется?</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="type" value="capital">
+											<span class="wpcf7-list-item-label">Капитальный</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="type" value="cosmetic">
+											<span class="wpcf7-list-item-label">Косметический</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="type" value="designer">
+											<span class="wpcf7-list-item-label">Дизайнерский</span>
+										</label>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev"><span>назад</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_4"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_5">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>5/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">5</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Какая отделка на объекте сейчас?</h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="no-finish">
+											<span class="wpcf7-list-item-label">Без отделки</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="develop-finish">
+											<span class="wpcf7-list-item-label">Отделка от застройщика</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="rough-finish">
+											<span class="wpcf7-list-item-label">Черновая отделка</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="amount" value="old-finish">
+											<span class="wpcf7-list-item-label">Старый ремонт</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev"><span>назад</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_5"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_6">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>6/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">6</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Нужен ли дизайн проект?<span class="quiz-form__subname">При заказе полного
+									дизайн-проекта у нас, предоставим скидку 10%</span></h3>
+
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="sketchy">
+											<span class="wpcf7-list-item-label">Нужен эскизный дизайн-проект</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="full">
+											<span class="wpcf7-list-item-label">Нужен полный дизайн-проект</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="no-need">
+											<span class="wpcf7-list-item-label">Нет, не нужен</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="need" value="available">
+											<span class="wpcf7-list-item-label">Дизайн проект есть</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev"><span>назад</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_6"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_7">
+						<div class="quiz-form__top">
+							<div class="quiz-form__number">
+								Вопрос <span>7/8</span>
+							</div>
+							<div class="quiz-form__discount">
+								Ваша скидка <span class="quiz-form__num">9</span><span class="quiz-form__proc">%</span>
+							</div>
+						</div>
+						<div class="quiz-form__body">
+							<h3 class="quiz-form__name">Выберите свой подарок</h3>
+							<div class="quiz-form__options">
+
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="present" value="cleaning">
+											<span class="wpcf7-list-item-label">Клининг после ремонта</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="present" value="w-system">
+											<span class="wpcf7-list-item-label">Система грубой очистки воды</span>
+										</label>
+									</span>
+								</span>
+								<span class="wpcf7-form-control wpcf7-radio">
+									<span class="wpcf7-list-item">
+										<label>
+											<input type="radio" name="present" value="e-lock">
+											<span class="wpcf7-list-item-label">Электронный замок на входную дверь</span>
+										</label>
+									</span>
+								</span>
+
+							</div>
+						</div>
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_prev"><span>назад</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__progress progress-quiz-form__progress_7"></div>
+								</div>
+							</div>
+							<button class="quiz-form__button button quiz-form__button_next"><span>далее</span>
+								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="quiz-form__fieldset quiz-form__fieldset_8">
+
+						<div class="quiz-form__body">
+							<p class="quiz-form__present">Ваш подарок: <span id="present">Клининг после ремонта</span></p>
+							<p class="quiz-form__amount">Ваша скидка: <span>10%</span></p>
+							<div class="quiz-form__phone">
+								<label>На телефон пришлем смету</label>
+								<input type="text" name="phone" placeholder="+7 (___) ___-__-__"
+									class="input quiz-form__input quiz-form__input_phone">
+							</div>
+						</div>
+
+						<div class="quiz-form__footer">
+							<button class="quiz-form__button button quiz-form__button_subm">узнать стоимость</button>
+						</div>
+					</fieldset>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="interview-popup" aria-hidden="true" class="interview-popup popup popup_show1">
+	<div class="popup__wrapper interview-popup__wrapper">
+		<div class="popup__content interview-popup__content">
+			<button data-close type="button" class="popup__close">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 2L22 22M22.8787 2L2.87868 22" stroke="black" stroke-width="3" />
+				</svg>
+
+			</button>
+			<div class="popup__body interview-popup__body">
 
 				<form action="" class="quiz-form">
 
@@ -539,7 +1060,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div id="submit-popup" aria-hidden="true" class="submit-popup popup form-popup">
 	<div class="popup__wrapper submit-popup__wrapper">
@@ -596,4 +1117,4 @@
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
