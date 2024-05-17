@@ -53,7 +53,13 @@ import { flsModules } from "./modules.js";
 // }
 
 
-
+const num = document.getElementById('num');
+num.oninput = function () {
+  this.value = this.value.substr(0, 4);
+  if (this.value > 3000) {
+    this.value = this.value.substr(0, 1);
+  }
+};
 
 
 // (function () {
