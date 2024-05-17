@@ -109,7 +109,7 @@
     height: 200%;
     left: 0;
     top: 50%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     border-radius: toRem(10);
 
     background-color: #979DA4;
@@ -120,6 +120,26 @@
 
     &_2 {
       width: 24.92%;
+    }
+
+    &_3 {
+      width: 37%;
+    }
+
+    &_4 {
+      width: 50%;
+    }
+
+    &_5 {
+      width: 62%;
+    }
+
+    &_6 {
+      width: 75%;
+    }
+
+    &_7 {
+      width: 87%;
     }
   }
 }
