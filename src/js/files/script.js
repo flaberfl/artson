@@ -53,13 +53,6 @@ import { flsModules } from "./modules.js";
 // }
 
 
-const num = document.getElementById('num');
-num.oninput = function () {
-  this.value = this.value.substr(0, 4);
-  if (this.value > 3000) {
-    this.value = this.value.substr(0, 1);
-  }
-};
 
 
 // (function () {
@@ -208,6 +201,8 @@ const quiz = document.querySelector('.quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quiz.querySelectorAll('.quiz-form__button_next');
 const btnsPrev = quiz.querySelectorAll('.quiz-form__button_prev');
+const square = document.getElementById('num');
+const startNext = document.getElementById('start-next');
 
 
 let count = 0;
@@ -239,6 +234,27 @@ function initQuiz() {
   })
 }
 
+
+
+square.oninput = ValueInp;
+function ValueInp() {
+  console.log(this.value);
+
+  this.value = this.value.substr(0, 4);
+  if (this.value > 3000) {
+    this.value = this.value.substr(0, 1);
+  }
+
+  if (this.value !== '') {
+    startNext.disabled = false;
+  } else {
+    startNext.disabled = true;
+  }
+}
+
+
+
+
 quizItems.forEach((quizItem, quizItemIndex) => {
 
   quizItem.addEventListener('change', (e) => {
@@ -250,10 +266,16 @@ quizItems.forEach((quizItem, quizItemIndex) => {
       btnsNext[quizItemIndex].disabled = false;
     } else {
       // заблокировать эту кнопку
-      if (btnsNext[quizItemIndex].style.display === 'none') {
-        btnsNext[quizItemIndex].disabled = false;
-      }
       btnsNext[quizItemIndex].disabled = true;
+
+      if (square.oninput.value !== '') {
+        btnsNext[quizItemIndex].disabled = false;
+      } else {
+        btnsNext[quizItemIndex].disabled = true;
+      }
+
+
+
     }
   })
 });
