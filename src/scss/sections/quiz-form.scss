@@ -103,7 +103,8 @@
     width: toRem(189);
 
     @media (max-width:$mobile) {
-      display: none;
+      width: toRem(60);
+      height: toRem(60);
 
       .quiz-form__fieldset_1 & {
         justify-self: end;

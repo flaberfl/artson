@@ -115,7 +115,6 @@ function autoRemoveActiveClass() {
   })
 
 }
-// autoRemoveActiveClass();
 
 document.querySelector('.reviews-map__person_1').addEventListener('mouseenter', function () {
   autoRemoveActiveClass();
@@ -147,37 +146,6 @@ document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', 
   autoRemoveActiveClass();
   document.querySelector('.reviews-map__box_7').classList.toggle('active');
 });
-
-
-
-
-
-
-// document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', function () {
-//   document.querySelector('.reviews-map__box_7').classList.toggle('active');
-// });
-
-// document.querySelector('.reviews-map__person_7').addEventListener('mouseleave', function () {
-//   document.querySelector('.reviews-map__box_7').classList.remove('active');
-// });
-
-
-
-
-
-// При прокрутке стрелка вниз изчезает
-
-// window.onscroll = function () {
-//   const arrow = document.querySelector('.intro__arrow-down');
-//   if (window.scrollY > 100) {
-//     arrow.classList.add('hidden');
-//   } else {
-//     arrow.classList.remove('hidden');
-//   }
-// };
-
-
-
 
 
 
@@ -234,3 +202,68 @@ for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
 //     btn_submit3.disabled = true;
 //   }
 // });
+
+
+const quiz = document.querySelector('.quiz-form');
+const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
+const btnsNext = quiz.querySelectorAll('.quiz-form__button_next');
+const btnsPrev = quiz.querySelectorAll('.quiz-form__button_prev');
+
+
+let count = 0;
+quizItems[count].classList.add('_active');
+
+btnsNext.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    count++;
+    initQuiz();
+  });
+  // if (btn.style.display === 'none') {
+  //   btn.disabled = false;
+  // }
+  // btn.disabled = true;
+  // console.log(btn.style.display === 'none');
+  // btn.disabled = true;
+
+  // if (btn.style.display !== 'none') {
+  //   btn.setAttribute('disabled', '');
+  //   }
+
+});
+
+btnsPrev.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    count--;
+    initQuiz();
+  });
+});
+
+function initQuiz() {
+  quizItems.forEach((element, i) => {
+    element.classList.remove('_active')
+    if (i === count) {
+      element.classList.add('_active')
+    }
+  })
+}
+
+quizItems.forEach((quizItem, quizItemIndex) => {
+
+  quizItem.addEventListener('change', (e) => {
+    const target = e.target;
+    const inputsChecked = quizItem.querySelectorAll('input:checked');
+
+    if (inputsChecked.length > 0) {
+      // разблокировать кнопку именно эту
+      btnsNext[quizItemIndex].disabled = false;
+    } else {
+      // заблокировать эту кнопку
+      if (btnsNext[quizItemIndex].style.display === 'none') {
+        btnsNext[quizItemIndex].disabled = false;
+      }
+      btnsNext[quizItemIndex].disabled = true;
+    }
+  })
+});
