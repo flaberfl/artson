@@ -257,11 +257,10 @@ body::after {
 	&__price {}
 
 	.popup__body {
-		// padding: 30px;
 		@include adaptiveValue("padding-top", 60, 35);
 		@include adaptiveValue("padding-bottom", 60, 35);
 		@include adaptiveValue("padding-left", 60, 35);
-		@include adaptiveValue("padding-right", 60, 35);
+		@include adaptiveValue("padding-right", 60, 25);
 	}
 
 	.item-types__content {
@@ -284,10 +283,20 @@ body::after {
 		display: grid;
 		grid-template-columns: auto auto;
 		margin-top: toRem(40);
+		row-gap: toRem(30);
+
+		@media (max-width: em(580)) {
+			grid-template-columns: auto;
+			justify-items: center;
+		}
 	}
 
 	&__button {
 		justify-self: start;
+
+		@media (max-width: em(580)) {
+			justify-self: center;
+		}
 	}
 }
 
