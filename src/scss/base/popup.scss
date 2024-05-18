@@ -67,12 +67,16 @@ body::after {
 .popup__content {
 	background-color: #fff;
 	width: 100%;
-	max-width: toRem(1400);
+	max-width: toRem(927);
 	visibility: hidden;
 	opacity: 0;
 	transform: scale(.6);
 	transition: all 0.6s ease 0s;
 	box-shadow: 0 29px 70px 0 rgba(0, 0, 0, 0.38);
+
+	.quiz-popup & {
+		max-width: toRem(1400);
+	}
 
 	.video-popup & {
 		background-color: #000;
@@ -168,6 +172,41 @@ body::after {
 
 	&:hover {
 		text-decoration: none;
+	}
+}
+
+.popup-input {
+	height: toRem(60);
+	border: 1px solid rgba($color: #000000, $alpha: .4);
+	width: 100%;
+
+	font-size: toRem(18) !important;
+	font-weight: 800 !important;
+	color: $mainColor;
+	letter-spacing: .03em;
+}
+
+.popup-form {
+	&__line {
+		&:not(:last-child) {
+			margin-bottom: toRem(21);
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 42, 25);
+
+		text-align: left;
+	}
+
+	&__button {
+		@include adaptiveValue("margin-top", 41, 20);
+		// text-align: center;
+		// justify-items: center;
+	}
+
+	@media (max-width:$mobile){
+		 text-align: center; 
 	}
 }
 

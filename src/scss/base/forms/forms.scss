@@ -5,7 +5,18 @@
 
 	&__column {}
 
-	&__line {}
+	&__line {
+		label {
+			display: block;
+			margin-bottom: toRem(22);
+			text-align: left;
+
+			font-size: toRem(16);
+			font-weight: 400;
+			color: $mainColor;
+			letter-spacing: .03em;
+		}
+	}
 
 	&__input {}
 

@@ -226,14 +226,16 @@ btnsPrev.forEach((btn) => {
 });
 
 function initQuiz() {
+
   quizItems.forEach((element, i) => {
     element.classList.remove('_active')
     if (i === count) {
       element.classList.add('_active')
     }
   })
+  changeHeader();
 }
-
+changeHeader();
 
 
 square.oninput = ValueInp;
@@ -251,8 +253,6 @@ function ValueInp() {
     startNext.disabled = true;
   }
 }
-
-
 
 
 quizItems.forEach((quizItem, quizItemIndex) => {
@@ -273,9 +273,39 @@ quizItems.forEach((quizItem, quizItemIndex) => {
       } else {
         btnsNext[quizItemIndex].disabled = true;
       }
-
-
-
     }
   })
 });
+
+
+function changeHeader() {
+  const elementsForm = quiz.querySelectorAll('.quiz-form__fieldset_8');
+  const subVisible = quiz.querySelectorAll('[sub-visible]');
+  const subHidden = quiz.querySelectorAll('[sub-hidden]');
+
+  console.log(subVisible);
+  console.log(subHidden);
+
+  subVisible.forEach(element => {
+    element.hidden = false;
+  });
+
+  subHidden.forEach(element => {
+    element.hidden = true;
+  });
+
+  elementsForm.forEach(elementForm => {
+
+    if (elementForm.classList.contains('_active')) {
+
+      subVisible.forEach(element => {
+        element.hidden = true;
+      });
+
+      subHidden.forEach(element => {
+        element.hidden = false;
+      });
+    }
+  });
+}
+
