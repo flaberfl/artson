@@ -78,6 +78,10 @@ body::after {
 		max-width: toRem(1400);
 	}
 
+	.types-works-popup & {
+		max-width: toRem(790);
+	}
+
 	.video-popup & {
 		background-color: #000;
 	}
@@ -205,8 +209,8 @@ body::after {
 		// justify-items: center;
 	}
 
-	@media (max-width:$mobile){
-		 text-align: center; 
+	@media (max-width:$mobile) {
+		text-align: center;
 	}
 }
 
@@ -225,3 +229,105 @@ body::after {
 	height: 100%;
 	// border-radius: 50px;
 }
+
+
+
+.types-works-popup {
+
+	/* .types-works-popup__title */
+	&__title {
+		@include adaptiveValue("margin-bottom", 40, 25);
+		@include adaptiveValue("font-size", 25, 20);
+		font-weight: 800;
+		color: $mainColor;
+	}
+
+	/* .types-works-popup__wrapper */
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiveValue("column-gap", 40, 20);
+
+		@media (max-width: em(580)) {
+			grid-template-columns: auto;
+		}
+	}
+
+	/* .types-works-popup__price */
+	&__price {}
+
+	.popup__body {
+		// padding: 30px;
+		@include adaptiveValue("padding-top", 60, 35);
+		@include adaptiveValue("padding-bottom", 60, 35);
+		@include adaptiveValue("padding-left", 60, 35);
+		@include adaptiveValue("padding-right", 60, 35);
+	}
+
+	.item-types__content {
+		padding: 0;
+	}
+
+	.item-types__price-new,
+	.item-types__price-old {
+		padding-left: toRem(0);
+		color: $mainColor;
+	}
+
+	.item-types__list {
+		@media (max-width: em(580)) {
+			margin-bottom: toRem(0);
+		}
+	}
+
+	&__footer {
+		display: grid;
+		grid-template-columns: auto auto;
+		margin-top: toRem(40);
+	}
+
+	&__button {
+		justify-self: start;
+	}
+}
+
+.popup {
+
+	/* .popup_show */
+	&_show {}
+
+	/* .popup__wrapper */
+	&__wrapper {}
+
+	/* .popup__content */
+	&__content {}
+
+	/* .popup__close */
+	&__close {}
+
+	/* .popup__body */
+	&__body {}
+}
+
+.item-types {
+
+	/* .item-types__content */
+	&__content {}
+
+	/* .item-types__list */
+	&__list {}
+
+	/* .item-types__item */
+	&__item {}
+
+	/* .item-types__price-old */
+	&__price-old {}
+
+	/* .item-types__price-new */
+	&__price-new {}
+
+	/* .item-types__button */
+	&__button {}
+}
+
+.button {}
