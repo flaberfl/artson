@@ -34,25 +34,18 @@
 
 			transition: all 0.6s;
 			background: url('@img/icons/btn-gradient.svg') 0 0 no-repeat;
-			// background-size: cover;
-
-
-			// 	left: -5px;
-			// top: -5px;
-			// width: 119%;
 		}
-
 
 		@media (min-width:$mobile) {
 			&:hover {
 				&::before {
 					left: -16px;
-					width: 112%;
+					width: 110%;
 					transform: scale(-1, 1);
 				}
 			}
 		}
-
+		
 		&_mob {
 			@media (max-width:$mobile) {
 				&::before {
