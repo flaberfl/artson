@@ -15,7 +15,8 @@ body::after {
 .popup-show body::after {
 	opacity: 1;
 }
-
+// types-works-popup
+// data-goto=".discount"
 .popup {
 	position: fixed;
 	top: 0;
@@ -27,6 +28,11 @@ body::after {
 	visibility: hidden;
 	pointer-events: none;
 	z-index: 999;
+	display: none;
+
+	.loaded & {
+		display: block;
+	}
 }
 
 .popup_show {
