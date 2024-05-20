@@ -90,6 +90,16 @@
 	}
 }
 
+[anim-scale] {
+	transform: scale(.8);
+	opacity: 0;
+	transition: all $animSpeed ease 0s;
+
+	&._watcher-view {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
 
 [delay10] {
 	transition: all $animSpeed ease .1s;

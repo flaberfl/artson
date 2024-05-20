@@ -157,6 +157,60 @@ for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
   b.id += '-' + i;
 }
 
+const activeElement = document.querySelector('.spollers__item_ac');
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM готов!')
+  // let countSpoller = 0;
+  if (activeElement.classList.contains('_watcher-view')) {
+    activeElement.dataset.open = true;
+    activeElement.classList.add('foo');
+  }
+})
+
+
+// activeElement.addEventListener("click", () => {
+//   if (activeElement.classList.contains("_watcher-view'")) {
+//     console.log('activeElement');
+  
+//   }
+//  });
+
+
+
+
+
+// function ActiveSpoller() {
+//   for (let i = 0; i < activeElement.length; i++) {
+//     if (activeElement[i].hasClass('._watcher-view')) {
+//       console.log('activeElement');
+//     }
+//     // console.log(activeElement);
+//   }
+// }
+
+// ActiveSpoller();
+// Получить элемент с классом active
+
+
+
+// if (activeElement.classList.contains('._watcher-view')) {
+// }
+
+// Если у элемента есть класс active, назначить ему атрибут data-open
+
+// activeElement.forEach((element, i) => {
+//   // element.dataset.open;
+//   // element.setAttribute("data-open");
+//   // if (element.classList.contains('._watcher-view')) {
+//   //   activeElement.dataset.open = true;
+//   //   console.log('Ураа');
+//   // }
+// })
+// console.log(activeElement);
+
+
 // Если checkbox отлючен-кнопка Submit - неактивна
 
 
@@ -240,7 +294,6 @@ changeHeader();
 
 square.oninput = ValueInp;
 function ValueInp() {
-  console.log(this.value);
 
   this.value = this.value.substr(0, 4);
   if (this.value > 3000) {
