@@ -1,12 +1,11 @@
 .types {
   @include adaptiveValue("padding-top", 129, 71);
-  // position: relative;
 
   background: url('@img/types/bg.jpg') 0 0 no-repeat;
-  background-size: cover;
   z-index: -2;
 
   @media (max-width:$tablet) {
+    background-size: cover;
     padding-bottom: toRem(93);
   }
 
@@ -51,13 +50,6 @@
     font-size: toRem(16);
     font-weight: 900;
     letter-spacing: .03em;
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: $subColor;
-      }
-    }
-
   }
 
   /* .types__body */
@@ -91,6 +83,12 @@
 
   /* .tabs__title */
   &__title {
+    &:hover {
+      &::before {
+        transform: scale(1);
+        opacity: .4;
+      }
+    }
 
     &_before {
       transition: all 0.3s easy 0s;
@@ -117,28 +115,6 @@
       }
     }
   }
-
-  /* .tabs__content */
-  &__content {}
-
-  /* .tabs__body */
-  // &__body {
-
-  //   opacity: 0;
-  //   // transform: scale(.9);
-  //   transform: translate(0, 20px);
-  //   transition: all 0.3s;
-
-
-  //   &._watcher-view {
-  //     transition: all 0.3s;
-  //     transform: translate(0, 0);
-  //     // transform: scale(1);
-  //     opacity: 1;
-  //   }
-  // }
-
-
 }
 
 
@@ -150,8 +126,6 @@
   padding: 51px 0 40px 0;
   @include adaptiveValue("padding-top", 51, 26);
   max-width: toRem(453);
-  // max-width: toRem(295);
-  // @include adaptiveValue("width", 453, 295);
 
   background-color: #fff;
 
@@ -175,7 +149,6 @@
     margin-bottom: toRem(14);
 
     width: calc(100% + 4px);
-    // z-index: 10;
     background: $gradientBlock;
 
     &::before {

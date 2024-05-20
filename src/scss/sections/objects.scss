@@ -1,6 +1,8 @@
 .objects {
-  @include adaptiveValue("padding-top", 198, 115);
+  @include adaptiveValue("padding-top", 198, 70);
   @include adaptiveValue("padding-bottom", 239, 105);
+
+
 
   &__title {
 

@@ -1,6 +1,6 @@
 .images {
+  @include adaptiveValue("padding-top", 123, 77);
   @include adaptiveValue("padding-bottom", 142, 110);
-  @include adaptiveValue("padding-top", 142, 87);
 
   /* .images__title */
   &__title {

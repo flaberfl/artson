@@ -45,7 +45,7 @@
 				}
 			}
 		}
-		
+
 		&_mob {
 			@media (max-width:$mobile) {
 				&::before {
@@ -57,6 +57,48 @@
 		&_2 {
 			&::before {
 				background: url('@img/icons/btn-gradient-2.svg') 0 0 no-repeat;
+			}
+		}
+
+		&_middle {
+			&::before {
+				background: url('@img/icons/btn-gradient-2.svg') 0 0 no-repeat;
+				left: -6px;
+			}
+		}
+
+		&_big {
+			&::before {
+				background: url('@img/icons/btn-big.svg') 0 0 no-repeat;
+			}
+		}
+	}
+
+	&__orange-white {
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-color: #fff;
+			width: 50%;
+			height: 50%;
+			border-radius: $borderRadius;
+			border: 1px solid $subColor;
+			z-index: -1;
+			opacity: 0;
+
+			transition: all 0.3s;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $subColor;
+
+				&::before {
+					opacity: 1;
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}

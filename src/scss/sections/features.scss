@@ -1,8 +1,18 @@
 .features {
   @include adaptiveValue("padding-top", 129, 76);
+  // @include adaptiveValue("padding-bottom", 100, 70);
 
   background: url('@img/features/bg.jpg') 0 0 no-repeat;
   background-size: cover;
+
+
+  @media (max-width: em(1360)){
+     padding-bottom: toRem(40);
+  }
+
+  @media (max-width:$mobile){
+     padding-bottom: 0; 
+  }
 
   /* .features__container */
   &__container {}
