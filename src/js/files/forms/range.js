@@ -10,8 +10,8 @@ import * as noUiSlider from 'nouislider';
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
 	if (priceSlider) {
-		let textFrom = priceSlider.getAttribute('data-from');
-		let textTo = priceSlider.getAttribute('data-to');
+		// let textFrom = priceSlider.getAttribute('data-from');
+		// let textTo = priceSlider.getAttribute('data-to');
 		noUiSlider.create(priceSlider, {
 			start: 1, // [0,200000]
 			connect: [true, false],
@@ -26,6 +26,12 @@ export function rangeInit() {
 			})
 			*/
 		});
+		const input = document.getElementById('num');
+
+		priceSlider.noUiSlider.on('update', function (values) {
+			input.value = Math.round(values);
+		})
+
 		/*
 		const priceStart = document.getElementById('price-start');
 		const priceEnd = document.getElementById('price-end');

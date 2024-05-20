@@ -52,54 +52,6 @@ function init() {
   // map.geoObjects.add(myPlacemark);
 }
 
-
-
-
-// (function () {
-//   var a = document.querySelector('.turnkey__media'), b = null, P = 0;
-//   window.addEventListener('scroll', Ascroll, false);
-//   document.body.addEventListener('scroll', Ascroll, false);
-//   function Ascroll() {
-//     if (b == null) {
-//       var Sa = getComputedStyle(a, ''), s = '';
-//       for (var i = 0; i < Sa.length; i++) {
-//         if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-//           s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
-//         }
-//       }
-//       b = document.createElement('div');
-//       b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-//       a.insertBefore(b, a.firstChild);
-//       var l = a.childNodes.length;
-//       for (var i = 1; i < l; i++) {
-//         b.appendChild(a.childNodes[1]);
-//       }
-//       a.style.height = b.getBoundingClientRect().height + 'px';
-//       a.style.padding = '0';
-//       a.style.border = '0';
-//     }
-//     var Ra = a.getBoundingClientRect(),
-//       R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.turnkey__stages').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
-//     if ((Ra.top - P) <= 0) {
-//       if ((Ra.top - P) <= R) {
-//         b.className = 'stop';
-//         b.style.top = - R + 'px';
-//       } else {
-//         b.className = 'sticky';
-//         b.style.top = P + 'px';
-//       }
-//     } else {
-//       b.className = '';
-//       b.style.top = '';
-//     }
-//     window.addEventListener('resize', function () {
-//       a.children[0].style.width = getComputedStyle(a, '').width
-//     }, false);
-//   }
-// })()
-
-
-
 function autoRemoveActiveClass() {
 
   const elements = document.querySelectorAll(".reviews-map__box");
@@ -149,7 +101,6 @@ const objPopupVideoLink = document.querySelectorAll('.video-popup-video');
 const objPopupVideo = document.querySelectorAll('.video-popup');
 
 
-
 objPopupVideoLink.forEach((element, i) =>
   element.setAttribute('data-popup', '#videos-popup-video' + '-' + i));
 
@@ -158,26 +109,11 @@ for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
 }
 
 
-
-
-
-
-
-// function ActiveSpoller() {
-//   for (let i = 0; i < activeElement.length; i++) {
-//     if (activeElement[i].hasClass('._watcher-view')) {
-//       console.log('activeElement');
-//     }
-//     // console.log(activeElement);
-//   }
-// }
-
-// ActiveSpoller();
-// Получить элемент с классом active
-
-
-
-
+// Назначение активного ТАБА
+const activeTabs = document.querySelectorAll('.tabs__title_start');
+activeTabs.forEach((element, i) => {
+  element.classList.add('_tab-active')
+})
 
 // Если checkbox отлючен-кнопка Submit - неактивна
 
@@ -303,9 +239,6 @@ function changeHeader() {
   const elementsForm = quiz.querySelectorAll('.quiz-form__fieldset_8');
   const subVisible = quiz.querySelectorAll('[sub-visible]');
   const subHidden = quiz.querySelectorAll('[sub-hidden]');
-
-  console.log(subVisible);
-  console.log(subHidden);
 
   subVisible.forEach(element => {
     element.hidden = false;
