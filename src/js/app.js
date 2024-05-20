@@ -272,3 +272,4 @@ import "./files/script.js";
 
 // data-prlx-mouse data-prlx-dxr
 //  data-prlx data-direction="-1" data-coefficient="200"
+data-prlx-parent

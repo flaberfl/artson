@@ -204,26 +204,13 @@
 }
 
 
-.tabs {
-
-  /* .tabs__navigation */
-  &__navigation {}
-
-  /* .tabs__title */
-  &__title {}
-
-  /* .tabs__content */
-  &__content {}
-
-  /* .tabs__body */
-  &__body {}
-}
-
 .tabs__title.portfolio__title {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: toRem(21) toRem(36);
   width: toRem(184);
   height: toRem(60);
 
@@ -235,13 +222,8 @@
   @media (max-width:$mobile) {
     width: toRem(150);
   }
-
-
-  &._tab-active {
-    border: 1px solid $subColor;
-    border-radius: $borderRadius;
-  }
 }
+
 
 .desc-portfolio {
 
