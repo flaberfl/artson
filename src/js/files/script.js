@@ -160,20 +160,38 @@ for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
 const activeElement = document.querySelector('.spollers__item_ac');
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM готов!')
-  // let countSpoller = 0;
-  if (activeElement.classList.contains('_watcher-view')) {
-    activeElement.dataset.open = true;
-    activeElement.classList.add('foo');
-  }
-})
+// document.addEventListener('DOMContentLoaded', function () {
+//   console.log('DOM готов!')
+//   // let countSpoller = 0;
+//   if (activeElement.classList.contains('_watcher-view')) {
+//     activeElement.dataset.open = true;
+//     activeElement.classList.add('foo');
+//   }
+// })
 
+
+// Анимация появления ТАБОВ
+
+// const hiddenTabs = document.querySelector("[hidden]");
+
+// console.log(hiddenTabs);
+// quizItems.forEach((element, i) => {
+//   element.classList.remove('_active')
+//   if (i === count) {
+//     element.classList.add('_active')
+//   }
+// })
+
+// Проверка наличия атрибута hidden
+// if (hiddenTabs.hasAttribute('hidden')) {
+//   // Добавление класса hide
+//   // hiddenTabs.classList.add('hide');
+// }
 
 // activeElement.addEventListener("click", () => {
 //   if (activeElement.classList.contains("_watcher-view'")) {
 //     console.log('activeElement');
-  
+
 //   }
 //  });
 

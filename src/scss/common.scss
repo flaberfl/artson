@@ -91,13 +91,24 @@
 }
 
 [anim-scale] {
-	transform: scale(.8);
+	transform: scale(.9);
 	opacity: 0;
 	transition: all $animSpeed ease 0s;
 
 	&._watcher-view {
 		transform: scale(1);
 		opacity: 1;
+	}
+}
+
+[anim-scale-0] {
+	transform: scale(.9);
+	// opacity: 0;
+	transition: all $animSpeed ease 0s;
+
+	&._watcher-view {
+		transform: scale(1);
+		// opacity: 1;
 	}
 }
 

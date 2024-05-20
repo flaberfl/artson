@@ -54,8 +54,8 @@
 
     transition: all 0.3s easy 0s;
 
-    @media (any-hover: hover){
-      &:hover{
+    @media (any-hover: hover) {
+      &:hover {
         color: $subColor;
       }
     }
@@ -105,19 +105,60 @@
   }
 }
 
+
 .tabs {
 
   /* .tabs__navigation */
   &__navigation {}
 
   /* .tabs__title */
-  &__title {}
+  &__title {
+
+    &_before {
+      transition: all 0.3s easy 0s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border: 1px solid $subColor;
+        border-radius: $borderRadius;
+
+        width: 100%;
+        height: 100%;
+        transform: scale(.6);
+        opacity: 0;
+
+        transition: all 0.3s ease-in-out;
+      }
+
+      &._tab-active {
+        &::before {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
 
   /* .tabs__content */
   &__content {}
 
   /* .tabs__body */
-  &__body {}
+  // &__body {
+
+  //   opacity: 0;
+  //   // transform: scale(.9);
+  //   transform: translate(0, 20px);
+  //   transition: all 0.3s;
+
+
+  //   &._watcher-view {
+  //     transition: all 0.3s;
+  //     transform: translate(0, 0);
+  //     // transform: scale(1);
+  //     opacity: 1;
+  //   }
+  // }
 
 
 }
