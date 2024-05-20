@@ -267,9 +267,6 @@
       @include adaptiveValue("font-size", 14, 12);
     }
 
-    @media (max-width: em(1660)) {
-      top: -77.4%;
-    }
 
     @media (max-width: em(1360)) {
       top: -41.4%;
@@ -283,6 +280,10 @@
     @media (max-width: em(680)) {
       top: 64%;
       gap: toRem(60);
+    }
+
+    @media (max-width: em(1660)) {
+      top: -77.4%;
     }
   }
 
@@ -299,8 +300,8 @@
     border-radius: 50%;
     z-index: 50;
 
-    @media (max-width: em(680)){
-       background-color: transparent; 
+    @media (max-width: em(680)) {
+      background-color: transparent;
     }
 
     &::before {

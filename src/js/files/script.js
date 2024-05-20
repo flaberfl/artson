@@ -172,7 +172,7 @@ btnsNext.forEach((btn) => {
     count++;
     initQuiz();
   });
-  btn.disabled = true;
+  // btn.disabled = true;
 });
 
 btnsPrev.forEach((btn) => {

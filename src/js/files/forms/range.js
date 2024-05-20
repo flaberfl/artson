@@ -8,11 +8,9 @@ import * as noUiSlider from 'nouislider';
 // import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
-	const priceSlider = document.querySelector('#range');
-	if (priceSlider) {
-		// let textFrom = priceSlider.getAttribute('data-from');
-		// let textTo = priceSlider.getAttribute('data-to');
-		noUiSlider.create(priceSlider, {
+	const squareSlider = document.querySelector('#range');
+	if (squareSlider) {
+		noUiSlider.create(squareSlider, {
 			start: 1, // [0,200000]
 			connect: [true, false],
 			step: 1,
@@ -26,11 +24,32 @@ export function rangeInit() {
 			})
 			*/
 		});
-		const input = document.getElementById('num');
 
-		priceSlider.noUiSlider.on('update', function (values) {
-			input.value = Math.round(values);
-		})
+		var inputSq = document.getElementById('num');
+
+		squareSlider.noUiSlider.on('update', function (values) {
+			inputSq.value = Math.round(values);
+		});
+
+		inputSq.addEventListener('change', function (oninput) {
+			squareSlider.noUiSlider.set(this.value);
+		});
+
+
+		// priceSlider.noUiSlider.on('change', function (values, handle) {
+
+
+		// 	// var value = values[handle];
+
+		// 	// if (handle) {
+		// 	// 	input.value = value;
+		// 	// }
+		// });
+
+
+		// input.value = Math.round(values);
+
+
 
 		/*
 		const priceStart = document.getElementById('price-start');
@@ -52,3 +71,4 @@ export function rangeInit() {
 	}
 }
 rangeInit();
+
