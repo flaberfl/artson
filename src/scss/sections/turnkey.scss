@@ -2,9 +2,6 @@
   @include adaptiveValue("padding-top", 106, 72);
   @include adaptiveValue("padding-bottom", 124, 117);
 
-  /* .turnkey__container */
-  &__container {}
-
   /* .turnkey__title */
   &__title {
     color: $mainColor;
@@ -109,7 +106,6 @@
   &__item {
     position: relative;
     padding-bottom: 69.315%;
-    // max-width: toRem(453);
     width: 100%;
     height: 100%;
     @include adaptiveValue("padding-top", 76, 32);

@@ -76,11 +76,6 @@
     white-space: nowrap;
   }
 
-  /* .docs__media */
-  &__media {
-    // width: 100%;
-  }
-
   /* .docs__slider */
   &__slider {
     margin-bottom: toRem(-1);
@@ -102,19 +97,11 @@
     max-width: toRem(453);
     background: #fff;
 
-
     img {
       max-width: 100%;
     }
   }
 }
-
-
-// .docs__slider.swiper {
-//   @media (max-width:$mobile) {
-//     overflow: visible !important;
-//   }
-// }
 
 
 .swiper-button-prev,

@@ -36,7 +36,6 @@
     width: 100%;
     height: 100%;
     background: rgba(15, 17, 26, 0.5);
-
   }
 
   /* .video__text */
@@ -93,7 +92,6 @@
       background: $gradientBlock;
     }
 
-
     @media (max-width:$mobile) {
       top: toRem(210);
     }
@@ -116,27 +114,6 @@
     to {
       -webkit-transform: scale(1.3);
       transform: scale(1.3);
-    }
-  }
-
-  @keyframes annoying {
-    from {
-      // top: 50%;
-      // left: 50%;
-      // transform:
-      //   // translate(-50%, -50%),
-      //   scale(1);
-      height: 0;
-    }
-
-    to {
-      // top: 50%;
-      // left: 50%;
-      // transform:
-      //   // translate(-50%, -50%),
-      //   scale(1.2);
-      height: 0;
-
     }
   }
 

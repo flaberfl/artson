@@ -1,10 +1,8 @@
 .features {
   @include adaptiveValue("padding-top", 129, 76);
-  // @include adaptiveValue("padding-bottom", 100, 70);
 
   background: url('@img/features/bg.jpg') 0 0 no-repeat;
   background-size: cover;
-
 
   @media (max-width: em(1360)){
      padding-bottom: toRem(40);
@@ -13,9 +11,6 @@
   @media (max-width:$mobile){
      padding-bottom: 0; 
   }
-
-  /* .features__container */
-  &__container {}
 
   &__body {
     display: grid;
@@ -30,9 +25,6 @@
       gap: toRem(90);
     }
   }
-
-  /* .features__title */
-  &__title {}
 
   /* .features__media */
   &__media {
@@ -62,7 +54,6 @@
   /* .features__img */
   &__img {
     position: absolute;
-    // max-width: 100%;
 
     /* .features__img_1 */
     &_1 {
@@ -99,7 +90,6 @@
       @media (max-width: em(1600)) {
         bottom: 10%;
       }
-
 
       @media (max-width: em(1300)) {
         z-index: 1;

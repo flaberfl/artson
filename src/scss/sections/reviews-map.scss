@@ -1,12 +1,10 @@
 .reviews-map {
-  // position: relative;
 
   /* .section-map__container */
   &__container {
     @include adaptiveValue("padding-top", 101, 45);
     position: relative;
     z-index: 100;
-    // pointer-events: none;
   }
 
   &__image {
@@ -259,7 +257,6 @@
     @media (min-width:em(1280)) {
       display: flex;
       justify-content: space-between;
-
     }
   }
 
@@ -308,10 +305,9 @@
 
 .map {
   position: absolute;
-  // position: relative;
   @include adaptiveValue("height", 860, 900);
+  
   width: 100%;
-  // z-index: 100;
 
   &::before {
     content: '';

@@ -1,7 +1,6 @@
 .portfolio {
   @include adaptiveValue("padding-top", 130, 91);
   @include adaptiveValue("padding-bottom", 166, 211);
-  // background: #000;
 
   /* .portfolio__container */
   &__container {}
@@ -29,18 +28,7 @@
       justify-self: center;
       margin-bottom: toRem(30);
     }
-
-    // position: relative;
   }
-
-  /* .portfolio__swiper-button-prev */
-  &__swiper-button-prev {}
-
-  /* .portfolio__swiper-button-next */
-  &__swiper-button-next {}
-
-  /* .portfolio__box */
-  &__box {}
 
   /* .portfolio__tabs */
   &__tabs {
@@ -68,9 +56,6 @@
     }
   }
 
-  /* .portfolio__content */
-  &__content {}
-
   /* .portfolio__body */
   &__body {
     // display: flex;
@@ -89,13 +74,6 @@
       gap: toRem(30);
     }
   }
-
-  /* .portfolio__slider */
-  &__slider_text,
-  &__slider_text_2 {}
-
-  /* .portfolio__wrapper */
-  &__wrapper {}
 
   /* .portfolio__slide */
   &__slide {
@@ -137,7 +115,6 @@
     @media (max-width:$tablet) {
       left: 50%;
       transform: translate(-50%, 0);
-      // bottom: toRem(-120);
       @include adaptiveValue("bottom", -120, -115);
 
       text-align: center;

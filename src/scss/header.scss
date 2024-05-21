@@ -162,7 +162,6 @@
 	}
 }
 
-
 @keyframes trambling-animation {
 
 	0%,
@@ -181,7 +180,6 @@
 		transform: rotate(10deg);
 	}
 }
-
 
 .menu {
 	padding: 0 toRem(10); // отступы безопасности
@@ -286,11 +284,8 @@
 	}
 
 	&__link {
-
 		font-size: toRem(22);
-		// line-height: 200%;
 		letter-spacing: 0.03em;
-
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -416,11 +411,6 @@
 			width: 0;
 		}
 
-		&::before,
-		&::after {
-			// background-color: $mainColor;
-		}
-
 		&::before {
 			top: calc(50% - toRem(1));
 			transform: rotate(-45deg);
@@ -506,5 +496,4 @@
 			opacity: 1;
 		}
 	}
-
 }
