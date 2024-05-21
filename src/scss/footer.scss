@@ -267,24 +267,24 @@
       @include adaptiveValue("font-size", 14, 12);
     }
 
+    @media (max-width: 1660px) {
+      top: -77.4%;
+    }
 
-    @media (max-width: em(1360)) {
+    @media (max-width: 1360px) {
       top: -41.4%;
       right: -3%;
     }
 
-    @media (max-width: em(1120)) {
+    @media (max-width: 1120px) {
       top: -14.4%;
     }
 
-    @media (max-width: em(680)) {
+    @media (max-width: 680px) {
       top: 64%;
       gap: toRem(60);
     }
 
-    @media (max-width: em(1660)) {
-      top: -77.4%;
-    }
   }
 
   /* .button__up-box */

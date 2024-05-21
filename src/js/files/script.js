@@ -103,7 +103,6 @@ function init() {
   myMap2.controls.remove('zoomControl'); // удаляем контрол зуммирования
   myMap2.controls.remove('rulerControl'); // удаляем контрол правил
   myMap2.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
 }
 
 
@@ -113,7 +112,6 @@ function autoRemoveActiveClass() {
   elements.forEach((element, i) => {
     element.classList.remove('active')
   })
-
 }
 
 document.querySelector('.reviews-map__person_1').addEventListener('mouseenter', function () {
@@ -168,15 +166,12 @@ activeTabs.forEach((element, i) => {
   element.classList.add('_tab-active')
 })
 
-
-
 // Диапазонный слайдер
 let range = document.querySelector('.inputRange');
 let field = document.getElementById('num1');
 let squareHidden = document.getElementById('sh');
 let from = document.getElementById('from');
 let to = document.getElementById('to');
-
 
 range.addEventListener('input', function (e) {
   field.value = e.target.value;
@@ -206,8 +201,8 @@ range.addEventListener('input', function (e) {
     from.innerHTML = 120;
     to.innerHTML = '~';
   }
-
 });
+
 field.addEventListener('input', function (e) {
   range.value = e.target.value;
   squareHidden.innerHTML = field.value;
@@ -235,7 +230,7 @@ field.addEventListener('input', function (e) {
   }
 });
 
-
+// Код квиза
 const quiz = document.querySelector('.quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quiz.querySelectorAll('.quiz-form__button_next');
