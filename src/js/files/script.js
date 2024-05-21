@@ -120,8 +120,6 @@ activeTabs.forEach((element, i) => {
 
 // Диапазонный слайдер
 let range = document.querySelector('.inputRange');
-let period = document.querySelector('.id-hidden');
-let period2 = document.querySelector('.id-hidden2');
 let field = document.getElementById('num1');
 let squareHidden = document.getElementById('sh');
 let from = document.getElementById('from');
@@ -155,8 +153,6 @@ range.addEventListener('input', function (e) {
   if (field.value > 150) {
     from.innerHTML = 120;
     to.innerHTML = '~';
-    // period.classList.add('hidden');
-    // period2.classList.add('hidden');
   }
 
 });
@@ -184,18 +180,14 @@ field.addEventListener('input', function (e) {
   if (field.value > 150) {
     from.innerHTML = 120;
     to.innerHTML = "";
-
   }
-
 });
-
 
 
 const quiz = document.querySelector('.quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quiz.querySelectorAll('.quiz-form__button_next');
 const btnsPrev = quiz.querySelectorAll('.quiz-form__button_prev');
-// const square = document.getElementById('num');
 const startNext = document.getElementById('start-next');
 
 
