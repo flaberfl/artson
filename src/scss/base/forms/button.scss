@@ -3,11 +3,11 @@
 
 .button {
 	position: relative;
-	overflow: hidden;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	height: toRem(60);
+	overflow: hidden;
 
 	padding: toRem(20) toRem(30);
 
@@ -21,100 +21,109 @@
 	letter-spacing: .03em;
 	color: #fff;
 
-	&__anim {
-		position: relative;
+	// &__anim {
+	// 	position: relative;
 
-		&::before {
-			content: '';
-			position: absolute;
+	// 	&::before {
+	// 		overflow-x: hidden;
+	// 		content: '';
+	// 		position: absolute;
 
-			left: -5px;
-			top: -5px;
-			width: 110%;
-			height: 121%;
+	// 		left: -5px;
+	// 		top: -5px;
+	// 		width: 110%;
+	// 		height: 121%;
 
-			transition: all 0.6s;
-			background: url('@img/icons/btn-gradient.svg') 0 0 no-repeat;
-		}
+	// 		transition: all 0.6s;
+	// 		background: url('@img/icons/btn-gradient.svg') 0 0 no-repeat;
+	// 	}
 
-		@media (min-width:$mobile) {
-			&:hover {
-				&::before {
-					left: -16px;
-					width: 110%;
-					transform: scale(-1, 1);
-				}
-			}
-		}
+	// 	@media (min-width:$mobile) {
+	// 		&:hover {
+	// 			&::before {
+	// 				left: -16px;
+	// 				width: 110%;
+	// 				transform: scale(-1, 1);
+	// 			}
+	// 		}
+	// 	}
 
-		&_mob {
-			@media (max-width:$mobile) {
-				&::before {
-					width: 121%;
-				}
-			}
-		}
+	// 	&_mob {
+	// 		@media (max-width:$mobile) {
+	// 			&::before {
+	// 				width: 121%;
+	// 			}
+	// 		}
+	// 	}
 
-		&_2 {
-			&::before {
-				background: url('@img/icons/btn-gradient-2.svg') 0 0 no-repeat;
-			}
-		}
+	// 	&_2 {
+	// 		&::before {
+	// 			background: url('@img/icons/btn-gradient-2.svg') 0 0 no-repeat;
+	// 		}
+	// 	}
 
-		&_middle {
-			&::before {
-				background: url('@img/icons/btn-gradient-2.svg') 0 0 no-repeat;
-				left: -6px;
-			}
-		}
+	// 	&_middle {
+	// 		&::before {
+	// 			background: url('@img/icons/btn-gradient-2.svg') 0 0 no-repeat;
+	// 			left: -6px;
+	// 		}
+	// 	}
 
-		&_big {
-			&::before {
-				background: url('@img/icons/btn-big.svg') 0 0 no-repeat;
-			}
-		}
+	// 	&_big {
+	// 		&::before {
+	// 			background: url('@img/icons/btn-big.svg') 0 0 no-repeat;
+	// 		}
+	// 	}
+	// }
+
+	// &__orange-white {
+
+	// 	&::before {
+	// 		content: '';
+	// 		position: absolute;
+	// 		background-color: #fff;
+	// 		width: 50%;
+	// 		height: 50%;
+	// 		border-radius: $borderRadius;
+	// 		border: 1px solid $subColor;
+	// 		z-index: -1;
+	// 		opacity: 0;
+
+	// 		transition: all 0.3s;
+	// 	}
+
+	// 	@media (any-hover: hover) {
+	// 		&:hover {
+	// 			color: $subColor;
+
+	// 			&::before {
+	// 				opacity: 1;
+	// 				width: 100%;
+	// 				height: 100%;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 45px;
+		transform: skewX(-45deg); // Наклон
+		animation: flareAnimation;
+		left: -150%;
+
+		// -webkit-transform: skewX(-45deg) translateX(0);
+		// transform: skewX(-45deg) translateX(0);
+		// -webkit-transition: none;
+		// transition: none;
+
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+		animation: flareAnimation 2.5s infinite linear; // Время и тип анимации можно менять
 	}
-
-	&__orange-white {
-
-		&::before {
-			content: '';
-			position: absolute;
-			background-color: #fff;
-			width: 50%;
-			height: 50%;
-			border-radius: $borderRadius;
-			border: 1px solid $subColor;
-			z-index: -1;
-			opacity: 0;
-
-			transition: all 0.3s;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $subColor;
-
-				&::before {
-					opacity: 1;
-					width: 100%;
-					height: 100%;
-				}
-			}
-		}
-	}
-}
-
-.button .flare {
-	position: absolute;
-	top: 0;
-	height: 100%;
-	width: 45px;
-	transform: skewX(-45deg); // Наклон
-	animation: flareAnimation;
-	left: -150%;
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-	animation: flareAnimation 3s infinite linear; // Время и тип анимации можно менять
 }
 
 
@@ -139,7 +148,3 @@
 		display: inline-flex !important;
 	}
 }
-
-// .intro__svg {
-// 	position: absolute;
-// }
