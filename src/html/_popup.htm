@@ -151,7 +151,8 @@
 							</div>
 						</div>
 						<div class="quiz-form__footer">
-							<button class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
+							<button
+								class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
@@ -164,7 +165,8 @@
 									<div class="progress-quiz-form__progress progress-quiz-form__progress_2"></div>
 								</div>
 							</div>
-							<button class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+							<button
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
@@ -187,16 +189,23 @@
 							<h3 class="quiz-form__name">Укажите площадь ремонтируемого помeщения</h3>
 
 							<div class="quiz-form__range">
-								<div id="range"></div>
+								<!-- <div id="range"></div> -->
+
+								<input class="inputRange" type="range" min="1" max="500" value="0" />
+
+								<!-- Скрытое поле для Contact Form7 -->
+								<span id="sh"></span>
+
 								<div class="quiz-form__range-inp">
-									<input id="num" min="1" max="1000" type="number" name="square"
+									<!-- Ползунок выбора площади -->
+									<input id="num1" min="1" max="2000" type="number" name="square"
 										class="input popup-input quiz-form__input quiz-form__input_range">
 									<label for="square">м<sup>2</sup></label>
 									<!-- <span id="result"></span> -->
 								</div>
 								<div class="quiz-form__period">
-									Срок работ: от 75 до 105 дней
-									<!-- Срок работ: от <span id="from"></span> до <span id="to"></span>дней -->
+									Срок работ: от <span id="from">1</span> <span class="id-hidden">до</span> <span id="to">~</span> <span
+										class="id-hidden2">дней</span>
 								</div>
 							</div>
 							<div class="quiz-form__file-inp">
@@ -204,7 +213,8 @@
 							</div>
 						</div>
 						<div class="quiz-form__footer">
-							<button class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
+							<button
+								class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
@@ -216,7 +226,8 @@
 									<div class="progress-quiz-form__progress progress-quiz-form__progress_3"></div>
 								</div>
 							</div>
-							<button id="start-next" class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+							<button id="start-next"
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
@@ -267,7 +278,8 @@
 							</div>
 						</div>
 						<div class="quiz-form__footer">
-							<button class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
+							<button
+								class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
@@ -279,7 +291,8 @@
 									<div class="progress-quiz-form__progress progress-quiz-form__progress_4"></div>
 								</div>
 							</div>
-							<button class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+							<button
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
@@ -339,7 +352,8 @@
 							</div>
 						</div>
 						<div class="quiz-form__footer">
-							<button class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
+							<button
+								class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
@@ -351,7 +365,8 @@
 									<div class="progress-quiz-form__progress progress-quiz-form__progress_5"></div>
 								</div>
 							</div>
-							<button class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+							<button
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
@@ -412,7 +427,8 @@
 							</div>
 						</div>
 						<div class="quiz-form__footer">
-							<button class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
+							<button
+								class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
@@ -424,7 +440,8 @@
 									<div class="progress-quiz-form__progress progress-quiz-form__progress_6"></div>
 								</div>
 							</div>
-							<button class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+							<button
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
@@ -475,7 +492,8 @@
 							</div>
 						</div>
 						<div class="quiz-form__footer">
-							<button class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
+							<button
+								class="quiz-form__button button quiz-form__button_prev button__anim button__anim_mob"><span>назад</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696699C5.53553 0.403806 6.01041 0.403806 6.3033 0.696699C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM19 6.75H1V5.25H19V6.75Z"
@@ -487,7 +505,8 @@
 									<div class="progress-quiz-form__progress progress-quiz-form__progress_7"></div>
 								</div>
 							</div>
-							<button class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+							<button
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
