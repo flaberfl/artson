@@ -39,7 +39,7 @@
 	height: 100%;
 	width: 3px;
 	background-color: #fff;
-	// z-index: 2;
+	z-index: 2;
 
 	&::before,
 	&::after {
@@ -52,12 +52,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background: url('@img/icons/before.svg') 0 0 no-repeat;
-
-		@media (max-width: 767.98px) {
-			width: 40px;
-			height: 40px;
-
-		}
 	}
 
 	&::before {}
