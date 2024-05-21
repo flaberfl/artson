@@ -189,22 +189,22 @@
 							<h3 class="quiz-form__name">Укажите площадь ремонтируемого помeщения</h3>
 
 							<div class="quiz-form__range">
-
+								
 								<!-- Ползунок выбора площади -->
-								<input class="inputRange" type="range" min="1" max="500" value="0" />
+								<input id="range-input" class="styled-slider slider-progress range-input" type="range" min="1" max="500" value="1" />
 
 								<!-- Скрытое поле для Contact Form7 -->
 								<span id="sh"></span>
 
 								<div class="quiz-form__range-inp">
-									<input id="num1" min="1" max="2000" type="number" name="square"
+									<input id="num1" min="1" max="500" type="number" name="square" value="1"
 										class="input popup-input quiz-form__input quiz-form__input_range">
 									<label for="square">м<sup>2</sup></label>
 
 								</div>
 								<div class="quiz-form__period">
-									Срок работ: от <span id="from">1</span> <span class="id-hidden">до</span> <span id="to">~</span> <span
-										class="id-hidden2">дней</span>
+									Срок работ: от <span id="from">1</span>
+									<span">до</span> <span id="to">~</span> <span>дней</span>
 								</div>
 							</div>
 							<div class="quiz-form__file-inp">

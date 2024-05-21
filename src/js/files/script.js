@@ -1,58 +1,5 @@
-// Підключення функціоналу "Чертоги Фрілансера"
 import { isMobile } from "./functions.js";
-// Підключення списку активних модулів
 import { flsModules } from "./modules.js";
-
-// ymaps.ready(init);
-// function init() {
-//   var map = new ymaps.Map("map", {
-//     center: [55.720860, 37.560354],
-//     zoom: 15
-//   });
-
-//   // var map2 = new ymaps.Map("map2", {
-//   //   center: [55.720860, 37.560354],
-//   //   zoom: 15
-//   // });
-
-//   // var myPlacemark2 = new ymaps.Placemark(
-
-//   //   [55.727540, 37.567785],
-//   //   {},
-//   //   {
-//   //     iconLayout: 'default#image',
-//   //     iconImageHref: './img/map/01-r.png',
-//   //     // iconImageSize: [59, 78],
-//   //     iconImageSize: [112, 122],
-//   //     iconImageOffset: [-30, -78]
-//   //   });
-
-
-//   map.controls.remove('geolocationControl');
-//   map.controls.remove('searchControl'); // удаляем поиск
-//   map.controls.remove('trafficControl'); // удаляем контроль трафика
-//   map.controls.remove('typeSelector'); // удаляем тип
-
-//   // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-//   map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-//   map.controls.remove('rulerControl'); // удаляем контрол правил
-//   map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
-
-//   // map2.controls.remove('geolocationControl');
-//   // map2.controls.remove('searchControl'); // удаляем поиск
-//   // map2.controls.remove('trafficControl'); // удаляем контроль трафика
-//   // map.controls.remove('typeSelector'); // удаляем тип
-
-//   // // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-//   // map2.controls.remove('zoomControl'); // удаляем контрол зуммирования
-//   // map2.controls.remove('rulerControl'); // удаляем контрол правил
-//   // map2.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
-//   // map.geoObjects.add(myPlacemark);
-// }
-
-
 
 ymaps.ready(init);
 
@@ -67,10 +14,6 @@ function init() {
     zoom: 16
   });
   var myPlacemark2 = new ymaps.Placemark([59.9386, 30.3241], {
-    // Свойства.
-    // Содержимое иконки, балуна и хинта.
-    // iconContent: '2',
-    // balloonContent: 'Балун',
     hintContent: 'Метка'
   }, {
 
@@ -168,11 +111,12 @@ activeTabs.forEach((element, i) => {
 
 // Диапазонный слайдер
 
-let range = document.querySelector('.inputRange');
+let range = document.querySelector('.range-input');
 let field = document.getElementById('num1');
 let squareHidden = document.getElementById('sh');
 let from = document.getElementById('from');
 let to = document.getElementById('to');
+
 
 range.addEventListener('input', function (e) {
   field.value = e.target.value;
@@ -230,6 +174,16 @@ field.addEventListener('input', function (e) {
     to.innerHTML = "";
   }
 });
+
+for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+  e.style.setProperty('--value', e.value);
+  e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+  e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+  e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+}
+// const range2 = document.querySelector("#range-input")
+
+
 
 // Код квиза
 const quiz = document.querySelector('.quiz-form');
@@ -359,8 +313,3 @@ document.addEventListener("afterPopupOpen", function (e) {
   const currentPopup = e.detail.popup;
   SendPresent();
 });
-
-
-
-// console.log(radios);
-

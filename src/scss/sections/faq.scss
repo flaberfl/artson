@@ -6,8 +6,6 @@
   background: url('@img/faq/bg.jpg') 0 0 no-repeat;
   background-size: cover;
 
-  // height: 100vh;
-
   /* .faq__container */
   &__container {}
 
@@ -27,8 +25,6 @@
     padding-bottom: toRem(15);
     @include adaptiveValue("padding-right", 66, 20);
     padding-left: toRem(14);
-    // align-items: flex-start;
-
     @include adaptiveValue("gap", 35, 19);
 
     background-color: #fff;
@@ -84,8 +80,6 @@
         }
       }
     }
-
-
   }
 
 
@@ -99,21 +93,4 @@
     letter-spacing: .03em;
     font-weight: 400;
   }
-}
-
-
-.spollers {
-
-  // /* .spollers__item */
-  // &__item {
-  //   .faq__spollers & {
-  //     width: fit-content;
-  //   }
-  // }
-
-  /* .spollers__title */
-  &__title {}
-
-  /* .spollers__body */
-  &__body {}
 }

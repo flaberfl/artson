@@ -3,36 +3,10 @@
   width: 100%;
   height: 100%;
   height: toRem(632);
-  // z-index: 20;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-
-  //   background: url('@img/map/map-2.jpg') 0 0 no-repeat;
-  //   width: 100%;
-  //   height: 100%;
-  // }
 
   /* .section-map__container */
   &__container {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: relative;
-    // z-index: 50;
     position: relative;
-  }
-
-
-
-  &__icon {
-    position: absolute;
-    left: 60%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    @include adaptiveValue("width", 294, 192);
-    @include adaptiveValue("height", 294, 192);
   }
 }
 

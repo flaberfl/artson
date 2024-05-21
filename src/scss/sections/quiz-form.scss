@@ -173,6 +173,7 @@
       font-weight: 800;
       color: $mainColor;
       letter-spacing: .03em;
+      pointer-events: none
     }
 
     &_phone {
@@ -228,7 +229,6 @@
     }
   }
 
-
   &__present {
     @include adaptiveValue("margin-bottom", 22, 16);
   }
@@ -246,8 +246,6 @@
       color: $mainColor;
     }
   }
-
-
 }
 
 .progress-quiz-form {
@@ -259,7 +257,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    // max-width: toRem(690);
   }
 
   &__progress {
@@ -301,20 +298,6 @@
     }
   }
 }
-
-.progress-quiz-form {
-
-  /* .progress-quiz-form__bar */
-  &__bar {}
-
-  /* .progress-quiz-form__progress */
-  &__progress {
-
-    /* .progress-quiz-form__progress_1 */
-    &_1 {}
-  }
-}
-
 
 
 // Бэкграунд радио кнопки
