@@ -57,38 +57,29 @@ import { flsModules } from "./modules.js";
 ymaps.ready(init);
 
 function init() {
-  var center = [56.136, 40.390];
+  // var center = [59.9386, 30.3141];
   var myMap1 = new ymaps.Map('map1', {
-    center: center,
-    zoom: 10
+    center: [59.9386, 30.3141],
+    zoom: 18
   });
   var myMap2 = new ymaps.Map('map2', {
-    center: center,
-    zoom: 10
+    center: [59.9386, 30.3241],
+    zoom: 16
   });
-  var myPlacemark1 = new ymaps.Placemark(center, {
+  var myPlacemark2 = new ymaps.Placemark([59.9386, 30.3241], {
     // Свойства.
     // Содержимое иконки, балуна и хинта.
-    iconContent: '1',
-    balloonContent: 'Балун',
-    hintContent: 'Стандартный значок метки'
+    // iconContent: '2',
+    // balloonContent: 'Балун',
+    hintContent: 'Метка'
   }, {
-    // Опции.
-    // Стандартная фиолетовая иконка.
-    preset: 'twirl#violetIcon'
+
+    iconLayout: 'default#image',
+    iconImageHref: 'img/map/point.svg',
+    // Размеры метки.
+    iconImageSize: [284, 284],
   });
-  var myPlacemark2 = new ymaps.Placemark(center, {
-    // Свойства.
-    // Содержимое иконки, балуна и хинта.
-    iconContent: '2',
-    balloonContent: 'Балун',
-    hintContent: 'Стандартный значок метки'
-  }, {
-    // Опции.
-    // Стандартная фиолетовая иконка.
-    preset: 'twirl#violetIcon'
-  });
-  myMap1.geoObjects.add(myPlacemark1);
+  // myMap1.geoObjects.add(myPlacemark1);
   myMap2.geoObjects.add(myPlacemark2);
 
 

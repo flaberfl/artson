@@ -1,10 +1,9 @@
 .contacts {
   position: relative;
   margin-top: toRem(-517);
+  left: 0;
 
   z-index: 50;
-  // pointer-events: all;
-  left: 0;
 
   @media (max-width: em(1360)) {
     margin-top: toRem(-450);
@@ -13,7 +12,6 @@
   @media (max-width: em(1120)) {
     margin-top: toRem(-360);
   }
-
 
   @media (max-width: em(960)) {
     margin-top: toRem(-566);
