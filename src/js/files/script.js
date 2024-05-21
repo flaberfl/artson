@@ -167,6 +167,7 @@ activeTabs.forEach((element, i) => {
 })
 
 // Диапазонный слайдер
+
 let range = document.querySelector('.inputRange');
 let field = document.getElementById('num1');
 let squareHidden = document.getElementById('sh');
@@ -336,3 +337,30 @@ function changeHeader() {
     }
   });
 }
+
+// Скрипт вывода наименования подарка при выборе подарка в квизе
+function SendPresent() {
+  let present = document.querySelector('.present-options');
+  let radios = present.querySelectorAll('input[type="radio"]');
+  let outputPresent = document.getElementById('present');
+  let btnPresent = document.querySelector('.button__present');
+
+  btnPresent.addEventListener('click', function () {
+    for (let radio of radios) {
+      if (radio.checked) {
+        outputPresent.innerHTML = radio.value;
+      }
+    }
+  });
+}
+
+// Запуск скрипта - когда запущен попап
+document.addEventListener("afterPopupOpen", function (e) {
+  const currentPopup = e.detail.popup;
+  SendPresent();
+});
+
+
+
+// console.log(radios);
+

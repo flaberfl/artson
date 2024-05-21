@@ -35,7 +35,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="where" value="new-house" checked>
+											<input type="radio" name="where" value="new-house">
 											<span class="wpcf7-list-item-label">Новостройка</span>
 										</label>
 									</span>
@@ -118,7 +118,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="amount" value="1-room" checked>
+											<input type="radio" name="amount" value="1-room">
 											<span class="wpcf7-list-item-label">Однокомнатная</span>
 										</label>
 									</span>
@@ -189,7 +189,6 @@
 							<h3 class="quiz-form__name">Укажите площадь ремонтируемого помeщения</h3>
 
 							<div class="quiz-form__range">
-								<!-- <div id="range"></div> -->
 
 								<!-- Ползунок выбора площади -->
 								<input class="inputRange" type="range" min="1" max="500" value="0" />
@@ -201,7 +200,7 @@
 									<input id="num1" min="1" max="2000" type="number" name="square"
 										class="input popup-input quiz-form__input quiz-form__input_range">
 									<label for="square">м<sup>2</sup></label>
-									<!-- <span id="result"></span> -->
+
 								</div>
 								<div class="quiz-form__period">
 									Срок работ: от <span id="from">1</span> <span class="id-hidden">до</span> <span id="to">~</span> <span
@@ -209,7 +208,10 @@
 								</div>
 							</div>
 							<div class="quiz-form__file-inp">
-								Выберите или перетащите файл планировки
+								<label class="file-upload" for="file-input-popup">
+									<input id="file-input-popup" type="file" name="file" multiple>
+									Выберите файл планировки
+								</label>
 							</div>
 						</div>
 						<div class="quiz-form__footer">
@@ -254,7 +256,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="type" value="capital" checked>
+											<input type="radio" name="type" value="capital">
 											<span class="wpcf7-list-item-label">Капитальный</span>
 										</label>
 									</span>
@@ -319,7 +321,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="finish" value="no-finish" checked>
+											<input type="radio" name="finish" value="no-finish">
 											<span class="wpcf7-list-item-label">Без отделки</span>
 										</label>
 									</span>
@@ -394,7 +396,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="need" value="sketchy" checked>
+											<input type="radio" name="need" value="sketchy">
 											<span class="wpcf7-list-item-label">Нужен эскизный дизайн-проект</span>
 										</label>
 									</span>
@@ -462,12 +464,12 @@
 						</div>
 						<div class="quiz-form__body">
 							<h3 class="quiz-form__name">Выберите свой подарок</h3>
-							<div class="quiz-form__options">
+							<div class="quiz-form__options present-options">
 
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="present" value="cleaning" checked>
+											<input type="radio" name="present" value="Клининг после ремонта">
 											<span class="wpcf7-list-item-label">Клининг после ремонта</span>
 										</label>
 									</span>
@@ -475,7 +477,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="present" value="w-system">
+											<input type="radio" name="present" value="Система грубой очистки воды">
 											<span class="wpcf7-list-item-label">Система грубой очистки воды</span>
 										</label>
 									</span>
@@ -483,7 +485,7 @@
 								<span class="wpcf7-form-control wpcf7-radio">
 									<span class="wpcf7-list-item">
 										<label>
-											<input type="radio" name="present" value="e-lock">
+											<input type="radio" name="present" value="Электронный замок на входную дверь">
 											<span class="wpcf7-list-item-label">Электронный замок на входную дверь</span>
 										</label>
 									</span>
@@ -506,7 +508,7 @@
 								</div>
 							</div>
 							<button
-								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob"><span>далее</span>
+								class="quiz-form__button button quiz-form__button_next button__anim button__anim_mob button__present"><span>далее</span>
 								<svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989592 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z"
@@ -519,7 +521,7 @@
 					<fieldset class="quiz-form__fieldset quiz-form__fieldset_8">
 
 						<div class="quiz-form__body">
-							<p class="quiz-form__present">Ваш подарок: <span id="present">Клининг после ремонта</span></p>
+							<p class="quiz-form__present">Ваш подарок: <span id="present"></span></p>
 							<p class="quiz-form__amount">Ваша скидка: <span>10%</span></p>
 							<div class="quiz-form__phone">
 								<label>На телефон пришлем смету</label>
