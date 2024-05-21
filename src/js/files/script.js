@@ -53,6 +53,69 @@ import { flsModules } from "./modules.js";
 // }
 
 
+
+ymaps.ready(init);
+
+function init() {
+  var center = [56.136, 40.390];
+  var myMap1 = new ymaps.Map('map1', {
+    center: center,
+    zoom: 10
+  });
+  var myMap2 = new ymaps.Map('map2', {
+    center: center,
+    zoom: 10
+  });
+  var myPlacemark1 = new ymaps.Placemark(center, {
+    // Свойства.
+    // Содержимое иконки, балуна и хинта.
+    iconContent: '1',
+    balloonContent: 'Балун',
+    hintContent: 'Стандартный значок метки'
+  }, {
+    // Опции.
+    // Стандартная фиолетовая иконка.
+    preset: 'twirl#violetIcon'
+  });
+  var myPlacemark2 = new ymaps.Placemark(center, {
+    // Свойства.
+    // Содержимое иконки, балуна и хинта.
+    iconContent: '2',
+    balloonContent: 'Балун',
+    hintContent: 'Стандартный значок метки'
+  }, {
+    // Опции.
+    // Стандартная фиолетовая иконка.
+    preset: 'twirl#violetIcon'
+  });
+  myMap1.geoObjects.add(myPlacemark1);
+  myMap2.geoObjects.add(myPlacemark2);
+
+
+  myMap1.controls.remove('geolocationControl');
+  myMap1.controls.remove('searchControl'); // удаляем поиск
+  myMap1.controls.remove('trafficControl'); // удаляем контроль трафика
+  myMap1.controls.remove('typeSelector'); // удаляем тип
+
+  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  myMap1.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  myMap1.controls.remove('rulerControl'); // удаляем контрол правил
+  myMap1.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+
+  myMap2.controls.remove('geolocationControl');
+  myMap2.controls.remove('searchControl'); // удаляем поиск
+  myMap2.controls.remove('trafficControl'); // удаляем контроль трафика
+  myMap2.controls.remove('typeSelector'); // удаляем тип
+
+  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  myMap2.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  myMap2.controls.remove('rulerControl'); // удаляем контрол правил
+  myMap2.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+}
+
+
 function autoRemoveActiveClass() {
 
   const elements = document.querySelectorAll(".reviews-map__box");
@@ -97,10 +160,8 @@ document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', 
 
 // Присвоим попапам и линкам на них порядковые номера
 
-
 const objPopupVideoLink = document.querySelectorAll('.video-popup-video');
 const objPopupVideo = document.querySelectorAll('.video-popup');
-
 
 objPopupVideoLink.forEach((element, i) =>
   element.setAttribute('data-popup', '#videos-popup-video' + '-' + i));
@@ -289,85 +350,3 @@ function changeHeader() {
     }
   });
 }
-
-
-// Блок До и После
-
-// const slider = document.querySelector('.slider-before');
-// const before = document.querySelector('.before');
-// const beforeImage = before.querySelector('img');
-// const change = document.querySelector('.change');
-// const body = document.body;
-
-// let isActive = false;
-
-// document.addEventListener('DOMContentLoaded', () => {
-// 	let width = slider.offsetWidth;
-// 	beforeImage.style.width = `${width}px`;
-// });
-
-// change.addEventListener('mousedown', () => {
-// 	isActive = true;
-// });
-
-// body.addEventListener('mouseup', () => {
-// 	isActive = false;
-// });
-
-// body.addEventListener('mouseleave', () => {
-// 	isActive = false;
-// });
-
-// const beforeAfterSlider = (x) => {
-// 	let shift = Math.max(0, Math.min(x, slider.offsetWidth));
-// 	before.style.width = `${shift}px`;
-// 	change.style.left = `${shift}px`;
-// };
-
-// const pauseEvents = (e) => {
-// 	e.stopPropagation();
-// 	e.preventDefault();
-// 	return false;
-// };
-
-// body.addEventListener('mousemove', (e) => {
-// 	if (!isActive) {
-// 		return;
-// 	}
-
-// 	let x = e.pageX;
-// 	x -= slider.getBoundingClientRect().left;
-// 	beforeAfterSlider(x);
-// 	pauseEvents(e);
-// });
-
-// change.addEventListener('touchstart', () => {
-// 	isActive = true;
-// });
-
-// body.addEventListener('touchend', () => {
-// 	isActive = false;
-// });
-
-// body.addEventListener('touchcancel', () => {
-// 	isActive = false;
-// });
-
-// body.addEventListener('touchmove', (e) => {
-// 	if (!isActive) {
-// 		return;
-// 	}
-
-//   let x;
-  
-//   let i;
-//   for (i = 0; i < e.changedTouches.length; i++) {
-//   	x = e.changedTouches[i].pageX; 
-//   }
-  
-//   x -= slider.getBoundingClientRect().left;
-
-//   beforeAfterSlider(x);
-//   pauseEvents(e);
-// });
-

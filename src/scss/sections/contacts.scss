@@ -3,7 +3,7 @@
   margin-top: toRem(-517);
 
   z-index: 50;
-  pointer-events: all;
+  // pointer-events: all;
   left: 0;
 
   @media (max-width: em(1360)) {
@@ -34,6 +34,8 @@
     @include adaptiveValue("padding-right", 95, 20);
     @include adaptiveValue("padding-bottom", 81, 46);
     @include adaptiveValue("padding-left", 90, 28);
+
+    pointer-events: all;
 
     &::before {
       content: '';
