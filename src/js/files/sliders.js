@@ -280,6 +280,7 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	speed: 700,
 	centeredSlides: true,
 	centeredSlidesBounds: true,
+	allowTouchMove: false,
 
 
 	// effect: 'coverflow',
