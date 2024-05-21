@@ -69,7 +69,7 @@ flsFunctions.tabs();
 Документація: https://template.fls.guru/template-docs/modul-do-pislia.html
 Сніппет (HTML): ba
 */
-// import './libs/beforeafter.js';
+import './libs/beforeafter.js';
 
 /*
 Модуль "Ефект хвиль"
