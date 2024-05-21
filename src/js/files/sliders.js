@@ -264,9 +264,7 @@ let myTextSlider = new Swiper('.portfolio__slider_text', {
 	}
 });
 
-let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо склас потрібного слайдера
-	// Підключаємо модулі слайдера
-	// для конкретного випадку
+let myImageSlider = new Swiper('.portfolio__slider', {
 	modules: [Navigation],
 	observer: true,
 	observeParents: true,
@@ -282,33 +280,8 @@ let myImageSlider = new Swiper('.portfolio__slider', { // Вказуємо ск�
 	centeredSlidesBounds: true,
 	allowTouchMove: false,
 
-
-	// effect: 'coverflow',
-	// coverflowEffect: {
-	// 	rotate: 0,
-	// 	stretch: 0,
-	// 	depth: 100,
-	// 	modifier: 2.5,
-
-	// },
-
-	// 	thumbs: {                           
-	// 		swiper: myTextSlider,            
-	// },    
-
-	//touchRatio: 0,
-	//simulateTouch: false,
-	//loop: true,
-	//preloadImages: false,
 	lazy: true,
 
-
-	// Ефекти
-	effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
 
 
 	// pagination: {
