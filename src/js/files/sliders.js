@@ -488,10 +488,6 @@ let myVideoSlider = new Swiper('.video__slider', {
 	}
 });
 
-
-
-
-
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');

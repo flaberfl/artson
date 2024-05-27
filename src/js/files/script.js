@@ -1,52 +1,52 @@
 import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
-ymaps.ready(init);
+// ymaps.ready(init);
 
-function init() {
-  // var center = [59.9386, 30.3141];
-  var myMap1 = new ymaps.Map('map1', {
-    center: [59.9386, 30.3141],
-    zoom: 18
-  });
-  var myMap2 = new ymaps.Map('map2', {
-    center: [59.9386, 30.3241],
-    zoom: 16
-  });
-  var myPlacemark2 = new ymaps.Placemark([59.9386, 30.3241], {
-    hintContent: 'Метка'
-  }, {
+// function init() {
+//   // var center = [59.9386, 30.3141];
+//   var myMap1 = new ymaps.Map('map1', {
+//     center: [59.9386, 30.3141],
+//     zoom: 18
+//   });
+//   var myMap2 = new ymaps.Map('map2', {
+//     center: [59.9386, 30.3241],
+//     zoom: 16
+//   });
+//   var myPlacemark2 = new ymaps.Placemark([59.9386, 30.3241], {
+//     hintContent: 'Метка'
+//   }, {
 
-    iconLayout: 'default#image',
-    iconImageHref: 'img/map/point.svg',
-    // Размеры метки.
-    iconImageSize: [284, 284],
-  });
-  // myMap1.geoObjects.add(myPlacemark1);
-  myMap2.geoObjects.add(myPlacemark2);
-
-
-  myMap1.controls.remove('geolocationControl');
-  myMap1.controls.remove('searchControl'); // удаляем поиск
-  myMap1.controls.remove('trafficControl'); // удаляем контроль трафика
-  myMap1.controls.remove('typeSelector'); // удаляем тип
-
-  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  myMap1.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  myMap1.controls.remove('rulerControl'); // удаляем контрол правил
-  myMap1.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+//     iconLayout: 'default#image',
+//     iconImageHref: 'img/map/point.svg',
+//     // Размеры метки.
+//     iconImageSize: [284, 284],
+//   });
+//   // myMap1.geoObjects.add(myPlacemark1);
+//   myMap2.geoObjects.add(myPlacemark2);
 
 
-  myMap2.controls.remove('geolocationControl');
-  myMap2.controls.remove('searchControl'); // удаляем поиск
-  myMap2.controls.remove('trafficControl'); // удаляем контроль трафика
-  myMap2.controls.remove('typeSelector'); // удаляем тип
+//   myMap1.controls.remove('geolocationControl');
+//   myMap1.controls.remove('searchControl'); // удаляем поиск
+//   myMap1.controls.remove('trafficControl'); // удаляем контроль трафика
+//   myMap1.controls.remove('typeSelector'); // удаляем тип
 
-  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  myMap2.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  myMap2.controls.remove('rulerControl'); // удаляем контрол правил
-  myMap2.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-}
+//   // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+//   myMap1.controls.remove('zoomControl'); // удаляем контрол зуммирования
+//   myMap1.controls.remove('rulerControl'); // удаляем контрол правил
+//   myMap1.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+
+//   myMap2.controls.remove('geolocationControl');
+//   myMap2.controls.remove('searchControl'); // удаляем поиск
+//   myMap2.controls.remove('trafficControl'); // удаляем контроль трафика
+//   myMap2.controls.remove('typeSelector'); // удаляем тип
+
+//   // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+//   myMap2.controls.remove('zoomControl'); // удаляем контрол зуммирования
+//   myMap2.controls.remove('rulerControl'); // удаляем контрол правил
+//   myMap2.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+// }
 
 
 function autoRemoveActiveClass() {
@@ -92,15 +92,58 @@ document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', 
 
 // Присвоим попапам и линкам на них порядковые номера
 
-const objPopupVideoLink = document.querySelectorAll('.video-popup-video');
+// const objPopupVideoLink = document.querySelectorAll('.video-popup');
+// const objPopupVideo = document.querySelectorAll('.video-popup');
+
+// objPopupVideoLink.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#video-popup' + '-' + i));
+
+// for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
+//   b.id += '-' + i;
+// }
+
+
+
+const objPopupVideoLink = document.querySelectorAll('.video-popup');
 const objPopupVideo = document.querySelectorAll('.video-popup');
 
 objPopupVideoLink.forEach((element, i) =>
-  element.setAttribute('data-popup', '#videos-popup-video' + '-' + i));
+  element.setAttribute('data-popup', '#video-popup' + '-' + i));
 
-for (var i = 0, b; b = document.getElementById('videos-popup-video'); ++i) {
+for (var i = 0, b; b = document.getElementById('video-popup'); ++i) {
   b.id += '-' + i;
 }
+
+
+
+
+// const objPopupTypesLinkNew = document.querySelectorAll('.item-types__link_new');
+// const objPopupNew = document.querySelectorAll('.types-works-popup_new');
+
+// objPopupTypesLinkNew.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#types-works-popup-new' + '-' + i));
+
+// for (var i = 0, b; b = document.getElementById('types-works-popup-new'); ++i) {
+//   b.id += '-' + i;
+// }
+
+
+// const objPopupTypesLinkOld = document.querySelectorAll('.item-types__link_old');
+// const objPopupOld = document.querySelectorAll('.types-works-popup_old');
+
+// objPopupTypesLinkOld.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#types-works-popup-old' + '-' + i));
+
+// for (var i = 0, b; b = document.getElementById('types-works-popup-old'); ++i) {
+//   b.id += '-' + i;
+// }
+
+
+
+
+
+
+
 
 
 // Назначение активного ТАБА
@@ -181,9 +224,6 @@ for (let e of document.querySelectorAll('input[type="range"].slider-progress')) 
   e.style.setProperty('--max', e.max == '' ? '100' : e.max);
   e.addEventListener('input', () => e.style.setProperty('--value', e.value));
 }
-// const range2 = document.querySelector("#range-input")
-
-
 
 // Код квиза
 const quiz = document.querySelector('.quiz-form');
@@ -313,3 +353,8 @@ document.addEventListener("afterPopupOpen", function (e) {
   const currentPopup = e.detail.popup;
   SendPresent();
 });
+
+
+flsModules.popup.close('#interview-popup')
+console.log(flsModules.popup.close('#interview-popup'));
+
