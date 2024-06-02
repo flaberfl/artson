@@ -85,6 +85,9 @@
 
   /* .portfolio__image */
   &__image {
+
+    @include adaptiveValue("height", 622, 215);
+
     img {
       width: 100%;
     }

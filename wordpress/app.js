@@ -6727,7 +6727,7 @@ PERFORMANCE OF THIS SOFTWARE.
         listener(event);
       }));
       return this;
-    };
+    }; 
     lgQuery.prototype.off = function (event) {
       var _this = this;
       if (!this.selector) return this;

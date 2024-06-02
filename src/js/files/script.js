@@ -57,38 +57,54 @@ function autoRemoveActiveClass() {
   })
 }
 
-document.querySelector('.reviews-map__person_1').addEventListener('mouseenter', function () {
-  autoRemoveActiveClass();
-  document.querySelector('.reviews-map__box_1').classList.toggle('active');
-});
+if (document.querySelector('.reviews-map__person_1') !== null) {
+  document.querySelector('.reviews-map__person_1').addEventListener('mouseenter', function () {
+    autoRemoveActiveClass();
+    document.querySelector('.reviews-map__box_1').classList.toggle('active');
+  });
+}
 
+if (document.querySelector('.reviews-map__person_2') !== null) {
+  document.querySelector('.reviews-map__person_2').addEventListener('mouseenter', function () {
+    autoRemoveActiveClass();
+    document.querySelector('.reviews-map__box_2').classList.toggle('active');
+  });
+}
 
-document.querySelector('.reviews-map__person_2').addEventListener('mouseenter', function () {
-  autoRemoveActiveClass();
-  document.querySelector('.reviews-map__box_2').classList.toggle('active');
-});
-document.querySelector('.reviews-map__person_3').addEventListener('mouseenter', function () {
-  autoRemoveActiveClass();
-  document.querySelector('.reviews-map__box_3').classList.toggle('active');
-});
-document.querySelector('.reviews-map__person_4').addEventListener('mouseenter', function () {
+if (document.querySelector('.reviews-map__person_3') !== null) {
+  document.querySelector('.reviews-map__person_3').addEventListener('mouseenter', function () {
+    autoRemoveActiveClass();
+    document.querySelector('.reviews-map__box_3').classList.toggle('active');
+  });
+}
+
+if (document.querySelector('.reviews-map__person_4') !== null) {
+  document.querySelector('.reviews-map__person_4').addEventListener('mouseenter', function () {
   autoRemoveActiveClass();
   document.querySelector('.reviews-map__box_4').classList.toggle('active');
 });
-document.querySelector('.reviews-map__person_5').addEventListener('mouseenter', function () {
-  autoRemoveActiveClass();
-  document.querySelector('.reviews-map__box_5').classList.toggle('active');
-});
-document.querySelector('.reviews-map__person_6').addEventListener('mouseenter', function () {
-  autoRemoveActiveClass();
-  document.querySelector('.reviews-map__box_6').classList.toggle('active');
-});
-document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', function () {
-  autoRemoveActiveClass();
-  document.querySelector('.reviews-map__box_7').classList.toggle('active');
-});
+}
 
+if (document.querySelector('.reviews-map__person_5') !== null) {
+  document.querySelector('.reviews-map__person_5').addEventListener('mouseenter', function () {
+    autoRemoveActiveClass();
+    document.querySelector('.reviews-map__box_5').classList.toggle('active');
+  });
+}
 
+if (document.querySelector('.reviews-map__person_6') !== null) {
+  document.querySelector('.reviews-map__person_6').addEventListener('mouseenter', function () {
+    autoRemoveActiveClass();
+    document.querySelector('.reviews-map__box_6').classList.toggle('active');
+  });
+}
+
+if (document.querySelector('.reviews-map__person_7') !== null) {
+  document.querySelector('.reviews-map__person_7').addEventListener('mouseenter', function () {
+    autoRemoveActiveClass();
+    document.querySelector('.reviews-map__box_7').classList.toggle('active');
+  });
+}
 
 // Присвоим попапам и линкам на них порядковые номера
 

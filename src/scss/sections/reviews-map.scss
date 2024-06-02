@@ -287,6 +287,16 @@
   /* .reviews-map__rating */
   &__rating {}
 
+  &__yandex {
+    font-weight: 600;
+    color: $subColor;
+    text-decoration: underline;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
   /* .reviews-map__review */
   &__review {
     font-size: toRem(16);
