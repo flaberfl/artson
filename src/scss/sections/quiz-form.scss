@@ -109,6 +109,10 @@
     @media (max-width:$mobileSmall) {
       grid-template-columns: 1fr auto;
       grid-template-rows: 1fr 1fr;
+      
+      .quiz-form__fieldset_8 & {
+        grid-template-rows: 1fr;
+      }
     }
   }
 

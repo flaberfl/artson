@@ -66,6 +66,20 @@
 	display: grid;
 }
 
+.polycy-link {
+	margin-top: toRem(25);
+
+	font-size: toRem(16);
+	color: $bodyColor;
+	text-align: center;
+	
+	a {
+		font-weight: 500;
+		text-decoration: underline;
+		white-space: nowrap;
+	}
+}
+
 .file-upload {
 	display: block;
 	border: none;
